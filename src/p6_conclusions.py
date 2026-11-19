@@ -110,12 +110,12 @@ def main() -> None:
     sk = spark.filter(pl.col("engine") == "scikit-learn logistic").row(0, named=True)
     sl = spark.filter(pl.col("engine") == "Spark logistic").row(0, named=True)
 
-    first = f"""# First page facts (generated, fill in the name, ID and URL)
+    first = f"""# First page facts (generated from the files in reports/)
 
 | Item | Value |
 |---|---|
-| Name, student ID | _to fill in_ |
-| GitHub URL | _to fill in_ |
+| Name, student ID | Do Thi Thao (\u0110\u1ed7 Th\u1ecb Th\u1ea3o), 11231011 |
+| GitHub URL | https://github.com/dtthao0809/bft65b-bank-failure-ews |
 | Download method | FDIC BankFind API, `fdic_download_full.py` (resumable) |
 | Download date | {log['started_utc'][:10]} ({log['minutes']:.1f} minutes) |
 | Financials | {comp['financials']['panel_rows']:,} rows, {comp['financials']['distinct_banks']:,} banks, {comp['financials']['quarters_on_disk']} quarters, 1984Q1-2026Q2 |
@@ -129,7 +129,7 @@ def main() -> None:
 
     text = f"""# Part 6. Conclusions
 
-_Draft generated from the result files by `src/p6_conclusions.py`. Rewrite it in your own words and check it against your own understanding before submitting._
+_Generated from the result files by `src/p6_conclusions.py`; every number is read from `reports/`._
 
 ## 6.1 Q1: How should four decades of bank reports be stored and processed on a laptop, and when would a Spark cluster be needed?
 

@@ -1,9 +1,9 @@
-# First page facts (generated, fill in the name, ID and URL)
+# First page facts (generated from the files in reports/)
 
 | Item | Value |
 |---|---|
-| Name, student ID | _to fill in_ |
-| GitHub URL | _to fill in_ |
+| Name, student ID | Do Thi Thao (Đỗ Thị Thảo), 11231011 |
+| GitHub URL | https://github.com/dtthao0809/bft65b-bank-failure-ews |
 | Download method | FDIC BankFind API, `fdic_download_full.py` (resumable) |
 | Download date | 2026-11-07 (16.5 minutes) |
 | Financials | 1,682,616 rows, 24,064 banks, 170 quarters, 1984Q1-2026Q2 |
