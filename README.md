@@ -38,7 +38,7 @@ python src/p2_build_panel.py                 # clean panel, exit classes, label 
 python src/p2_quality.py                     # automated data-quality report
 python src/p2_checks.py                      # point-in-time and label tests; exits non-zero on failure
 
-# Part 3 (needs a JDK for Spark, see below)
+# Part 3 (needs a JDK for Spark, see "Java for Spark" below)
 python src/p3_benchmark.py --suite engines   # all engines on the real data, about 25 min
 python src/p3_compare.py                     # every cell of pandas and Spark against Polars and silver
 python src/p3_benchmark.py --suite threads   # 1 to 18 threads, about 25 min
@@ -76,7 +76,7 @@ result files, and stops if any test suite has a failure.
 Parquet files of a rerun with the committed ones (`reports/repro_check.csv`). Deterministic results must match
 to 1e-9; timings, execution plans and machine state are listed but expected to differ.
 
-This was done on 2026-11-08 in VS Code, in a clean `git clone` of this repository with a new environment from
+This was done on 2026-11-08 in VS Code, in a clean clone of the project with a new environment from
 `requirements.txt` and the same raw download (hashes as in `reports/p1_raw_sha256.csv`). Every step completed, and
 `--reproduce` gave the recorded test results exactly. All 61 deterministic results matched, including every bronze,
 silver and gold Parquet file byte for byte. The benchmarks ran with fewer repeats. One measurement did not repeat:
@@ -107,9 +107,15 @@ pip install -r requirements-notebooks.txt
 python notebooks/_make_notebooks.py          # rebuilds and executes all six, about 6 minutes
 ```
 
-The repository includes a `.vscode/` folder: open the folder in VS Code with the Python and Jupyter extensions,
-choose the `.venv` interpreter, then use *Terminal > Run Task* (one task per README step, plus `Run all P1`
-to `Run all P6`) or F5 to debug the open script from the project root.
+In VS Code, open the repository folder with the Python and Jupyter extensions, choose the `.venv` interpreter,
+and run the README commands in the integrated terminal from the repository root.
+
+## Java for Spark
+
+Part 3 and `src/p5_spark.py` need a JDK 17 or 21 (for example Eclipse Temurin). Either set `JAVA_HOME`, or unpack
+the JDK into `tools/jdk-*/` (git-ignored), where `src/p3_spark_session.py` finds it. On Windows a full JDK is
+required, not only a JRE: the session compiles `src/spark_win/NoNativeLocalFS.java` with `javac` once, so that Spark
+can list local folders without `hadoop.dll`. On Linux, macOS and Colab that class is not used.
 
 ## Data source
 
