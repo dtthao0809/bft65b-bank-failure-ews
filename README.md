@@ -1,6 +1,6 @@
 # A Big-Data Pipeline for Bank Failure Early Warning (BFT65B)
 
-Author: Do Thi Thao (Đỗ Thị Thảo), student ID 11231011, Financial Technology, Institute of Banking and Finance
+Author: Do Thi Thao (Đỗ Thị Thảo), student ID 11231011, Financial Technology, School of Banking and Finance
 
 Course: BFT65B Big Data Analytics in Finance, National Economics University
 
@@ -68,7 +68,8 @@ python src/p5_checks.py                      # validation design tests; exits no
 `python src/p6_conclusions.py` then writes the first-page facts and a draft of the conclusions from the
 result files, and stops if any test suite has a failure.
 `python report/build_report.py . report/BFT65B_report.docx` then builds the report from the files in `reports/`
-(needs `pip install python-docx==1.2.0`); the PDF is exported from that DOCX.
+(needs `pip install python-docx==1.2.0`); the PDF is exported from that DOCX. The submitted report was edited by hand
+from this output (cover page, chapter numbering and wording); its numbers are the same as in `reports/`.
 
 ### Checking a rerun
 
