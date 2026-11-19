@@ -98,6 +98,9 @@ On the same day the fast checks were rerun on the laptop, on the existing data a
 before), and `--reproduce` gave the recorded test results exactly. They changed no committed file except
 `reports/p1_completeness.json`, which `--offline` rewrites without the API comparison; the committed version was
 restored. The long steps (download, storage and engine benchmarks, model development) were not rerun on 2026-11-19.
+Afterwards `src/p6_conclusions.py` was changed to write the author's name, student ID and repository URL into
+`reports/p6_first_page.md` and to drop a leftover note to the author from the head of `reports/p6_conclusions_draft.md`;
+it was rerun, and no number in either file changed.
 
 ### The test period
 

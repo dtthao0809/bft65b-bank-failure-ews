@@ -1,6 +1,6 @@
 # Part 6. Conclusions
 
-_Draft generated from the result files by `src/p6_conclusions.py`. Rewrite it in your own words and check it against your own understanding before submitting._
+_Generated from the result files by `src/p6_conclusions.py`; every number is read from `reports/`._
 
 ## 6.1 Q1: How should four decades of bank reports be stored and processed on a laptop, and when would a Spark cluster be needed?
 

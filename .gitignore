@@ -20,10 +20,6 @@ metastore_db/
 # Local JDK for PySpark (see README)
 tools/
 
-# Personal notes, not part of the submission
-HUONG_DAN_VSCODE.md
-Bộ câu hỏi*.docx
-
 # Exam brief from the course, not part of the submission
 final_report_bft65b.pdf
 # Word temporary files
