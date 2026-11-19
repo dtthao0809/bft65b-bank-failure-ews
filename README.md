@@ -100,7 +100,9 @@ before), and `--reproduce` gave the recorded test results exactly. They changed 
 restored. The long steps (download, storage and engine benchmarks, model development) were not rerun on 2026-11-19.
 Afterwards `src/p6_conclusions.py` was changed to write the author's name, student ID and repository URL into
 `reports/p6_first_page.md` and to drop a leftover note to the author from the head of `reports/p6_conclusions_draft.md`;
-it was rerun, and no number in either file changed.
+it was rerun, and no number in either file changed. `notebooks/06_part6_conclusions.ipynb` was executed again with
+`python notebooks/_make_notebooks.py part6_conclusions` so that it shows the new first page; it now carries 2026-11-19
+timestamps, the other five notebooks keep those of 2026-11-08.
 
 ### The test period
 
