@@ -76,7 +76,8 @@ result files, and stops if any test suite has a failure.
 Parquet files of a rerun with the committed ones (`reports/repro_check.csv`). Deterministic results must match
 to 1e-9; timings, execution plans and machine state are listed but expected to differ.
 
-This was done on 2026-11-08 in VS Code, in a clean clone of the project with a new environment from
+This was done on 2026-11-08 in VS Code, in a clean clone of the project (a clone of the local repository; its history
+was started afresh on 2026-11-19 when it was published, so that report drafts were not included) with a new environment from
 `requirements.txt` and the same raw download (hashes as in `reports/p1_raw_sha256.csv`). Every step completed, and
 `--reproduce` gave the recorded test results exactly. All 61 deterministic results matched, including every bronze,
 silver and gold Parquet file byte for byte. The benchmarks ran with fewer repeats. One measurement did not repeat:
@@ -169,5 +170,7 @@ The report's reference list, numbered as in the report:
     https://english.luatvietnam.vn/decision-no-32-2021-qd-ttg-on-insurance-money-limit-211331-doc1.html
 
 AI assistance: Claude (Anthropic), through Claude Code and the Claude app, was used for design discussion, writing
-and debugging code, and drafting text. The author reviewed the code, reran the pipeline from this README in VS Code
-on 2026-11-08, checked the published repository again on 2026-11-19, and is responsible for all text in the report.
+and debugging code, and drafting text. On 2026-11-19 it was also used to check the published repository, run the fast
+checks on the author's laptop and prepare the last README and Part 6 commits (marked Co-Authored-By). The author
+reviewed the code and every change, reran the pipeline from this README in VS Code on 2026-11-08, and is responsible
+for all text in the report.
