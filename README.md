@@ -91,7 +91,13 @@ Windows (CRLF); `.gitattributes` now checks that file out with CRLF on every sys
 The code edited after the 2026-11-08 rerun was compared statement by statement (Python syntax trees, ignoring comments
 and docstrings) with the version that was rerun. No step that builds data, features, models, the threshold or the test
 results changed; the only code changes are the Part 6 wording about the largest scale Spark finished, an optional
-comparison in the Part 1 notebook, and command-line help text. The pipeline itself was not rerun on 2026-11-19.
+comparison in the Part 1 notebook, and command-line help text.
+On the same day the fast checks were rerun on the laptop, on the existing data and at commit e53b803:
+`p1_verify --offline`, `p2_checks`, `p3_compare`, `p4_checks`, `p5_test --reproduce`, `p5_checks` and
+`p6_conclusions`. All of them passed (Part 2 20/20, Part 4 31/31, Part 5 16/16; Polars, Spark and pandas agreed as
+before), and `--reproduce` gave the recorded test results exactly. They changed no committed file except
+`reports/p1_completeness.json`, which `--offline` rewrites without the API comparison; the committed version was
+restored. The long steps (download, storage and engine benchmarks, model development) were not rerun on 2026-11-19.
 
 ### The test period
 
