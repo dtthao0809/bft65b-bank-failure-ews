@@ -1,3 +1,22 @@
+"""
+Part 1a - Verify that the raw download is complete and record its provenance.
+
+The download itself is `fdic_download_full.py` (resumable, adapted from the course starter).
+This script does not trust the download's own log: it recounts everything from the files.
+
+  A. Coverage      every expected quarter exists; rows in each Parquet footer == API total
+  B. Keys          (CERT, REPDTE) non-null and unique; REPDTE in the file == REPDTE in its name
+  C. Small tables  rows == live API total; no exact duplicates (paging by a non-unique sort key
+                   could silently duplicate or drop rows, so this is checked explicitly)
+  D. Control total panel vs the FDIC /summary endpoint, an aggregate the panel was not built from
+  E. Cross-table   do failed banks and panel banks exist in the other tables?
+  F. Independent   optional cell-by-cell comparison with a second download (--compare DIR)
+  G. Evidence      SHA-256 of every raw file, schema-drift profile, API data vintage
+
+Exit code 0 only if every hard check (A, B, C) passes. D, E and F are reported for the reader.
+
+Usage:  python src/p1_verify.py [--compare data_raw/fdic] [--offline]
+"""
 from __future__ import annotations
 
 import argparse
@@ -235,7 +254,7 @@ def plot_coverage(panel: pl.DataFrame, path: Path) -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description='Part 1a - Verify that the raw download is complete and record its provenance.')
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--compare", type=Path, help="folder of a second, independent download")
     ap.add_argument("--offline", action="store_true", help="skip the checks that call the API")
     a = ap.parse_args()

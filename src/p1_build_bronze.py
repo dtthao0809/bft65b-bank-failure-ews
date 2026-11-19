@@ -1,3 +1,24 @@
+"""
+Part 1b - Storage: Layer 0 (raw, one file per quarter, as received) -> Layer 1 "bronze".
+
+Design (each choice is measured in p1_storage_benchmark.py):
+  Format        Parquet: columnar, typed, carries min/max statistics
+  Compression   ZSTD level 3
+  Partitioning  hive style, YEAR=YYYY/part-0.parquet. The key lives in the path only, so no
+                engine sees two conflicting copies of YEAR
+  Sort order    (CERT, REPDTE) inside each year: row-group statistics on CERT let a single-bank
+                lookup skip most of a file, and lags later read rows already in order
+  Schema        an explicit contract in config.py, not inferred from the data
+
+Bronze changes types and physical layout only. No value is cleaned here: nulls, zeros and the
+9999-12-31 sentinels in Institutions stay as received and are handled in Part 2, so every
+cleaning decision can be seen and audited in one place.
+
+Every run proves that nothing was lost: row counts, null counts and column totals are compared
+with the raw files, and the build fails if any of them differ.
+
+Usage:  python src/p1_build_bronze.py
+"""
 from __future__ import annotations
 
 import json

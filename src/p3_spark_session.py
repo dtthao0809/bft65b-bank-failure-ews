@@ -1,3 +1,15 @@
+"""
+Start a local Spark session from Python, on Windows as well as on Linux, macOS and Colab.
+
+What Spark needs and where it comes from:
+  * a JDK 17 or 21. JAVA_HOME wins; otherwise the newest tools/jdk-* folder (see README);
+  * on Windows, a way to list folders without hadoop.dll. Apache does not ship that DLL, so
+    src/spark_win/NoNativeLocalFS.java replaces just that call. It is compiled once with the JDK,
+    against the Hadoop jar that comes with PySpark, into tools/spark_win.
+
+No Python UDF is used anywhere in Part 3, so Spark work stays in the JVM and Python only sends the
+plan. This is the fast path in PySpark, and it also means no Python worker process is started.
+"""
 from __future__ import annotations
 
 import os

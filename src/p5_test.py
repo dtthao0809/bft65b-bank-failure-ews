@@ -1,3 +1,22 @@
+"""
+Part 5d - The test period, used once.
+
+The script refuses to run unless reports/p5_frozen.json exists and the saved models match its hash, and it
+refuses to run again once reports/p5_test_results.json exists. It changes nothing about the models, the
+threshold or the features: those were all fixed on development data.
+
+--dry-run    runs the same code on fold F3's validation window, with a model fitted on F3's training window.
+             It reads no test row and exists to find bugs before the one real run.
+--reproduce  for a fresh clone, where the recorded results already exist. Reruns the evaluation with the
+             rebuilt models, writes reports/p5_reproduce_*, and fails unless the numbers equal the recorded
+             ones. It cannot overwrite them, and it informs no decision: everything is already fixed.
+
+Confidence intervals resample whole banks, because a bank's rows are not independent.
+
+Usage:  python src/p5_test.py --dry-run
+        python src/p5_test.py
+        python src/p5_test.py --reproduce
+"""
 from __future__ import annotations
 
 import argparse

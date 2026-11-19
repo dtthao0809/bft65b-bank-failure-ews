@@ -1,3 +1,33 @@
+"""
+Part 1c - Storage benchmark: measure the bronze layout against CSV and against the alternatives.
+
+Each design dimension is varied on the SAME table:
+  format        CSV, CSV+gzip, Parquet, Delta
+  compression   none, Snappy, ZSTD-3
+  partitioning  one file, YEAR, quarter
+  sort          (CERT, REPDTE) vs (REPDTE, CERT)
+  row group     4k, 16k, 64k rows
+  types         Int64 amounts vs all-Float64
+
+Workloads, chosen because the later parts of the pipeline actually run them:
+  W1 full scan, Polars        W2 full scan, pandas
+  W3 three columns, all rows  W4 one year, mean ROA by state
+  W5 one bank's history       W6 one quarter's cross-section
+
+Fairness:
+  * every measurement runs in a fresh process, so no engine reuses caches from an earlier query;
+  * runs are in random order (fixed seed), so slow drift on the machine hits all layouts alike;
+  * one discarded warm-up per pair puts all files in the OS page cache. This FAVOURS CSV: the
+    numbers exclude disk time, and CSV is the layout with the most bytes to read;
+  * CSV is given the full schema by hand, so it pays no inference cost in the timings;
+  * every layout must return the same answer, or the run fails.
+
+Timings depend on the machine, so a machine-independent measure is reported too: the bytes a
+reader must fetch for each query, computed from the Parquet footers (partition values plus
+row-group min/max). This is the plan available from metadata, not an I/O trace.
+
+Usage:  python src/p1_storage_benchmark.py [--repeat 5] [--keep]
+"""
 from __future__ import annotations
 
 import argparse
@@ -350,7 +380,7 @@ def fig_summary(tbl: pl.DataFrame, rep: Path) -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description='Part 1c - Storage benchmark: measure the bronze layout against CSV and against the alternatives.')
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--repeat", type=int, default=5)
     ap.add_argument("--keep", action="store_true", help="keep the scratch copies")
     ap.add_argument("--worker", nargs=3, metavar=("LAYOUT", "WORKLOAD", "CERT"), help=argparse.SUPPRESS)

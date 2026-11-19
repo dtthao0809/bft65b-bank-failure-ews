@@ -1,3 +1,12 @@
+"""
+Part 4d - Tests for the leakage gate. Exit code is non-zero if any test fails.
+
+A test that cannot fail proves nothing, so each central test has a control: features that are leaky
+on purpose must be caught by the truncation test, and a pipeline fitted on too much data must be caught by
+the pipeline test.
+
+Usage:  python src/p4_checks.py
+"""
 from __future__ import annotations
 
 import sys

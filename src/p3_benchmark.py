@@ -1,3 +1,33 @@
+"""
+Part 3c - Benchmark: Polars against the pandas baseline and PySpark, on the core pipeline of p3_core.py.
+
+Suites
+  engines   every engine and setting on the real data (5 repeats; Spark settings 3)
+  threads   strong scaling: same data, 1 to 18 threads, Polars and Spark
+  scale     data volume: the data copied x2 ... x16, to find where each engine hits the memory limit
+  spark_tune  Spark settings, interleaved: shuffle partitions, heap, local[*] against local[18]
+
+Fairness
+  * every run is a fresh process, so no engine reuses caches from an earlier run;
+  * runs are in random order (fixed seed), so slow drift on the machine hits all engines alike;
+  * one discarded warm-up per engine and data size puts the input files in the OS page cache;
+  * the task is the same for all: read bronze, compute, sort, write ZSTD Parquet to the same disk.
+    Timing a lazy "collect" against a Spark action that writes nothing would not be comparable;
+  * the pandas baseline is vectorised and idiomatic (groupby, transform, rolling). A row-wise apply
+    would make Polars look better and would prove nothing;
+  * every output is checked for row count and number of positives, or the run counts as failed.
+
+Peak memory is the highest sum of RSS over the process tree, sampled every 100 ms, so Spark's JVM
+counts. A run is stopped when that passes MEM_LIMIT_GB or the machine has under 0.5 GB left, and is
+reported as "memory_guard". This is a real laptop in daily use: other applications hold most of its
+15.4 GB, so free memory at the start of each run is recorded (avail_start_gb). A run waits for 3 GB
+free before it starts, and at x1 a run stopped by the guard is retried (retries are recorded).
+
+Scaled data repeats every bank with a new CERT. It tests volume only, not variety: same distribution,
+same number of quarters, and each bank's history stays the same length.
+
+Usage:  python src/p3_benchmark.py --suite engines | threads | scale
+"""
 from __future__ import annotations
 
 import argparse

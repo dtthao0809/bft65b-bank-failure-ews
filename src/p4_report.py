@@ -1,3 +1,8 @@
+"""
+Part 4e - Figures. The event study reads development rows only; the split figure shows failure counts only.
+
+Usage:  python src/p4_report.py
+"""
 from __future__ import annotations
 
 import sys

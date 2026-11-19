@@ -1,3 +1,24 @@
+"""
+Part 4b - Which candidate features go forward? Decided from the training window of development only.
+
+The test period is never read: load_train() filters by date before anything else is computed. The
+validation window of development (2008-2011) is also kept out of every y-driven rule here, so Part 5 can
+validate on it without having helped choose the features.
+
+Rules, set before looking at the results:
+  S1 null share at most 20% in every training era (a field that is often null would mostly be imputed)
+  S2 signal: mean within-era AUC at least 0.02 away from 0.5
+  S3 the signal has the same direction in every era with at least 30 failed banks
+  S4 of a pair with |Spearman| above 0.90, keep the one with the stronger within-era signal; a feature
+     over 5% null gives up 0.01 of strength (this tie-break was added after the first run, see below)
+  L1 a single-feature AUC above 0.98 stops the run: that is more likely a leak than a discovery
+
+AUC is computed inside eras as well as pooled. A pooled AUC can be high simply because a feature drifted
+over time and failures cluster in a few years. The gap between the two measures that effect, and it is
+also how missing-value indicators are judged.
+
+Usage:  python src/p4_screen.py
+"""
 from __future__ import annotations
 
 import json

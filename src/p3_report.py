@@ -1,3 +1,14 @@
+"""
+Part 3e - Turn the benchmark runs into the report's tables and figures, with every number computed.
+
+Inputs: reports/p3_benchmark_runs.csv, p3_plan_summary.json, data/silver/panel
+Outputs:
+  p3_engines.csv, p3_spark_settings.csv, p3_threads.csv, p3_scale.csv
+  p3_cluster_case.json   the numbers behind the argument about when a cluster is justified
+  fig_p3_engines.png, fig_p3_threads.png, fig_p3_scale.png
+
+Usage:  python src/p3_report.py
+"""
 from __future__ import annotations
 
 import json

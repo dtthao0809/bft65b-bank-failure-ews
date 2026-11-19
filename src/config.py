@@ -1,3 +1,13 @@
+"""
+Central configuration for the BFT65B bank-failure early-warning pipeline.
+
+Every script imports paths, the field lists and the schema contract from here, so a
+design change (e.g. adding a field) is made in exactly one place.
+
+Environment overrides (used only to dry-run the code on another download):
+    BFT_RAW  folder of the raw download   (default: data_raw/fdic_full)
+    BFT_OUT  folder for data/ and reports/ (default: repository root)
+"""
 from __future__ import annotations
 
 import os

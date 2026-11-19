@@ -1,3 +1,6 @@
+"""
+Part 5 - Shared pieces: the models, the metrics and the cost model. Nothing here reads the test period.
+"""
 from __future__ import annotations
 
 import os

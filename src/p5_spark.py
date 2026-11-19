@@ -1,3 +1,18 @@
+"""
+Part 5c - A short Spark MLlib demo on fold F3: the same features, window and preprocessing idea as scikit-learn.
+
+Spark runs locally here, so this shows the API and that the numbers agree. It is not a claim that Spark is
+needed: Part 3 shows that this data does not need a cluster.
+
+Preprocessing is fitted on the training window only, as in Part 4: quantile caps and medians are computed
+there and applied to validation. Uses a logistic model with the same penalty as scikit-learn, so the two
+should nearly agree, and a small gradient-boosted model.
+
+scikit-learn minimises  C x sum(loss) + 0.5 x |w|^2
+Spark minimises         mean(loss) + lambda x 0.5 x |w|^2,  so lambda = 1 / (C x n)
+
+Usage:  python src/p5_spark.py
+"""
 from __future__ import annotations
 
 import json

@@ -1,3 +1,14 @@
+"""
+Part 2a - Automated data-quality report. Every number is recomputed from the data on each run.
+
+Output: reports/p2_dq_report.md, the issue register, per-column profile, missing-by-year matrix,
+exit table, structural-break scan and figures.
+
+Each register entry has a dimension (uniqueness, completeness, validity, consistency, timeliness),
+the measured size of the problem, and the rule that handles it in p2_build_panel.py.
+
+Usage:  python src/p2_quality.py      (run after p2_build_panel.py)
+"""
 from __future__ import annotations
 
 import sys

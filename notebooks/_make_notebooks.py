@@ -1,3 +1,10 @@
+"""
+Builds the six walkthrough notebooks (one per Part) and executes them, so they are committed with outputs.
+
+The notebooks do not repeat the heavy work. They rerun the fast verification scripts live, show the
+result files the pipeline wrote to reports/, and run a few small Polars queries on the stored layers.
+Run from the project root:  python notebooks/_make_notebooks.py   (about 6 minutes)
+"""
 from __future__ import annotations
 
 import sys

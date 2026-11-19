@@ -1,3 +1,25 @@
+"""
+Part 4c - All preprocessing, in one scikit-learn Pipeline that is fitted on training data only.
+
+  numeric  winsorise at the training 0.5% and 99.5% -> impute the training median -> standardise
+  flags    passed through unchanged
+
+Every number the pipeline learns comes from fit(). transform() uses those numbers row by row, so a
+validation or test row can change neither the parameters nor another row's output.
+
+Why each step:
+  * winsorise: ratios have extreme tails (Part 2 found 6,462 extreme rows; ROA reaches about +-1,300).
+    Those are kept in the feature table and capped here, because the cut-offs come from the data;
+  * median imputation with no missing-value indicator: see p4_missing_indicators.csv. Missingness of
+    tier1_lev and nco_4q looks predictive pooled (AUC 0.62-0.64) but much less inside eras, so it marks
+    pre-1990 thrift reports rather than risk;
+  * standardise: needed by the logistic baseline in Part 5. Tree models can skip it (scale=False).
+
+load_xy() is the only way later code should read modelling data. It reads a date window and refuses the
+test period unless the caller says so, so an accidental read fails loudly.
+
+Usage:  python src/p4_pipeline.py     fits on the Part 4 training window and reports validation drift
+"""
 from __future__ import annotations
 
 import json

@@ -1,3 +1,9 @@
+"""
+Part 5f - Figures and descriptive follow-ups. Reads stored scores: no model is fitted or scored here, and
+nothing below changes a decision. The follow-ups are labelled post hoc in reports/p5_test_posthoc.json.
+
+Usage:  python src/p5_report.py
+"""
 from __future__ import annotations
 
 import json

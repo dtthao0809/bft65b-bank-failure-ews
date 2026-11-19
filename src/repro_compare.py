@@ -1,3 +1,12 @@
+"""
+Compare a clean rerun with the recorded results: every report file, and the data layers byte by byte.
+
+Files are sorted into two groups. Deterministic results must match. Timings and execution plans carry measured
+times, ids and machine state, so they are expected to differ and are only listed.
+
+Usage:  python src/repro_compare.py <folder of the clean rerun>
+Writes reports/repro_check.csv. Exit code is non-zero if a deterministic result differs.
+"""
 from __future__ import annotations
 
 import hashlib

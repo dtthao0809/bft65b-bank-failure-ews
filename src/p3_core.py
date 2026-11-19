@@ -1,3 +1,36 @@
+"""
+Part 3a - The core transformations, written three times: Polars (main), pandas (baseline), PySpark.
+
+All three implement the same specification, from the bronze layer:
+
+  T1 scan      keep only the columns needed
+  T2 filter    semi-join Institutions (R1), EQ not null (R2)
+  T3 join      first in-scope failure per bank; drop reports dated on or after it (R3)
+  T4 clean     zero capital ratio -> null (R4), impossible negative balance -> null (R7)
+  T5 window    year-to-date flows -> quarterly flows, by bank
+  T6 row       ratios, null when the denominator is not positive
+  T7 window    lags and rolling statistics by bank, null unless the quarters are consecutive
+  T8 cross     percentile rank within the quarter, and gap to the state median for the quarter
+  T9 label     y = 1 if the first failure falls in (q, q + 4 quarters]; null after 2025Q2
+  T10 sort     (CERT, REPDTE), write ZSTD Parquet
+
+Every derived column uses only reports dated at or before q (T7 looks backwards, T8 stays inside q).
+y and _fail_date are the only columns that look forward; they are label-side columns.
+
+The specification is written so the engines cannot silently disagree. These are the differences
+that had to be pinned down, and the report explains them:
+  * zero denominators: Polars and pandas give inf/NaN, Spark in ANSI mode raises an error.
+    Every ratio is therefore guarded, and "undefined" is null everywhere.
+  * rolling windows: a Spark window average ignores nulls, Polars and pandas return null. Spark
+    counts non-null values and requires a full window.
+  * percentile rank: Spark's percent_rank is (rank - 1) / (n - 1) with ties at the lowest rank. All
+    engines here use the average rank divided by the number of non-null values.
+  * null keys: pandas merge matches null to null, Polars and Spark joins do not. STNAME is never
+    null after T2 and T3 (checked in p3_compare.py), so the difference cannot bite.
+
+Usage (one engine, one run; p3_benchmark.py drives this from fresh processes):
+  python src/p3_core.py --engine polars_mem --src data/bronze --out data/_p3/out/polars_mem
+"""
 from __future__ import annotations
 
 import argparse

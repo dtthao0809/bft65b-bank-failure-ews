@@ -1,3 +1,19 @@
+"""
+Part 5b - Model comparison, threshold and freeze. Uses development data only.
+
+Selection rule, set before seeing results:
+  * primary measure: average precision (AP), averaged over the three folds. ROC AUC looks excellent at
+    this base rate even for poor models, because true negatives dominate it;
+  * every fold refits preprocessing and model on its own training window;
+  * a simpler or more constrained variant wins if its mean AP is within 1% of the best (relative);
+  * the threshold minimises total cost on out-of-fold predictions, not on data the model was fitted on.
+
+Screening in Part 4 used labels up to 2006, so F1 and F2 are slightly optimistic for feature choice and
+F3 is fully clean. F3 is reported separately for that reason.
+
+The outcome goes to reports/p5_frozen.json, with a hash of the fitted models. p5_test.py refuses to run
+without it. Usage:  python src/p5_develop.py
+"""
 from __future__ import annotations
 
 import hashlib

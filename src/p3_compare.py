@@ -1,3 +1,21 @@
+"""
+Part 3b - Do the three engines give the same answer?
+
+Polars is the reference. Every row and every column of the pandas and Spark outputs is compared with
+it, and all three are also compared with the silver panel of Part 2, which was built by different
+code (eager, more rules). A count of matching totals would not be enough: errors can cancel out.
+
+Rules of the comparison
+  * rows must match exactly on (CERT, REPDTE), with no extra or missing rows;
+  * integer-valued columns and y must match exactly;
+  * floats match within a relative tolerance of 1e-9, because rolling windows sum in a different
+    order in each engine. The largest difference found is reported, so the tolerance is not hiding
+    anything;
+  * null must match null. pandas stores null as NaN, so NaN in any engine counts as null.
+
+Exit code is non-zero if anything fails.
+Usage:  python src/p3_compare.py [--dir data/_p3/out]
+"""
 from __future__ import annotations
 
 import argparse

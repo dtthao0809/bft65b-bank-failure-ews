@@ -1,3 +1,21 @@
+"""
+Part 3d - What do the engines actually do? Plans and measurements, saved as evidence for the report.
+
+Polars
+  p3_plan_polars.txt         the query before and after optimisation
+  p3_polars_streaming.dot    the physical graph of the streaming engine (Graphviz text)
+  p3_polars_profile.csv      time added by each step of the pipeline
+  p3_optimizer_effect.csv    the same queries with optimisation rules switched off
+Spark
+  p3_plan_spark.txt          parsed, optimised and physical plans before the run; final adaptive plan after
+  p3_spark_stages.csv        each stage: duration, shuffle bytes, spill
+  p3_spark_exchanges.csv     each shuffle in the final plan: partitioning, rows, bytes
+Both
+  p3_pushdown.csv            does a filter get pushed into the scan? Is it safe to do so?
+  p3_plan_summary.json       counts used in the report
+
+Usage:  python src/p3_plans.py
+"""
 from __future__ import annotations
 
 import json

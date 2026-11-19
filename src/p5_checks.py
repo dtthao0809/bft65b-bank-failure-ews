@@ -1,3 +1,8 @@
+"""
+Part 5e - Tests for the validation design. Exit code is non-zero if any test fails.
+
+Usage:  python src/p5_checks.py
+"""
 from __future__ import annotations
 
 import hashlib

@@ -1,3 +1,33 @@
+"""
+Part 2b - Layer 1 "bronze" -> Layer 2 "silver": the clean, point-in-time bank-quarter panel.
+
+Rule order (every rule's effect is counted in reports/p2_waterfall.csv):
+  Rows removed
+    R1  bank has no Institutions record (mostly non-deposit trust companies, none ever failed)
+    R2  EQ is null (no capital reported: branches of foreign banks, none ever failed)
+    R3  REPDTE >= first in-scope FAILURE date (the bank is no longer a going concern)
+  Cells changed (the row stays)
+    R4  RBC1AAJ, RBCRWAJ == 0 -> null: not reported (before 1990Q1, and CBLR banks from 2020)
+    R5  ratios with a zero denominator -> null: FDIC stores 0 for "undefined"
+    R6  ROE -> null when EQ <= 0: two negatives would show a failing bank as profitable
+    R7  negative balances that cannot be negative -> null
+    R8  blank STNAME -> null
+  Columns added
+    R9  <FLOW>_Q: quarterly flows from year-to-date flows
+    f_* point-in-time flags
+    y and _*: label-side columns, built from the future. NEVER features.
+
+Deliberately not done here, because each would use information beyond quarter q:
+  * outlier capping: cut-offs must be fitted on training data only (Part 4)
+  * imputation and forward-filling: same reason, and missing values carry meaning in this data
+Using current-snapshot Institutions fields as features is also forbidden (ACTIVE, CHANGEC1,
+ENDEFYMD, BKCLASS). R1 uses only whether a record exists; no bank removed by R1 ever failed.
+
+build_panel() takes a cutoff so p2_checks.py can prove that non-underscore columns ignore the
+future: rebuilding on data truncated at a cutoff must give identical values.
+
+Usage:  python src/p2_build_panel.py
+"""
 from __future__ import annotations
 
 import json

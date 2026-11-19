@@ -1,3 +1,16 @@
+"""
+Part 6 - Draft of the conclusions and the first-page facts, generated from the result files.
+
+Every number in the text is read from reports/, so the draft cannot drift away from the measurements. The
+script stops if a test suite of Parts 2, 4 or 5 has a failure, or if the test evaluation is missing.
+
+Outputs: reports/p6_conclusions_draft.md, reports/p6_first_page.md, reports/p6_key_numbers.json
+
+The Vietnam section rests on the sources listed at its end, read in November 2026. They are secondary
+sources, so check them against the legal texts before relying on a detail.
+
+Usage:  python src/p6_conclusions.py
+"""
 from __future__ import annotations
 
 import json

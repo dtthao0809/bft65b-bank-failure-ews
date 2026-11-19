@@ -1,3 +1,13 @@
+"""
+Part 2c - Automated tests of the silver panel. Exit code 0 only if every test passes.
+
+The two that matter most for the exam's leakage gate:
+  truncation  rebuild the panel from data cut at a past date. Every point-in-time column must
+              equal the full build. A column that used any later data would change.
+  label       recompute y independently, with pandas and plain arithmetic, from the Failures table.
+
+Usage:  python src/p2_checks.py      (run after p2_build_panel.py)
+"""
 from __future__ import annotations
 
 import json

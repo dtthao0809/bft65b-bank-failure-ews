@@ -1,3 +1,26 @@
+"""
+Part 4a - Layer 2 "silver" -> Layer 3 "gold": the leak-free feature table, joined with the label.
+
+Three rules keep the future out:
+  1. Features are built from a panel with only the point-in-time columns of _schema_panel.json. y and
+     the _ columns are not there, so no expression can reach them. The label is joined at the very end.
+  2. Every expression looks at quarter q or earlier: lags, trailing windows, and statistics across banks
+     inside the same quarter. There is no lead, no centred window, no statistic across all time.
+  3. Nothing is fitted here. Capping, imputing and scaling learn from data, so they live in
+     p4_pipeline.py and see the training period only.
+
+Failures enter one feature, st_fail_4q, and only events dated at or before the report date.
+
+Other choices, each one from a Part 2 finding:
+  * ratios are recomputed from levels, because FDIC's NCLNLSR disagrees with its own levels in 1985-96;
+  * 4-quarter totals of quarterly flows replace year-to-date figures, which would give seasonality;
+  * windows need consecutive quarters, so a reporting gap gives null rather than a wrong total;
+  * ratios that explode as a denominator nears zero are bounded in [0, 1] instead. A null there would be
+    imputed with the median, and would give a bank with no capital left an average score;
+  * size is a rank within the quarter. Log assets grows with inflation, so it would proxy calendar time.
+
+Usage:  python src/p4_features.py
+"""
 from __future__ import annotations
 
 import json

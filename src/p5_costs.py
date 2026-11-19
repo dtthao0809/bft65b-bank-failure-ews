@@ -1,3 +1,18 @@
+"""
+Part 5a - What does a false alarm cost, and what does a missed failure cost? From development data.
+
+Missed failure.  FDIC's own estimated loss to the insurance fund: COST in the Failures table, per failure.
+False alarm.     An extra examination. FDIC data do not price an exam, so it is built from data plus one
+                 assumption: staff cost per person-week = a bank's annual non-interest expense per employee
+                 / 52, the median per year; team size and length are the assumption (16 person-weeks).
+Loss avoided.    An alarm cannot avoid the whole loss. The share saved is estimated from how much less the
+                 FDIC lost on banks closed with capital left than on banks closed insolvent. This is a
+                 correlation across failures and not a causal effect, so a range is reported as well.
+
+Only development failures and years are read. Results: reports/p5_costs.json, p5_exam_cost_by_year.csv.
+
+Usage:  python src/p5_costs.py
+"""
 from __future__ import annotations
 
 import json
