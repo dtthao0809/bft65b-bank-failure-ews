@@ -1,0 +1,104 @@
+{
+ "rows": 1666719,
+ "banks": 23788,
+ "cells_compared_per_engine": 55001727,
+ "y1_rows": 10860,
+ "stname_nulls": 0,
+ "by_engine": [
+  {
+   "engine": "Polars streaming",
+   "null_mismatch": 0,
+   "value_mismatch": 0,
+   "max_abs_diff": 0.0,
+   "max_rel_diff_exact_cols": 0.0
+  },
+  {
+   "engine": "PySpark",
+   "null_mismatch": 0,
+   "value_mismatch": 0,
+   "max_abs_diff": 5.684341886080802e-14,
+   "max_rel_diff_exact_cols": 0.0
+  },
+  {
+   "engine": "pandas",
+   "null_mismatch": 0,
+   "value_mismatch": 5,
+   "max_abs_diff": 4.00096466894595e-09,
+   "max_rel_diff_exact_cols": 0.0
+  }
+ ],
+ "against_silver": {
+  "silver_rows": 1666719,
+  "core_rows": 1666719,
+  "rows_only_in_one": 0,
+  "cell_differences": {
+   "q_idx": 0,
+   "ASSET": 0,
+   "EQ": 0,
+   "RBC1AAJ": 0,
+   "LIAB": 0,
+   "DEP": 0,
+   "CHBAL": 0,
+   "LNLSGR": 0,
+   "NCLNLS": 0,
+   "NETINC_Q": 0,
+   "INTINC_Q": 0,
+   "EINTEXP_Q": 0,
+   "NTLNLS_Q": 0,
+   "y": 0,
+   "_fail_date": 0
+  }
+ },
+ "pandas_roa_std8_arbitration": [
+  {
+   "CERT": 32611,
+   "REPDTE": "2003-12-31",
+   "polars": 0.016877068278396065,
+   "pandas": 0.016877069541621288,
+   "direct": 0.016877068278396065,
+   "polars_err": 0.0,
+   "pandas_err": 1.2632252223421236e-09,
+   "bank_max_abs_roa_q": 1304.9108910891089
+  },
+  {
+   "CERT": 32611,
+   "REPDTE": "2004-03-31",
+   "polars": 0.016877068278396065,
+   "pandas": 0.016877069541621288,
+   "direct": 0.016877068278396065,
+   "polars_err": 0.0,
+   "pandas_err": 1.2632252223421236e-09,
+   "bank_max_abs_roa_q": 1304.9108910891089
+  },
+  {
+   "CERT": 32611,
+   "REPDTE": "2004-06-30",
+   "polars": 0.013615101363215181,
+   "pandas": 0.013615102929091218,
+   "direct": 0.013615101363215181,
+   "polars_err": 0.0,
+   "pandas_err": 1.5658760364745117e-09,
+   "bank_max_abs_roa_q": 1304.9108910891089
+  },
+  {
+   "CERT": 32611,
+   "REPDTE": "2004-09-30",
+   "polars": 0.01291229666820792,
+   "pandas": 0.01291229831931372,
+   "direct": 0.012912296668207921,
+   "polars_err": 1.734723475976807e-18,
+   "pandas_err": 1.651105798958219e-09,
+   "bank_max_abs_roa_q": 1304.9108910891089
+  },
+  {
+   "CERT": 32611,
+   "REPDTE": "2004-12-31",
+   "polars": 0.00532859801295222,
+   "pandas": 0.005328602013916889,
+   "direct": 0.00532859801295222,
+   "polars_err": 0.0,
+   "pandas_err": 4.00096466894595e-09,
+   "bank_max_abs_roa_q": 1304.9108910891089
+  }
+ ]
+}

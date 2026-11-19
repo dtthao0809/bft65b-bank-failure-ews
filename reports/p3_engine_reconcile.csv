@@ -1,0 +1,103 @@
+engine,column,kind,rows_ref,rows_other,null_mismatch,value_mismatch,max_abs_diff,max_rel_diff
+pandas,(rows),key,1666719,1666719,0,0,0.0,0.0
+pandas,YEAR,exact,1666719,1666719,0,0,0.0,0.0
+pandas,STNAME,exact,1666719,1666719,0,0,0.0,0.0
+pandas,q_idx,exact,1666719,1666719,0,0,0.0,0.0
+pandas,ASSET,exact,1666719,1666719,0,0,0.0,0.0
+pandas,EQ,exact,1666719,1666719,0,0,0.0,0.0
+pandas,RBC1AAJ,float,1666719,1666719,0,0,0.0,0.0
+pandas,LIAB,exact,1666719,1666719,0,0,0.0,0.0
+pandas,DEP,exact,1666719,1666719,0,0,0.0,0.0
+pandas,CHBAL,exact,1666719,1666719,0,0,0.0,0.0
+pandas,LNLSGR,exact,1666719,1666719,0,0,0.0,0.0
+pandas,NCLNLS,exact,1666719,1666719,0,0,0.0,0.0
+pandas,NETINC_Q,exact,1666719,1666719,0,0,0.0,0.0
+pandas,INTINC_Q,exact,1666719,1666719,0,0,0.0,0.0
+pandas,EINTEXP_Q,exact,1666719,1666719,0,0,0.0,0.0
+pandas,NTLNLS_Q,exact,1666719,1666719,0,0,0.0,0.0
+pandas,eq_ta,float,1666719,1666719,0,0,0.0,0.0
+pandas,npl,float,1666719,1666719,0,0,0.0,0.0
+pandas,cash_ta,float,1666719,1666719,0,0,0.0,0.0
+pandas,loan_dep,float,1666719,1666719,0,0,0.0,0.0
+pandas,roa_q,float,1666719,1666719,0,0,0.0,0.0
+pandas,nim_q,float,1666719,1666719,0,0,0.0,0.0
+pandas,nco_q,float,1666719,1666719,0,0,0.0,0.0
+pandas,eq_ta_d4,float,1666719,1666719,0,0,0.0,0.0
+pandas,asset_g4,float,1666719,1666719,0,0,0.0,0.0
+pandas,npl_d1,float,1666719,1666719,0,0,0.0,0.0
+pandas,roa_4q,float,1666719,1666719,0,0,1.1102230246251565e-16,1.0
+pandas,roa_std8,float,1666719,1666719,0,5,4.00096466894595e-9,7.50846968585099e-7
+pandas,eq_ta_pct,float,1666719,1666719,0,0,0.0,0.0
+pandas,npl_pct,float,1666719,1666719,0,0,0.0,0.0
+pandas,eq_ta_st_med,float,1666719,1666719,0,0,0.0,0.0
+pandas,eq_ta_gap,float,1666719,1666719,0,0,0.0,0.0
+pandas,y,exact,1666719,1666719,0,0,0.0,0.0
+pandas,_fail_date,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,(rows),key,1666719,1666719,0,0,0.0,0.0
+PySpark,YEAR,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,STNAME,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,q_idx,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,ASSET,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,EQ,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,RBC1AAJ,float,1666719,1666719,0,0,0.0,0.0
+PySpark,LIAB,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,DEP,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,CHBAL,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,LNLSGR,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,NCLNLS,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,NETINC_Q,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,INTINC_Q,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,EINTEXP_Q,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,NTLNLS_Q,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,eq_ta,float,1666719,1666719,0,0,0.0,0.0
+PySpark,npl,float,1666719,1666719,0,0,0.0,0.0
+PySpark,cash_ta,float,1666719,1666719,0,0,0.0,0.0
+PySpark,loan_dep,float,1666719,1666719,0,0,0.0,0.0
+PySpark,roa_q,float,1666719,1666719,0,0,0.0,0.0
+PySpark,nim_q,float,1666719,1666719,0,0,0.0,0.0
+PySpark,nco_q,float,1666719,1666719,0,0,0.0,0.0
+PySpark,eq_ta_d4,float,1666719,1666719,0,0,0.0,0.0
+PySpark,asset_g4,float,1666719,1666719,0,0,0.0,0.0
+PySpark,npl_d1,float,1666719,1666719,0,0,0.0,0.0
+PySpark,roa_4q,float,1666719,1666719,0,0,1.7763568394002505e-15,1.0
+PySpark,roa_std8,float,1666719,1666719,0,0,5.684341886080802e-14,8.316641317733427e-15
+PySpark,eq_ta_pct,float,1666719,1666719,0,0,0.0,0.0
+PySpark,npl_pct,float,1666719,1666719,0,0,0.0,0.0
+PySpark,eq_ta_st_med,float,1666719,1666719,0,0,0.0,0.0
+PySpark,eq_ta_gap,float,1666719,1666719,0,0,0.0,0.0
+PySpark,y,exact,1666719,1666719,0,0,0.0,0.0
+PySpark,_fail_date,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,(rows),key,1666719,1666719,0,0,0.0,0.0
+Polars streaming,YEAR,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,STNAME,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,q_idx,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,ASSET,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,EQ,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,RBC1AAJ,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,LIAB,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,DEP,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,CHBAL,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,LNLSGR,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,NCLNLS,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,NETINC_Q,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,INTINC_Q,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,EINTEXP_Q,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,NTLNLS_Q,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,eq_ta,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,npl,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,cash_ta,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,loan_dep,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,roa_q,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,nim_q,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,nco_q,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,eq_ta_d4,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,asset_g4,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,npl_d1,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,roa_4q,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,roa_std8,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,eq_ta_pct,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,npl_pct,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,eq_ta_st_med,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,eq_ta_gap,float,1666719,1666719,0,0,0.0,0.0
+Polars streaming,y,exact,1666719,1666719,0,0,0.0,0.0
+Polars streaming,_fail_date,exact,1666719,1666719,0,0,0.0,0.0

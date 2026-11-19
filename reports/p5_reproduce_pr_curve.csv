@@ -1,0 +1,1201 @@
+model,precision,recall
+gbm no state features,0.00093,1.00000
+gbm no state features,0.00093,1.00000
+gbm no state features,0.00093,1.00000
+gbm no state features,0.00093,1.00000
+gbm no state features,0.00094,1.00000
+gbm no state features,0.00094,1.00000
+gbm no state features,0.00094,1.00000
+gbm no state features,0.00095,1.00000
+gbm no state features,0.00095,1.00000
+gbm no state features,0.00095,1.00000
+gbm no state features,0.00095,1.00000
+gbm no state features,0.00096,1.00000
+gbm no state features,0.00096,1.00000
+gbm no state features,0.00096,1.00000
+gbm no state features,0.00096,1.00000
+gbm no state features,0.00097,1.00000
+gbm no state features,0.00097,1.00000
+gbm no state features,0.00097,1.00000
+gbm no state features,0.00097,1.00000
+gbm no state features,0.00098,1.00000
+gbm no state features,0.00098,1.00000
+gbm no state features,0.00098,1.00000
+gbm no state features,0.00098,1.00000
+gbm no state features,0.00099,1.00000
+gbm no state features,0.00099,1.00000
+gbm no state features,0.00099,1.00000
+gbm no state features,0.00100,1.00000
+gbm no state features,0.00100,1.00000
+gbm no state features,0.00100,1.00000
+gbm no state features,0.00100,1.00000
+gbm no state features,0.00101,1.00000
+gbm no state features,0.00101,1.00000
+gbm no state features,0.00101,1.00000
+gbm no state features,0.00101,1.00000
+gbm no state features,0.00102,1.00000
+gbm no state features,0.00102,1.00000
+gbm no state features,0.00102,1.00000
+gbm no state features,0.00103,1.00000
+gbm no state features,0.00103,1.00000
+gbm no state features,0.00103,1.00000
+gbm no state features,0.00104,1.00000
+gbm no state features,0.00104,1.00000
+gbm no state features,0.00104,1.00000
+gbm no state features,0.00104,1.00000
+gbm no state features,0.00105,1.00000
+gbm no state features,0.00105,1.00000
+gbm no state features,0.00105,0.99606
+gbm no state features,0.00105,0.99606
+gbm no state features,0.00106,0.99606
+gbm no state features,0.00105,0.99213
+gbm no state features,0.00106,0.99213
+gbm no state features,0.00106,0.98819
+gbm no state features,0.00106,0.98819
+gbm no state features,0.00106,0.98425
+gbm no state features,0.00106,0.98425
+gbm no state features,0.00106,0.98425
+gbm no state features,0.00107,0.98425
+gbm no state features,0.00107,0.98425
+gbm no state features,0.00107,0.98425
+gbm no state features,0.00108,0.98425
+gbm no state features,0.00108,0.98425
+gbm no state features,0.00108,0.98425
+gbm no state features,0.00108,0.98031
+gbm no state features,0.00109,0.98031
+gbm no state features,0.00109,0.98031
+gbm no state features,0.00109,0.98031
+gbm no state features,0.00110,0.98031
+gbm no state features,0.00110,0.98031
+gbm no state features,0.00110,0.98031
+gbm no state features,0.00111,0.98031
+gbm no state features,0.00111,0.98031
+gbm no state features,0.00111,0.98031
+gbm no state features,0.00112,0.98031
+gbm no state features,0.00112,0.98031
+gbm no state features,0.00112,0.98031
+gbm no state features,0.00113,0.98031
+gbm no state features,0.00113,0.98031
+gbm no state features,0.00113,0.98031
+gbm no state features,0.00114,0.98031
+gbm no state features,0.00114,0.98031
+gbm no state features,0.00114,0.98031
+gbm no state features,0.00115,0.98031
+gbm no state features,0.00115,0.98031
+gbm no state features,0.00116,0.98031
+gbm no state features,0.00116,0.98031
+gbm no state features,0.00116,0.98031
+gbm no state features,0.00117,0.98031
+gbm no state features,0.00117,0.97638
+gbm no state features,0.00117,0.97638
+gbm no state features,0.00117,0.97638
+gbm no state features,0.00117,0.97244
+gbm no state features,0.00118,0.97244
+gbm no state features,0.00118,0.97244
+gbm no state features,0.00118,0.97244
+gbm no state features,0.00119,0.97244
+gbm no state features,0.00119,0.97244
+gbm no state features,0.00120,0.97244
+gbm no state features,0.00120,0.97244
+gbm no state features,0.00120,0.97244
+gbm no state features,0.00121,0.97244
+gbm no state features,0.00121,0.96850
+gbm no state features,0.00121,0.96850
+gbm no state features,0.00122,0.96850
+gbm no state features,0.00122,0.96850
+gbm no state features,0.00122,0.96850
+gbm no state features,0.00123,0.96850
+gbm no state features,0.00123,0.96850
+gbm no state features,0.00124,0.96850
+gbm no state features,0.00124,0.96850
+gbm no state features,0.00124,0.96850
+gbm no state features,0.00125,0.96850
+gbm no state features,0.00125,0.96850
+gbm no state features,0.00126,0.96850
+gbm no state features,0.00126,0.96457
+gbm no state features,0.00126,0.96457
+gbm no state features,0.00126,0.96063
+gbm no state features,0.00127,0.96063
+gbm no state features,0.00127,0.96063
+gbm no state features,0.00127,0.96063
+gbm no state features,0.00128,0.96063
+gbm no state features,0.00128,0.96063
+gbm no state features,0.00129,0.96063
+gbm no state features,0.00129,0.96063
+gbm no state features,0.00129,0.95669
+gbm no state features,0.00130,0.95669
+gbm no state features,0.00130,0.95669
+gbm no state features,0.00131,0.95669
+gbm no state features,0.00131,0.95669
+gbm no state features,0.00131,0.95276
+gbm no state features,0.00132,0.95276
+gbm no state features,0.00132,0.95276
+gbm no state features,0.00133,0.95276
+gbm no state features,0.00133,0.95276
+gbm no state features,0.00134,0.95276
+gbm no state features,0.00134,0.95276
+gbm no state features,0.00134,0.94882
+gbm no state features,0.00135,0.94882
+gbm no state features,0.00135,0.94882
+gbm no state features,0.00136,0.94882
+gbm no state features,0.00136,0.94882
+gbm no state features,0.00136,0.94488
+gbm no state features,0.00137,0.94488
+gbm no state features,0.00137,0.94488
+gbm no state features,0.00138,0.94488
+gbm no state features,0.00138,0.94488
+gbm no state features,0.00139,0.94488
+gbm no state features,0.00139,0.94488
+gbm no state features,0.00140,0.94488
+gbm no state features,0.00140,0.94488
+gbm no state features,0.00141,0.94488
+gbm no state features,0.00142,0.94488
+gbm no state features,0.00142,0.94488
+gbm no state features,0.00143,0.94488
+gbm no state features,0.00143,0.94488
+gbm no state features,0.00144,0.94488
+gbm no state features,0.00145,0.94488
+gbm no state features,0.00145,0.94488
+gbm no state features,0.00146,0.94488
+gbm no state features,0.00146,0.94488
+gbm no state features,0.00147,0.94488
+gbm no state features,0.00148,0.94488
+gbm no state features,0.00148,0.94488
+gbm no state features,0.00149,0.94488
+gbm no state features,0.00149,0.94488
+gbm no state features,0.00150,0.94488
+gbm no state features,0.00151,0.94488
+gbm no state features,0.00151,0.94488
+gbm no state features,0.00152,0.94488
+gbm no state features,0.00153,0.94488
+gbm no state features,0.00153,0.94488
+gbm no state features,0.00154,0.94488
+gbm no state features,0.00155,0.94488
+gbm no state features,0.00155,0.94488
+gbm no state features,0.00156,0.94488
+gbm no state features,0.00157,0.94488
+gbm no state features,0.00158,0.94488
+gbm no state features,0.00158,0.94488
+gbm no state features,0.00159,0.94488
+gbm no state features,0.00160,0.94488
+gbm no state features,0.00160,0.94488
+gbm no state features,0.00161,0.94488
+gbm no state features,0.00162,0.94488
+gbm no state features,0.00163,0.94488
+gbm no state features,0.00163,0.94488
+gbm no state features,0.00164,0.94488
+gbm no state features,0.00165,0.94488
+gbm no state features,0.00166,0.94488
+gbm no state features,0.00166,0.94094
+gbm no state features,0.00167,0.94094
+gbm no state features,0.00167,0.94094
+gbm no state features,0.00168,0.94094
+gbm no state features,0.00169,0.94094
+gbm no state features,0.00170,0.94094
+gbm no state features,0.00171,0.94094
+gbm no state features,0.00171,0.94094
+gbm no state features,0.00172,0.94094
+gbm no state features,0.00173,0.94094
+gbm no state features,0.00174,0.94094
+gbm no state features,0.00175,0.94094
+gbm no state features,0.00176,0.94094
+gbm no state features,0.00177,0.94094
+gbm no state features,0.00178,0.94094
+gbm no state features,0.00178,0.94094
+gbm no state features,0.00179,0.94094
+gbm no state features,0.00180,0.93701
+gbm no state features,0.00180,0.93701
+gbm no state features,0.00181,0.93701
+gbm no state features,0.00182,0.93307
+gbm no state features,0.00183,0.93307
+gbm no state features,0.00183,0.93307
+gbm no state features,0.00184,0.93307
+gbm no state features,0.00185,0.93307
+gbm no state features,0.00186,0.93307
+gbm no state features,0.00187,0.93307
+gbm no state features,0.00188,0.93307
+gbm no state features,0.00189,0.93307
+gbm no state features,0.00191,0.93307
+gbm no state features,0.00192,0.93307
+gbm no state features,0.00193,0.93307
+gbm no state features,0.00194,0.93307
+gbm no state features,0.00195,0.93307
+gbm no state features,0.00196,0.93307
+gbm no state features,0.00197,0.93307
+gbm no state features,0.00198,0.93307
+gbm no state features,0.00199,0.93307
+gbm no state features,0.00200,0.93307
+gbm no state features,0.00202,0.93307
+gbm no state features,0.00203,0.93307
+gbm no state features,0.00204,0.93307
+gbm no state features,0.00205,0.93307
+gbm no state features,0.00206,0.93307
+gbm no state features,0.00208,0.93307
+gbm no state features,0.00209,0.93307
+gbm no state features,0.00210,0.93307
+gbm no state features,0.00211,0.93307
+gbm no state features,0.00213,0.93307
+gbm no state features,0.00214,0.93307
+gbm no state features,0.00215,0.93307
+gbm no state features,0.00217,0.93307
+gbm no state features,0.00218,0.93307
+gbm no state features,0.00219,0.93307
+gbm no state features,0.00221,0.93307
+gbm no state features,0.00222,0.93307
+gbm no state features,0.00224,0.93307
+gbm no state features,0.00225,0.93307
+gbm no state features,0.00226,0.93307
+gbm no state features,0.00228,0.93307
+gbm no state features,0.00229,0.93307
+gbm no state features,0.00231,0.93307
+gbm no state features,0.00233,0.93307
+gbm no state features,0.00234,0.93307
+gbm no state features,0.00236,0.93307
+gbm no state features,0.00237,0.93307
+gbm no state features,0.00239,0.93307
+gbm no state features,0.00241,0.93307
+gbm no state features,0.00242,0.93307
+gbm no state features,0.00243,0.92913
+gbm no state features,0.00245,0.92913
+gbm no state features,0.00246,0.92913
+gbm no state features,0.00248,0.92913
+gbm no state features,0.00250,0.92913
+gbm no state features,0.00251,0.92520
+gbm no state features,0.00252,0.92520
+gbm no state features,0.00254,0.92520
+gbm no state features,0.00256,0.92520
+gbm no state features,0.00258,0.92520
+gbm no state features,0.00260,0.92520
+gbm no state features,0.00262,0.92520
+gbm no state features,0.00264,0.92520
+gbm no state features,0.00266,0.92520
+gbm no state features,0.00268,0.92520
+gbm no state features,0.00270,0.92520
+gbm no state features,0.00272,0.92520
+gbm no state features,0.00275,0.92520
+gbm no state features,0.00277,0.92520
+gbm no state features,0.00279,0.92520
+gbm no state features,0.00281,0.92520
+gbm no state features,0.00284,0.92520
+gbm no state features,0.00286,0.92520
+gbm no state features,0.00288,0.92520
+gbm no state features,0.00291,0.92520
+gbm no state features,0.00293,0.92520
+gbm no state features,0.00296,0.92520
+gbm no state features,0.00298,0.92520
+gbm no state features,0.00301,0.92520
+gbm no state features,0.00303,0.92520
+gbm no state features,0.00306,0.92520
+gbm no state features,0.00309,0.92520
+gbm no state features,0.00312,0.92520
+gbm no state features,0.00314,0.92520
+gbm no state features,0.00317,0.92520
+gbm no state features,0.00319,0.92126
+gbm no state features,0.00322,0.92126
+gbm no state features,0.00325,0.92126
+gbm no state features,0.00328,0.92126
+gbm no state features,0.00331,0.92126
+gbm no state features,0.00334,0.92126
+gbm no state features,0.00338,0.92126
+gbm no state features,0.00341,0.92126
+gbm no state features,0.00344,0.92126
+gbm no state features,0.00348,0.92126
+gbm no state features,0.00351,0.92126
+gbm no state features,0.00355,0.92126
+gbm no state features,0.00357,0.91732
+gbm no state features,0.00361,0.91732
+gbm no state features,0.00365,0.91732
+gbm no state features,0.00369,0.91732
+gbm no state features,0.00371,0.91339
+gbm no state features,0.00375,0.91339
+gbm no state features,0.00379,0.91339
+gbm no state features,0.00384,0.91339
+gbm no state features,0.00388,0.91339
+gbm no state features,0.00392,0.91339
+gbm no state features,0.00397,0.91339
+gbm no state features,0.00402,0.91339
+gbm no state features,0.00406,0.91339
+gbm no state features,0.00411,0.91339
+gbm no state features,0.00416,0.91339
+gbm no state features,0.00421,0.91339
+gbm no state features,0.00427,0.91339
+gbm no state features,0.00432,0.91339
+gbm no state features,0.00438,0.91339
+gbm no state features,0.00443,0.91339
+gbm no state features,0.00449,0.91339
+gbm no state features,0.00455,0.91339
+gbm no state features,0.00461,0.91339
+gbm no state features,0.00468,0.91339
+gbm no state features,0.00474,0.91339
+gbm no state features,0.00481,0.91339
+gbm no state features,0.00488,0.91339
+gbm no state features,0.00495,0.91339
+gbm no state features,0.00500,0.90945
+gbm no state features,0.00507,0.90945
+gbm no state features,0.00515,0.90945
+gbm no state features,0.00523,0.90945
+gbm no state features,0.00531,0.90945
+gbm no state features,0.00539,0.90945
+gbm no state features,0.00548,0.90945
+gbm no state features,0.00555,0.90551
+gbm no state features,0.00564,0.90551
+gbm no state features,0.00571,0.90157
+gbm no state features,0.00581,0.90157
+gbm no state features,0.00591,0.90157
+gbm no state features,0.00601,0.90157
+gbm no state features,0.00610,0.89764
+gbm no state features,0.00621,0.89764
+gbm no state features,0.00633,0.89764
+gbm no state features,0.00645,0.89764
+gbm no state features,0.00654,0.89370
+gbm no state features,0.00665,0.88976
+gbm no state features,0.00678,0.88976
+gbm no state features,0.00692,0.88976
+gbm no state features,0.00707,0.88976
+gbm no state features,0.00722,0.88976
+gbm no state features,0.00738,0.88976
+gbm no state features,0.00755,0.88976
+gbm no state features,0.00773,0.88976
+gbm no state features,0.00784,0.88189
+gbm no state features,0.00803,0.88189
+gbm no state features,0.00824,0.88189
+gbm no state features,0.00841,0.87795
+gbm no state features,0.00864,0.87795
+gbm no state features,0.00887,0.87795
+gbm no state features,0.00900,0.86614
+gbm no state features,0.00925,0.86614
+gbm no state features,0.00953,0.86614
+gbm no state features,0.00977,0.86220
+gbm no state features,0.01003,0.85827
+gbm no state features,0.01035,0.85827
+gbm no state features,0.01065,0.85433
+gbm no state features,0.01102,0.85433
+gbm no state features,0.01141,0.85433
+gbm no state features,0.01184,0.85433
+gbm no state features,0.01229,0.85433
+gbm no state features,0.01272,0.85039
+gbm no state features,0.01326,0.85039
+gbm no state features,0.01384,0.85039
+gbm no state features,0.01447,0.85039
+gbm no state features,0.01515,0.85039
+gbm no state features,0.01591,0.85039
+gbm no state features,0.01675,0.85039
+gbm no state features,0.01768,0.85039
+gbm no state features,0.01872,0.85039
+gbm no state features,0.01989,0.85039
+gbm no state features,0.02111,0.84646
+gbm no state features,0.02252,0.84252
+gbm no state features,0.02425,0.84252
+gbm no state features,0.02627,0.84252
+gbm no state features,0.02866,0.84252
+gbm no state features,0.03153,0.84252
+gbm no state features,0.03504,0.84252
+gbm no state features,0.03924,0.83858
+gbm no state features,0.04484,0.83858
+gbm no state features,0.05215,0.83465
+gbm no state features,0.06257,0.83465
+gbm no state features,0.07638,0.81496
+gbm no state features,0.10084,0.80709
+gbm no state features,0.14317,0.76378
+gbm no state features,0.24631,0.65748
+gbm no state features,1.00000,0.00000
+"B1 logit: capital, NPL, ROA",0.00093,1.00000
+"B1 logit: capital, NPL, ROA",0.00093,1.00000
+"B1 logit: capital, NPL, ROA",0.00093,1.00000
+"B1 logit: capital, NPL, ROA",0.00094,1.00000
+"B1 logit: capital, NPL, ROA",0.00094,1.00000
+"B1 logit: capital, NPL, ROA",0.00094,1.00000
+"B1 logit: capital, NPL, ROA",0.00094,1.00000
+"B1 logit: capital, NPL, ROA",0.00095,1.00000
+"B1 logit: capital, NPL, ROA",0.00095,1.00000
+"B1 logit: capital, NPL, ROA",0.00095,1.00000
+"B1 logit: capital, NPL, ROA",0.00095,1.00000
+"B1 logit: capital, NPL, ROA",0.00096,1.00000
+"B1 logit: capital, NPL, ROA",0.00096,1.00000
+"B1 logit: capital, NPL, ROA",0.00096,1.00000
+"B1 logit: capital, NPL, ROA",0.00096,1.00000
+"B1 logit: capital, NPL, ROA",0.00097,1.00000
+"B1 logit: capital, NPL, ROA",0.00097,1.00000
+"B1 logit: capital, NPL, ROA",0.00097,1.00000
+"B1 logit: capital, NPL, ROA",0.00097,1.00000
+"B1 logit: capital, NPL, ROA",0.00098,1.00000
+"B1 logit: capital, NPL, ROA",0.00098,1.00000
+"B1 logit: capital, NPL, ROA",0.00098,1.00000
+"B1 logit: capital, NPL, ROA",0.00098,1.00000
+"B1 logit: capital, NPL, ROA",0.00099,1.00000
+"B1 logit: capital, NPL, ROA",0.00099,1.00000
+"B1 logit: capital, NPL, ROA",0.00099,1.00000
+"B1 logit: capital, NPL, ROA",0.00099,1.00000
+"B1 logit: capital, NPL, ROA",0.00100,1.00000
+"B1 logit: capital, NPL, ROA",0.00100,1.00000
+"B1 logit: capital, NPL, ROA",0.00100,1.00000
+"B1 logit: capital, NPL, ROA",0.00101,1.00000
+"B1 logit: capital, NPL, ROA",0.00101,1.00000
+"B1 logit: capital, NPL, ROA",0.00101,1.00000
+"B1 logit: capital, NPL, ROA",0.00101,1.00000
+"B1 logit: capital, NPL, ROA",0.00102,1.00000
+"B1 logit: capital, NPL, ROA",0.00102,1.00000
+"B1 logit: capital, NPL, ROA",0.00102,1.00000
+"B1 logit: capital, NPL, ROA",0.00103,1.00000
+"B1 logit: capital, NPL, ROA",0.00103,1.00000
+"B1 logit: capital, NPL, ROA",0.00103,1.00000
+"B1 logit: capital, NPL, ROA",0.00103,1.00000
+"B1 logit: capital, NPL, ROA",0.00104,1.00000
+"B1 logit: capital, NPL, ROA",0.00104,1.00000
+"B1 logit: capital, NPL, ROA",0.00104,1.00000
+"B1 logit: capital, NPL, ROA",0.00105,1.00000
+"B1 logit: capital, NPL, ROA",0.00105,1.00000
+"B1 logit: capital, NPL, ROA",0.00105,1.00000
+"B1 logit: capital, NPL, ROA",0.00105,1.00000
+"B1 logit: capital, NPL, ROA",0.00106,1.00000
+"B1 logit: capital, NPL, ROA",0.00106,1.00000
+"B1 logit: capital, NPL, ROA",0.00106,1.00000
+"B1 logit: capital, NPL, ROA",0.00107,1.00000
+"B1 logit: capital, NPL, ROA",0.00107,1.00000
+"B1 logit: capital, NPL, ROA",0.00107,1.00000
+"B1 logit: capital, NPL, ROA",0.00108,1.00000
+"B1 logit: capital, NPL, ROA",0.00108,1.00000
+"B1 logit: capital, NPL, ROA",0.00108,1.00000
+"B1 logit: capital, NPL, ROA",0.00109,1.00000
+"B1 logit: capital, NPL, ROA",0.00109,1.00000
+"B1 logit: capital, NPL, ROA",0.00109,1.00000
+"B1 logit: capital, NPL, ROA",0.00109,1.00000
+"B1 logit: capital, NPL, ROA",0.00110,1.00000
+"B1 logit: capital, NPL, ROA",0.00110,1.00000
+"B1 logit: capital, NPL, ROA",0.00110,1.00000
+"B1 logit: capital, NPL, ROA",0.00111,1.00000
+"B1 logit: capital, NPL, ROA",0.00111,1.00000
+"B1 logit: capital, NPL, ROA",0.00111,1.00000
+"B1 logit: capital, NPL, ROA",0.00112,1.00000
+"B1 logit: capital, NPL, ROA",0.00112,1.00000
+"B1 logit: capital, NPL, ROA",0.00112,1.00000
+"B1 logit: capital, NPL, ROA",0.00113,1.00000
+"B1 logit: capital, NPL, ROA",0.00113,1.00000
+"B1 logit: capital, NPL, ROA",0.00113,1.00000
+"B1 logit: capital, NPL, ROA",0.00114,1.00000
+"B1 logit: capital, NPL, ROA",0.00114,1.00000
+"B1 logit: capital, NPL, ROA",0.00115,1.00000
+"B1 logit: capital, NPL, ROA",0.00114,0.99606
+"B1 logit: capital, NPL, ROA",0.00115,0.99606
+"B1 logit: capital, NPL, ROA",0.00115,0.99213
+"B1 logit: capital, NPL, ROA",0.00115,0.98819
+"B1 logit: capital, NPL, ROA",0.00114,0.98425
+"B1 logit: capital, NPL, ROA",0.00115,0.98425
+"B1 logit: capital, NPL, ROA",0.00115,0.98425
+"B1 logit: capital, NPL, ROA",0.00116,0.98425
+"B1 logit: capital, NPL, ROA",0.00116,0.98425
+"B1 logit: capital, NPL, ROA",0.00116,0.98425
+"B1 logit: capital, NPL, ROA",0.00117,0.98425
+"B1 logit: capital, NPL, ROA",0.00117,0.98425
+"B1 logit: capital, NPL, ROA",0.00117,0.98425
+"B1 logit: capital, NPL, ROA",0.00118,0.98425
+"B1 logit: capital, NPL, ROA",0.00118,0.98425
+"B1 logit: capital, NPL, ROA",0.00119,0.98425
+"B1 logit: capital, NPL, ROA",0.00119,0.98425
+"B1 logit: capital, NPL, ROA",0.00119,0.98425
+"B1 logit: capital, NPL, ROA",0.00120,0.98425
+"B1 logit: capital, NPL, ROA",0.00120,0.98425
+"B1 logit: capital, NPL, ROA",0.00121,0.98425
+"B1 logit: capital, NPL, ROA",0.00121,0.98425
+"B1 logit: capital, NPL, ROA",0.00121,0.98425
+"B1 logit: capital, NPL, ROA",0.00122,0.98425
+"B1 logit: capital, NPL, ROA",0.00122,0.98425
+"B1 logit: capital, NPL, ROA",0.00123,0.98425
+"B1 logit: capital, NPL, ROA",0.00123,0.98425
+"B1 logit: capital, NPL, ROA",0.00123,0.98425
+"B1 logit: capital, NPL, ROA",0.00124,0.98425
+"B1 logit: capital, NPL, ROA",0.00124,0.98425
+"B1 logit: capital, NPL, ROA",0.00125,0.98425
+"B1 logit: capital, NPL, ROA",0.00125,0.98425
+"B1 logit: capital, NPL, ROA",0.00126,0.98425
+"B1 logit: capital, NPL, ROA",0.00126,0.98425
+"B1 logit: capital, NPL, ROA",0.00126,0.98425
+"B1 logit: capital, NPL, ROA",0.00127,0.98425
+"B1 logit: capital, NPL, ROA",0.00127,0.98425
+"B1 logit: capital, NPL, ROA",0.00128,0.98425
+"B1 logit: capital, NPL, ROA",0.00128,0.98425
+"B1 logit: capital, NPL, ROA",0.00129,0.98425
+"B1 logit: capital, NPL, ROA",0.00129,0.98425
+"B1 logit: capital, NPL, ROA",0.00130,0.98425
+"B1 logit: capital, NPL, ROA",0.00130,0.98425
+"B1 logit: capital, NPL, ROA",0.00130,0.98425
+"B1 logit: capital, NPL, ROA",0.00131,0.98425
+"B1 logit: capital, NPL, ROA",0.00131,0.98425
+"B1 logit: capital, NPL, ROA",0.00132,0.98425
+"B1 logit: capital, NPL, ROA",0.00132,0.98425
+"B1 logit: capital, NPL, ROA",0.00133,0.98425
+"B1 logit: capital, NPL, ROA",0.00133,0.98425
+"B1 logit: capital, NPL, ROA",0.00134,0.98425
+"B1 logit: capital, NPL, ROA",0.00134,0.98425
+"B1 logit: capital, NPL, ROA",0.00135,0.98425
+"B1 logit: capital, NPL, ROA",0.00135,0.98425
+"B1 logit: capital, NPL, ROA",0.00136,0.98425
+"B1 logit: capital, NPL, ROA",0.00136,0.98425
+"B1 logit: capital, NPL, ROA",0.00137,0.98425
+"B1 logit: capital, NPL, ROA",0.00137,0.98425
+"B1 logit: capital, NPL, ROA",0.00138,0.98425
+"B1 logit: capital, NPL, ROA",0.00138,0.98425
+"B1 logit: capital, NPL, ROA",0.00139,0.98425
+"B1 logit: capital, NPL, ROA",0.00139,0.98425
+"B1 logit: capital, NPL, ROA",0.00140,0.98425
+"B1 logit: capital, NPL, ROA",0.00140,0.98425
+"B1 logit: capital, NPL, ROA",0.00141,0.98425
+"B1 logit: capital, NPL, ROA",0.00142,0.98425
+"B1 logit: capital, NPL, ROA",0.00142,0.98425
+"B1 logit: capital, NPL, ROA",0.00143,0.98425
+"B1 logit: capital, NPL, ROA",0.00143,0.98425
+"B1 logit: capital, NPL, ROA",0.00144,0.98425
+"B1 logit: capital, NPL, ROA",0.00144,0.98425
+"B1 logit: capital, NPL, ROA",0.00145,0.98425
+"B1 logit: capital, NPL, ROA",0.00146,0.98425
+"B1 logit: capital, NPL, ROA",0.00146,0.98425
+"B1 logit: capital, NPL, ROA",0.00147,0.98425
+"B1 logit: capital, NPL, ROA",0.00147,0.98425
+"B1 logit: capital, NPL, ROA",0.00148,0.98425
+"B1 logit: capital, NPL, ROA",0.00148,0.98425
+"B1 logit: capital, NPL, ROA",0.00149,0.98425
+"B1 logit: capital, NPL, ROA",0.00150,0.98425
+"B1 logit: capital, NPL, ROA",0.00150,0.98425
+"B1 logit: capital, NPL, ROA",0.00151,0.98425
+"B1 logit: capital, NPL, ROA",0.00152,0.98425
+"B1 logit: capital, NPL, ROA",0.00152,0.98425
+"B1 logit: capital, NPL, ROA",0.00153,0.98425
+"B1 logit: capital, NPL, ROA",0.00153,0.98425
+"B1 logit: capital, NPL, ROA",0.00154,0.98425
+"B1 logit: capital, NPL, ROA",0.00155,0.98425
+"B1 logit: capital, NPL, ROA",0.00155,0.98425
+"B1 logit: capital, NPL, ROA",0.00156,0.98425
+"B1 logit: capital, NPL, ROA",0.00157,0.98425
+"B1 logit: capital, NPL, ROA",0.00157,0.98425
+"B1 logit: capital, NPL, ROA",0.00158,0.98425
+"B1 logit: capital, NPL, ROA",0.00159,0.98425
+"B1 logit: capital, NPL, ROA",0.00159,0.98425
+"B1 logit: capital, NPL, ROA",0.00160,0.98425
+"B1 logit: capital, NPL, ROA",0.00161,0.98425
+"B1 logit: capital, NPL, ROA",0.00162,0.98425
+"B1 logit: capital, NPL, ROA",0.00162,0.98425
+"B1 logit: capital, NPL, ROA",0.00163,0.98425
+"B1 logit: capital, NPL, ROA",0.00164,0.98425
+"B1 logit: capital, NPL, ROA",0.00165,0.98425
+"B1 logit: capital, NPL, ROA",0.00165,0.98425
+"B1 logit: capital, NPL, ROA",0.00166,0.98425
+"B1 logit: capital, NPL, ROA",0.00167,0.98425
+"B1 logit: capital, NPL, ROA",0.00168,0.98425
+"B1 logit: capital, NPL, ROA",0.00168,0.98425
+"B1 logit: capital, NPL, ROA",0.00169,0.98425
+"B1 logit: capital, NPL, ROA",0.00170,0.98425
+"B1 logit: capital, NPL, ROA",0.00171,0.98425
+"B1 logit: capital, NPL, ROA",0.00171,0.98425
+"B1 logit: capital, NPL, ROA",0.00172,0.98425
+"B1 logit: capital, NPL, ROA",0.00173,0.98425
+"B1 logit: capital, NPL, ROA",0.00174,0.98425
+"B1 logit: capital, NPL, ROA",0.00175,0.98425
+"B1 logit: capital, NPL, ROA",0.00175,0.98031
+"B1 logit: capital, NPL, ROA",0.00176,0.98031
+"B1 logit: capital, NPL, ROA",0.00177,0.98031
+"B1 logit: capital, NPL, ROA",0.00177,0.98031
+"B1 logit: capital, NPL, ROA",0.00178,0.98031
+"B1 logit: capital, NPL, ROA",0.00179,0.98031
+"B1 logit: capital, NPL, ROA",0.00180,0.98031
+"B1 logit: capital, NPL, ROA",0.00181,0.98031
+"B1 logit: capital, NPL, ROA",0.00182,0.98031
+"B1 logit: capital, NPL, ROA",0.00183,0.98031
+"B1 logit: capital, NPL, ROA",0.00183,0.97638
+"B1 logit: capital, NPL, ROA",0.00184,0.97638
+"B1 logit: capital, NPL, ROA",0.00185,0.97638
+"B1 logit: capital, NPL, ROA",0.00186,0.97638
+"B1 logit: capital, NPL, ROA",0.00186,0.97244
+"B1 logit: capital, NPL, ROA",0.00187,0.97244
+"B1 logit: capital, NPL, ROA",0.00188,0.97244
+"B1 logit: capital, NPL, ROA",0.00189,0.97244
+"B1 logit: capital, NPL, ROA",0.00190,0.97244
+"B1 logit: capital, NPL, ROA",0.00191,0.97244
+"B1 logit: capital, NPL, ROA",0.00192,0.97244
+"B1 logit: capital, NPL, ROA",0.00193,0.97244
+"B1 logit: capital, NPL, ROA",0.00194,0.97244
+"B1 logit: capital, NPL, ROA",0.00195,0.97244
+"B1 logit: capital, NPL, ROA",0.00196,0.97244
+"B1 logit: capital, NPL, ROA",0.00197,0.97244
+"B1 logit: capital, NPL, ROA",0.00198,0.97244
+"B1 logit: capital, NPL, ROA",0.00199,0.97244
+"B1 logit: capital, NPL, ROA",0.00200,0.97244
+"B1 logit: capital, NPL, ROA",0.00202,0.97244
+"B1 logit: capital, NPL, ROA",0.00203,0.97244
+"B1 logit: capital, NPL, ROA",0.00204,0.97244
+"B1 logit: capital, NPL, ROA",0.00205,0.97244
+"B1 logit: capital, NPL, ROA",0.00206,0.97244
+"B1 logit: capital, NPL, ROA",0.00207,0.97244
+"B1 logit: capital, NPL, ROA",0.00208,0.96850
+"B1 logit: capital, NPL, ROA",0.00209,0.96850
+"B1 logit: capital, NPL, ROA",0.00210,0.96850
+"B1 logit: capital, NPL, ROA",0.00211,0.96850
+"B1 logit: capital, NPL, ROA",0.00213,0.96850
+"B1 logit: capital, NPL, ROA",0.00214,0.96850
+"B1 logit: capital, NPL, ROA",0.00215,0.96850
+"B1 logit: capital, NPL, ROA",0.00216,0.96850
+"B1 logit: capital, NPL, ROA",0.00218,0.96850
+"B1 logit: capital, NPL, ROA",0.00219,0.96850
+"B1 logit: capital, NPL, ROA",0.00220,0.96457
+"B1 logit: capital, NPL, ROA",0.00221,0.96457
+"B1 logit: capital, NPL, ROA",0.00222,0.96457
+"B1 logit: capital, NPL, ROA",0.00224,0.96457
+"B1 logit: capital, NPL, ROA",0.00225,0.96457
+"B1 logit: capital, NPL, ROA",0.00227,0.96457
+"B1 logit: capital, NPL, ROA",0.00228,0.96457
+"B1 logit: capital, NPL, ROA",0.00229,0.96457
+"B1 logit: capital, NPL, ROA",0.00230,0.96063
+"B1 logit: capital, NPL, ROA",0.00231,0.96063
+"B1 logit: capital, NPL, ROA",0.00233,0.96063
+"B1 logit: capital, NPL, ROA",0.00235,0.96063
+"B1 logit: capital, NPL, ROA",0.00236,0.96063
+"B1 logit: capital, NPL, ROA",0.00238,0.96063
+"B1 logit: capital, NPL, ROA",0.00239,0.96063
+"B1 logit: capital, NPL, ROA",0.00241,0.96063
+"B1 logit: capital, NPL, ROA",0.00242,0.96063
+"B1 logit: capital, NPL, ROA",0.00244,0.96063
+"B1 logit: capital, NPL, ROA",0.00246,0.96063
+"B1 logit: capital, NPL, ROA",0.00248,0.96063
+"B1 logit: capital, NPL, ROA",0.00249,0.96063
+"B1 logit: capital, NPL, ROA",0.00251,0.96063
+"B1 logit: capital, NPL, ROA",0.00253,0.96063
+"B1 logit: capital, NPL, ROA",0.00255,0.96063
+"B1 logit: capital, NPL, ROA",0.00256,0.96063
+"B1 logit: capital, NPL, ROA",0.00258,0.96063
+"B1 logit: capital, NPL, ROA",0.00260,0.96063
+"B1 logit: capital, NPL, ROA",0.00262,0.96063
+"B1 logit: capital, NPL, ROA",0.00264,0.96063
+"B1 logit: capital, NPL, ROA",0.00266,0.96063
+"B1 logit: capital, NPL, ROA",0.00268,0.96063
+"B1 logit: capital, NPL, ROA",0.00270,0.96063
+"B1 logit: capital, NPL, ROA",0.00272,0.96063
+"B1 logit: capital, NPL, ROA",0.00273,0.95669
+"B1 logit: capital, NPL, ROA",0.00275,0.95669
+"B1 logit: capital, NPL, ROA",0.00277,0.95669
+"B1 logit: capital, NPL, ROA",0.00280,0.95669
+"B1 logit: capital, NPL, ROA",0.00282,0.95669
+"B1 logit: capital, NPL, ROA",0.00284,0.95669
+"B1 logit: capital, NPL, ROA",0.00286,0.95669
+"B1 logit: capital, NPL, ROA",0.00289,0.95669
+"B1 logit: capital, NPL, ROA",0.00291,0.95669
+"B1 logit: capital, NPL, ROA",0.00293,0.95669
+"B1 logit: capital, NPL, ROA",0.00295,0.95276
+"B1 logit: capital, NPL, ROA",0.00296,0.94882
+"B1 logit: capital, NPL, ROA",0.00298,0.94882
+"B1 logit: capital, NPL, ROA",0.00301,0.94882
+"B1 logit: capital, NPL, ROA",0.00304,0.94882
+"B1 logit: capital, NPL, ROA",0.00306,0.94882
+"B1 logit: capital, NPL, ROA",0.00309,0.94882
+"B1 logit: capital, NPL, ROA",0.00312,0.94882
+"B1 logit: capital, NPL, ROA",0.00314,0.94882
+"B1 logit: capital, NPL, ROA",0.00317,0.94882
+"B1 logit: capital, NPL, ROA",0.00320,0.94882
+"B1 logit: capital, NPL, ROA",0.00322,0.94488
+"B1 logit: capital, NPL, ROA",0.00325,0.94488
+"B1 logit: capital, NPL, ROA",0.00328,0.94488
+"B1 logit: capital, NPL, ROA",0.00331,0.94488
+"B1 logit: capital, NPL, ROA",0.00334,0.94488
+"B1 logit: capital, NPL, ROA",0.00337,0.94488
+"B1 logit: capital, NPL, ROA",0.00340,0.94488
+"B1 logit: capital, NPL, ROA",0.00344,0.94488
+"B1 logit: capital, NPL, ROA",0.00347,0.94488
+"B1 logit: capital, NPL, ROA",0.00349,0.94094
+"B1 logit: capital, NPL, ROA",0.00353,0.94094
+"B1 logit: capital, NPL, ROA",0.00356,0.94094
+"B1 logit: capital, NPL, ROA",0.00360,0.94094
+"B1 logit: capital, NPL, ROA",0.00364,0.94094
+"B1 logit: capital, NPL, ROA",0.00368,0.94094
+"B1 logit: capital, NPL, ROA",0.00371,0.94094
+"B1 logit: capital, NPL, ROA",0.00375,0.94094
+"B1 logit: capital, NPL, ROA",0.00380,0.94094
+"B1 logit: capital, NPL, ROA",0.00384,0.94094
+"B1 logit: capital, NPL, ROA",0.00388,0.94094
+"B1 logit: capital, NPL, ROA",0.00392,0.94094
+"B1 logit: capital, NPL, ROA",0.00397,0.94094
+"B1 logit: capital, NPL, ROA",0.00401,0.94094
+"B1 logit: capital, NPL, ROA",0.00406,0.94094
+"B1 logit: capital, NPL, ROA",0.00411,0.94094
+"B1 logit: capital, NPL, ROA",0.00416,0.94094
+"B1 logit: capital, NPL, ROA",0.00421,0.94094
+"B1 logit: capital, NPL, ROA",0.00426,0.94094
+"B1 logit: capital, NPL, ROA",0.00431,0.94094
+"B1 logit: capital, NPL, ROA",0.00436,0.94094
+"B1 logit: capital, NPL, ROA",0.00442,0.94094
+"B1 logit: capital, NPL, ROA",0.00446,0.93701
+"B1 logit: capital, NPL, ROA",0.00450,0.93307
+"B1 logit: capital, NPL, ROA",0.00456,0.93307
+"B1 logit: capital, NPL, ROA",0.00460,0.92913
+"B1 logit: capital, NPL, ROA",0.00466,0.92913
+"B1 logit: capital, NPL, ROA",0.00472,0.92913
+"B1 logit: capital, NPL, ROA",0.00479,0.92913
+"B1 logit: capital, NPL, ROA",0.00486,0.92913
+"B1 logit: capital, NPL, ROA",0.00493,0.92913
+"B1 logit: capital, NPL, ROA",0.00498,0.92520
+"B1 logit: capital, NPL, ROA",0.00505,0.92520
+"B1 logit: capital, NPL, ROA",0.00512,0.92520
+"B1 logit: capital, NPL, ROA",0.00520,0.92520
+"B1 logit: capital, NPL, ROA",0.00528,0.92520
+"B1 logit: capital, NPL, ROA",0.00536,0.92520
+"B1 logit: capital, NPL, ROA",0.00545,0.92520
+"B1 logit: capital, NPL, ROA",0.00554,0.92520
+"B1 logit: capital, NPL, ROA",0.00563,0.92520
+"B1 logit: capital, NPL, ROA",0.00572,0.92520
+"B1 logit: capital, NPL, ROA",0.00582,0.92520
+"B1 logit: capital, NPL, ROA",0.00592,0.92520
+"B1 logit: capital, NPL, ROA",0.00602,0.92520
+"B1 logit: capital, NPL, ROA",0.00613,0.92520
+"B1 logit: capital, NPL, ROA",0.00624,0.92520
+"B1 logit: capital, NPL, ROA",0.00636,0.92520
+"B1 logit: capital, NPL, ROA",0.00645,0.92126
+"B1 logit: capital, NPL, ROA",0.00657,0.92126
+"B1 logit: capital, NPL, ROA",0.00670,0.92126
+"B1 logit: capital, NPL, ROA",0.00684,0.92126
+"B1 logit: capital, NPL, ROA",0.00698,0.92126
+"B1 logit: capital, NPL, ROA",0.00709,0.91732
+"B1 logit: capital, NPL, ROA",0.00724,0.91732
+"B1 logit: capital, NPL, ROA",0.00737,0.91339
+"B1 logit: capital, NPL, ROA",0.00753,0.91339
+"B1 logit: capital, NPL, ROA",0.00770,0.91339
+"B1 logit: capital, NPL, ROA",0.00785,0.90945
+"B1 logit: capital, NPL, ROA",0.00803,0.90945
+"B1 logit: capital, NPL, ROA",0.00823,0.90945
+"B1 logit: capital, NPL, ROA",0.00840,0.90551
+"B1 logit: capital, NPL, ROA",0.00854,0.89764
+"B1 logit: capital, NPL, ROA",0.00877,0.89764
+"B1 logit: capital, NPL, ROA",0.00892,0.88976
+"B1 logit: capital, NPL, ROA",0.00913,0.88583
+"B1 logit: capital, NPL, ROA",0.00939,0.88583
+"B1 logit: capital, NPL, ROA",0.00962,0.88189
+"B1 logit: capital, NPL, ROA",0.00992,0.88189
+"B1 logit: capital, NPL, ROA",0.01023,0.88189
+"B1 logit: capital, NPL, ROA",0.01056,0.88189
+"B1 logit: capital, NPL, ROA",0.01091,0.88189
+"B1 logit: capital, NPL, ROA",0.01123,0.87795
+"B1 logit: capital, NPL, ROA",0.01163,0.87795
+"B1 logit: capital, NPL, ROA",0.01196,0.87008
+"B1 logit: capital, NPL, ROA",0.01230,0.86220
+"B1 logit: capital, NPL, ROA",0.01280,0.86220
+"B1 logit: capital, NPL, ROA",0.01333,0.86220
+"B1 logit: capital, NPL, ROA",0.01385,0.85827
+"B1 logit: capital, NPL, ROA",0.01441,0.85433
+"B1 logit: capital, NPL, ROA",0.01510,0.85433
+"B1 logit: capital, NPL, ROA",0.01585,0.85433
+"B1 logit: capital, NPL, ROA",0.01668,0.85433
+"B1 logit: capital, NPL, ROA",0.01761,0.85433
+"B1 logit: capital, NPL, ROA",0.01865,0.85433
+"B1 logit: capital, NPL, ROA",0.01981,0.85433
+"B1 logit: capital, NPL, ROA",0.02113,0.85433
+"B1 logit: capital, NPL, ROA",0.02243,0.84646
+"B1 logit: capital, NPL, ROA",0.02416,0.84646
+"B1 logit: capital, NPL, ROA",0.02605,0.84252
+"B1 logit: capital, NPL, ROA",0.02829,0.83858
+"B1 logit: capital, NPL, ROA",0.03067,0.82677
+"B1 logit: capital, NPL, ROA",0.03409,0.82677
+"B1 logit: capital, NPL, ROA",0.03798,0.81890
+"B1 logit: capital, NPL, ROA",0.04341,0.81890
+"B1 logit: capital, NPL, ROA",0.05063,0.81890
+"B1 logit: capital, NPL, ROA",0.06077,0.81890
+"B1 logit: capital, NPL, ROA",0.07558,0.81496
+"B1 logit: capital, NPL, ROA",0.09981,0.80709
+"B1 logit: capital, NPL, ROA",0.14015,0.75591
+"B1 logit: capital, NPL, ROA",0.23358,0.62992
+"B1 logit: capital, NPL, ROA",1.00000,0.00000
+"B0 Texas ratio, no fitting",0.00093,1.00000
+"B0 Texas ratio, no fitting",0.00099,0.96850
+"B0 Texas ratio, no fitting",0.00099,0.96850
+"B0 Texas ratio, no fitting",0.00100,0.96850
+"B0 Texas ratio, no fitting",0.00100,0.96850
+"B0 Texas ratio, no fitting",0.00100,0.96850
+"B0 Texas ratio, no fitting",0.00100,0.96850
+"B0 Texas ratio, no fitting",0.00101,0.96850
+"B0 Texas ratio, no fitting",0.00101,0.96850
+"B0 Texas ratio, no fitting",0.00101,0.96850
+"B0 Texas ratio, no fitting",0.00101,0.96850
+"B0 Texas ratio, no fitting",0.00102,0.96850
+"B0 Texas ratio, no fitting",0.00102,0.96850
+"B0 Texas ratio, no fitting",0.00102,0.96850
+"B0 Texas ratio, no fitting",0.00102,0.96850
+"B0 Texas ratio, no fitting",0.00103,0.96850
+"B0 Texas ratio, no fitting",0.00103,0.96850
+"B0 Texas ratio, no fitting",0.00103,0.96850
+"B0 Texas ratio, no fitting",0.00104,0.96850
+"B0 Texas ratio, no fitting",0.00104,0.96850
+"B0 Texas ratio, no fitting",0.00104,0.96850
+"B0 Texas ratio, no fitting",0.00104,0.96850
+"B0 Texas ratio, no fitting",0.00105,0.96850
+"B0 Texas ratio, no fitting",0.00105,0.96850
+"B0 Texas ratio, no fitting",0.00105,0.96850
+"B0 Texas ratio, no fitting",0.00106,0.96850
+"B0 Texas ratio, no fitting",0.00106,0.96850
+"B0 Texas ratio, no fitting",0.00106,0.96850
+"B0 Texas ratio, no fitting",0.00106,0.96850
+"B0 Texas ratio, no fitting",0.00107,0.96850
+"B0 Texas ratio, no fitting",0.00107,0.96850
+"B0 Texas ratio, no fitting",0.00107,0.96850
+"B0 Texas ratio, no fitting",0.00108,0.96850
+"B0 Texas ratio, no fitting",0.00108,0.96850
+"B0 Texas ratio, no fitting",0.00108,0.96457
+"B0 Texas ratio, no fitting",0.00108,0.96457
+"B0 Texas ratio, no fitting",0.00108,0.96063
+"B0 Texas ratio, no fitting",0.00108,0.96063
+"B0 Texas ratio, no fitting",0.00108,0.96063
+"B0 Texas ratio, no fitting",0.00108,0.95669
+"B0 Texas ratio, no fitting",0.00108,0.95276
+"B0 Texas ratio, no fitting",0.00108,0.95276
+"B0 Texas ratio, no fitting",0.00109,0.95276
+"B0 Texas ratio, no fitting",0.00109,0.95276
+"B0 Texas ratio, no fitting",0.00109,0.94882
+"B0 Texas ratio, no fitting",0.00109,0.94488
+"B0 Texas ratio, no fitting",0.00109,0.94488
+"B0 Texas ratio, no fitting",0.00109,0.94488
+"B0 Texas ratio, no fitting",0.00110,0.94488
+"B0 Texas ratio, no fitting",0.00110,0.94488
+"B0 Texas ratio, no fitting",0.00110,0.94094
+"B0 Texas ratio, no fitting",0.00110,0.94094
+"B0 Texas ratio, no fitting",0.00111,0.94094
+"B0 Texas ratio, no fitting",0.00110,0.93701
+"B0 Texas ratio, no fitting",0.00111,0.93701
+"B0 Texas ratio, no fitting",0.00111,0.93701
+"B0 Texas ratio, no fitting",0.00111,0.93701
+"B0 Texas ratio, no fitting",0.00112,0.93701
+"B0 Texas ratio, no fitting",0.00112,0.93701
+"B0 Texas ratio, no fitting",0.00112,0.93701
+"B0 Texas ratio, no fitting",0.00113,0.93701
+"B0 Texas ratio, no fitting",0.00113,0.93701
+"B0 Texas ratio, no fitting",0.00113,0.93701
+"B0 Texas ratio, no fitting",0.00114,0.93701
+"B0 Texas ratio, no fitting",0.00114,0.93701
+"B0 Texas ratio, no fitting",0.00114,0.93701
+"B0 Texas ratio, no fitting",0.00115,0.93701
+"B0 Texas ratio, no fitting",0.00115,0.93701
+"B0 Texas ratio, no fitting",0.00115,0.93701
+"B0 Texas ratio, no fitting",0.00116,0.93701
+"B0 Texas ratio, no fitting",0.00116,0.93701
+"B0 Texas ratio, no fitting",0.00117,0.93701
+"B0 Texas ratio, no fitting",0.00117,0.93701
+"B0 Texas ratio, no fitting",0.00117,0.93701
+"B0 Texas ratio, no fitting",0.00118,0.93701
+"B0 Texas ratio, no fitting",0.00118,0.93701
+"B0 Texas ratio, no fitting",0.00118,0.93701
+"B0 Texas ratio, no fitting",0.00119,0.93701
+"B0 Texas ratio, no fitting",0.00119,0.93701
+"B0 Texas ratio, no fitting",0.00119,0.93701
+"B0 Texas ratio, no fitting",0.00120,0.93701
+"B0 Texas ratio, no fitting",0.00120,0.93701
+"B0 Texas ratio, no fitting",0.00121,0.93701
+"B0 Texas ratio, no fitting",0.00121,0.93701
+"B0 Texas ratio, no fitting",0.00121,0.93701
+"B0 Texas ratio, no fitting",0.00122,0.93701
+"B0 Texas ratio, no fitting",0.00122,0.93701
+"B0 Texas ratio, no fitting",0.00123,0.93701
+"B0 Texas ratio, no fitting",0.00123,0.93701
+"B0 Texas ratio, no fitting",0.00123,0.93701
+"B0 Texas ratio, no fitting",0.00124,0.93701
+"B0 Texas ratio, no fitting",0.00124,0.93701
+"B0 Texas ratio, no fitting",0.00125,0.93701
+"B0 Texas ratio, no fitting",0.00125,0.93701
+"B0 Texas ratio, no fitting",0.00125,0.93701
+"B0 Texas ratio, no fitting",0.00126,0.93701
+"B0 Texas ratio, no fitting",0.00126,0.93701
+"B0 Texas ratio, no fitting",0.00127,0.93701
+"B0 Texas ratio, no fitting",0.00127,0.93701
+"B0 Texas ratio, no fitting",0.00127,0.93701
+"B0 Texas ratio, no fitting",0.00128,0.93701
+"B0 Texas ratio, no fitting",0.00128,0.93701
+"B0 Texas ratio, no fitting",0.00129,0.93701
+"B0 Texas ratio, no fitting",0.00129,0.93701
+"B0 Texas ratio, no fitting",0.00130,0.93701
+"B0 Texas ratio, no fitting",0.00130,0.93701
+"B0 Texas ratio, no fitting",0.00130,0.93701
+"B0 Texas ratio, no fitting",0.00131,0.93701
+"B0 Texas ratio, no fitting",0.00131,0.93701
+"B0 Texas ratio, no fitting",0.00132,0.93701
+"B0 Texas ratio, no fitting",0.00132,0.93701
+"B0 Texas ratio, no fitting",0.00133,0.93701
+"B0 Texas ratio, no fitting",0.00133,0.93701
+"B0 Texas ratio, no fitting",0.00133,0.93307
+"B0 Texas ratio, no fitting",0.00134,0.93307
+"B0 Texas ratio, no fitting",0.00134,0.93307
+"B0 Texas ratio, no fitting",0.00135,0.93307
+"B0 Texas ratio, no fitting",0.00135,0.93307
+"B0 Texas ratio, no fitting",0.00136,0.93307
+"B0 Texas ratio, no fitting",0.00136,0.93307
+"B0 Texas ratio, no fitting",0.00136,0.93307
+"B0 Texas ratio, no fitting",0.00137,0.93307
+"B0 Texas ratio, no fitting",0.00137,0.93307
+"B0 Texas ratio, no fitting",0.00138,0.93307
+"B0 Texas ratio, no fitting",0.00138,0.93307
+"B0 Texas ratio, no fitting",0.00139,0.93307
+"B0 Texas ratio, no fitting",0.00139,0.93307
+"B0 Texas ratio, no fitting",0.00139,0.92913
+"B0 Texas ratio, no fitting",0.00140,0.92913
+"B0 Texas ratio, no fitting",0.00140,0.92520
+"B0 Texas ratio, no fitting",0.00140,0.92520
+"B0 Texas ratio, no fitting",0.00141,0.92520
+"B0 Texas ratio, no fitting",0.00141,0.92126
+"B0 Texas ratio, no fitting",0.00141,0.92126
+"B0 Texas ratio, no fitting",0.00142,0.92126
+"B0 Texas ratio, no fitting",0.00142,0.92126
+"B0 Texas ratio, no fitting",0.00142,0.91732
+"B0 Texas ratio, no fitting",0.00143,0.91732
+"B0 Texas ratio, no fitting",0.00143,0.91732
+"B0 Texas ratio, no fitting",0.00144,0.91732
+"B0 Texas ratio, no fitting",0.00145,0.91732
+"B0 Texas ratio, no fitting",0.00145,0.91732
+"B0 Texas ratio, no fitting",0.00146,0.91732
+"B0 Texas ratio, no fitting",0.00146,0.91732
+"B0 Texas ratio, no fitting",0.00147,0.91732
+"B0 Texas ratio, no fitting",0.00147,0.91732
+"B0 Texas ratio, no fitting",0.00148,0.91732
+"B0 Texas ratio, no fitting",0.00149,0.91732
+"B0 Texas ratio, no fitting",0.00149,0.91732
+"B0 Texas ratio, no fitting",0.00149,0.91339
+"B0 Texas ratio, no fitting",0.00150,0.91339
+"B0 Texas ratio, no fitting",0.00150,0.91339
+"B0 Texas ratio, no fitting",0.00151,0.91339
+"B0 Texas ratio, no fitting",0.00151,0.90945
+"B0 Texas ratio, no fitting",0.00152,0.90945
+"B0 Texas ratio, no fitting",0.00152,0.90945
+"B0 Texas ratio, no fitting",0.00153,0.90945
+"B0 Texas ratio, no fitting",0.00153,0.90945
+"B0 Texas ratio, no fitting",0.00154,0.90945
+"B0 Texas ratio, no fitting",0.00155,0.90945
+"B0 Texas ratio, no fitting",0.00155,0.90945
+"B0 Texas ratio, no fitting",0.00156,0.90945
+"B0 Texas ratio, no fitting",0.00157,0.90945
+"B0 Texas ratio, no fitting",0.00157,0.90945
+"B0 Texas ratio, no fitting",0.00158,0.90945
+"B0 Texas ratio, no fitting",0.00158,0.90551
+"B0 Texas ratio, no fitting",0.00158,0.90157
+"B0 Texas ratio, no fitting",0.00159,0.90157
+"B0 Texas ratio, no fitting",0.00159,0.90157
+"B0 Texas ratio, no fitting",0.00160,0.90157
+"B0 Texas ratio, no fitting",0.00161,0.90157
+"B0 Texas ratio, no fitting",0.00161,0.90157
+"B0 Texas ratio, no fitting",0.00162,0.90157
+"B0 Texas ratio, no fitting",0.00163,0.90157
+"B0 Texas ratio, no fitting",0.00163,0.89764
+"B0 Texas ratio, no fitting",0.00164,0.89764
+"B0 Texas ratio, no fitting",0.00164,0.89764
+"B0 Texas ratio, no fitting",0.00165,0.89764
+"B0 Texas ratio, no fitting",0.00166,0.89764
+"B0 Texas ratio, no fitting",0.00167,0.89764
+"B0 Texas ratio, no fitting",0.00167,0.89764
+"B0 Texas ratio, no fitting",0.00167,0.89370
+"B0 Texas ratio, no fitting",0.00168,0.89370
+"B0 Texas ratio, no fitting",0.00169,0.89370
+"B0 Texas ratio, no fitting",0.00170,0.89370
+"B0 Texas ratio, no fitting",0.00171,0.89370
+"B0 Texas ratio, no fitting",0.00171,0.89370
+"B0 Texas ratio, no fitting",0.00172,0.89370
+"B0 Texas ratio, no fitting",0.00173,0.89370
+"B0 Texas ratio, no fitting",0.00174,0.89370
+"B0 Texas ratio, no fitting",0.00175,0.89370
+"B0 Texas ratio, no fitting",0.00175,0.89370
+"B0 Texas ratio, no fitting",0.00176,0.89370
+"B0 Texas ratio, no fitting",0.00177,0.89370
+"B0 Texas ratio, no fitting",0.00178,0.89370
+"B0 Texas ratio, no fitting",0.00179,0.89370
+"B0 Texas ratio, no fitting",0.00180,0.89370
+"B0 Texas ratio, no fitting",0.00181,0.89370
+"B0 Texas ratio, no fitting",0.00182,0.89370
+"B0 Texas ratio, no fitting",0.00182,0.89370
+"B0 Texas ratio, no fitting",0.00183,0.89370
+"B0 Texas ratio, no fitting",0.00184,0.89370
+"B0 Texas ratio, no fitting",0.00185,0.89370
+"B0 Texas ratio, no fitting",0.00186,0.89370
+"B0 Texas ratio, no fitting",0.00187,0.89370
+"B0 Texas ratio, no fitting",0.00188,0.89370
+"B0 Texas ratio, no fitting",0.00189,0.89370
+"B0 Texas ratio, no fitting",0.00190,0.89370
+"B0 Texas ratio, no fitting",0.00191,0.89370
+"B0 Texas ratio, no fitting",0.00192,0.89370
+"B0 Texas ratio, no fitting",0.00193,0.89370
+"B0 Texas ratio, no fitting",0.00194,0.89370
+"B0 Texas ratio, no fitting",0.00195,0.89370
+"B0 Texas ratio, no fitting",0.00196,0.89370
+"B0 Texas ratio, no fitting",0.00197,0.89370
+"B0 Texas ratio, no fitting",0.00198,0.89370
+"B0 Texas ratio, no fitting",0.00199,0.89370
+"B0 Texas ratio, no fitting",0.00201,0.89370
+"B0 Texas ratio, no fitting",0.00202,0.89370
+"B0 Texas ratio, no fitting",0.00203,0.89370
+"B0 Texas ratio, no fitting",0.00204,0.89370
+"B0 Texas ratio, no fitting",0.00205,0.89370
+"B0 Texas ratio, no fitting",0.00206,0.89370
+"B0 Texas ratio, no fitting",0.00207,0.89370
+"B0 Texas ratio, no fitting",0.00209,0.89370
+"B0 Texas ratio, no fitting",0.00210,0.89370
+"B0 Texas ratio, no fitting",0.00211,0.89370
+"B0 Texas ratio, no fitting",0.00212,0.89370
+"B0 Texas ratio, no fitting",0.00213,0.89370
+"B0 Texas ratio, no fitting",0.00215,0.89370
+"B0 Texas ratio, no fitting",0.00216,0.89370
+"B0 Texas ratio, no fitting",0.00217,0.89370
+"B0 Texas ratio, no fitting",0.00219,0.89370
+"B0 Texas ratio, no fitting",0.00220,0.89370
+"B0 Texas ratio, no fitting",0.00221,0.89370
+"B0 Texas ratio, no fitting",0.00223,0.89370
+"B0 Texas ratio, no fitting",0.00224,0.89370
+"B0 Texas ratio, no fitting",0.00225,0.89370
+"B0 Texas ratio, no fitting",0.00227,0.89370
+"B0 Texas ratio, no fitting",0.00228,0.89370
+"B0 Texas ratio, no fitting",0.00230,0.89370
+"B0 Texas ratio, no fitting",0.00231,0.89370
+"B0 Texas ratio, no fitting",0.00233,0.89370
+"B0 Texas ratio, no fitting",0.00234,0.89370
+"B0 Texas ratio, no fitting",0.00236,0.89370
+"B0 Texas ratio, no fitting",0.00237,0.89370
+"B0 Texas ratio, no fitting",0.00239,0.89370
+"B0 Texas ratio, no fitting",0.00240,0.89370
+"B0 Texas ratio, no fitting",0.00242,0.89370
+"B0 Texas ratio, no fitting",0.00243,0.89370
+"B0 Texas ratio, no fitting",0.00245,0.89370
+"B0 Texas ratio, no fitting",0.00247,0.89370
+"B0 Texas ratio, no fitting",0.00248,0.89370
+"B0 Texas ratio, no fitting",0.00250,0.89370
+"B0 Texas ratio, no fitting",0.00252,0.89370
+"B0 Texas ratio, no fitting",0.00254,0.89370
+"B0 Texas ratio, no fitting",0.00254,0.88976
+"B0 Texas ratio, no fitting",0.00256,0.88976
+"B0 Texas ratio, no fitting",0.00258,0.88976
+"B0 Texas ratio, no fitting",0.00260,0.88976
+"B0 Texas ratio, no fitting",0.00262,0.88976
+"B0 Texas ratio, no fitting",0.00262,0.88583
+"B0 Texas ratio, no fitting",0.00264,0.88583
+"B0 Texas ratio, no fitting",0.00266,0.88583
+"B0 Texas ratio, no fitting",0.00268,0.88583
+"B0 Texas ratio, no fitting",0.00270,0.88583
+"B0 Texas ratio, no fitting",0.00272,0.88583
+"B0 Texas ratio, no fitting",0.00274,0.88583
+"B0 Texas ratio, no fitting",0.00276,0.88583
+"B0 Texas ratio, no fitting",0.00279,0.88583
+"B0 Texas ratio, no fitting",0.00281,0.88583
+"B0 Texas ratio, no fitting",0.00283,0.88583
+"B0 Texas ratio, no fitting",0.00285,0.88583
+"B0 Texas ratio, no fitting",0.00287,0.88583
+"B0 Texas ratio, no fitting",0.00290,0.88583
+"B0 Texas ratio, no fitting",0.00292,0.88583
+"B0 Texas ratio, no fitting",0.00294,0.88583
+"B0 Texas ratio, no fitting",0.00297,0.88583
+"B0 Texas ratio, no fitting",0.00299,0.88583
+"B0 Texas ratio, no fitting",0.00302,0.88583
+"B0 Texas ratio, no fitting",0.00304,0.88583
+"B0 Texas ratio, no fitting",0.00307,0.88583
+"B0 Texas ratio, no fitting",0.00309,0.88583
+"B0 Texas ratio, no fitting",0.00312,0.88583
+"B0 Texas ratio, no fitting",0.00315,0.88583
+"B0 Texas ratio, no fitting",0.00318,0.88583
+"B0 Texas ratio, no fitting",0.00320,0.88583
+"B0 Texas ratio, no fitting",0.00323,0.88583
+"B0 Texas ratio, no fitting",0.00326,0.88583
+"B0 Texas ratio, no fitting",0.00329,0.88583
+"B0 Texas ratio, no fitting",0.00332,0.88583
+"B0 Texas ratio, no fitting",0.00335,0.88583
+"B0 Texas ratio, no fitting",0.00338,0.88583
+"B0 Texas ratio, no fitting",0.00342,0.88583
+"B0 Texas ratio, no fitting",0.00345,0.88583
+"B0 Texas ratio, no fitting",0.00348,0.88583
+"B0 Texas ratio, no fitting",0.00352,0.88583
+"B0 Texas ratio, no fitting",0.00353,0.88189
+"B0 Texas ratio, no fitting",0.00357,0.88189
+"B0 Texas ratio, no fitting",0.00360,0.88189
+"B0 Texas ratio, no fitting",0.00362,0.87795
+"B0 Texas ratio, no fitting",0.00364,0.87402
+"B0 Texas ratio, no fitting",0.00368,0.87402
+"B0 Texas ratio, no fitting",0.00372,0.87402
+"B0 Texas ratio, no fitting",0.00376,0.87402
+"B0 Texas ratio, no fitting",0.00380,0.87402
+"B0 Texas ratio, no fitting",0.00384,0.87402
+"B0 Texas ratio, no fitting",0.00388,0.87402
+"B0 Texas ratio, no fitting",0.00393,0.87402
+"B0 Texas ratio, no fitting",0.00397,0.87402
+"B0 Texas ratio, no fitting",0.00401,0.87402
+"B0 Texas ratio, no fitting",0.00404,0.87008
+"B0 Texas ratio, no fitting",0.00409,0.87008
+"B0 Texas ratio, no fitting",0.00413,0.87008
+"B0 Texas ratio, no fitting",0.00418,0.87008
+"B0 Texas ratio, no fitting",0.00423,0.87008
+"B0 Texas ratio, no fitting",0.00426,0.86614
+"B0 Texas ratio, no fitting",0.00432,0.86614
+"B0 Texas ratio, no fitting",0.00435,0.86220
+"B0 Texas ratio, no fitting",0.00440,0.86220
+"B0 Texas ratio, no fitting",0.00446,0.86220
+"B0 Texas ratio, no fitting",0.00452,0.86220
+"B0 Texas ratio, no fitting",0.00455,0.85827
+"B0 Texas ratio, no fitting",0.00461,0.85827
+"B0 Texas ratio, no fitting",0.00468,0.85827
+"B0 Texas ratio, no fitting",0.00474,0.85827
+"B0 Texas ratio, no fitting",0.00480,0.85827
+"B0 Texas ratio, no fitting",0.00487,0.85827
+"B0 Texas ratio, no fitting",0.00492,0.85433
+"B0 Texas ratio, no fitting",0.00499,0.85433
+"B0 Texas ratio, no fitting",0.00504,0.85039
+"B0 Texas ratio, no fitting",0.00511,0.85039
+"B0 Texas ratio, no fitting",0.00519,0.85039
+"B0 Texas ratio, no fitting",0.00526,0.85039
+"B0 Texas ratio, no fitting",0.00534,0.85039
+"B0 Texas ratio, no fitting",0.00543,0.85039
+"B0 Texas ratio, no fitting",0.00549,0.84646
+"B0 Texas ratio, no fitting",0.00558,0.84646
+"B0 Texas ratio, no fitting",0.00567,0.84646
+"B0 Texas ratio, no fitting",0.00576,0.84646
+"B0 Texas ratio, no fitting",0.00586,0.84646
+"B0 Texas ratio, no fitting",0.00596,0.84646
+"B0 Texas ratio, no fitting",0.00606,0.84646
+"B0 Texas ratio, no fitting",0.00617,0.84646
+"B0 Texas ratio, no fitting",0.00628,0.84646
+"B0 Texas ratio, no fitting",0.00637,0.84252
+"B0 Texas ratio, no fitting",0.00649,0.84252
+"B0 Texas ratio, no fitting",0.00658,0.83858
+"B0 Texas ratio, no fitting",0.00671,0.83858
+"B0 Texas ratio, no fitting",0.00685,0.83858
+"B0 Texas ratio, no fitting",0.00699,0.83858
+"B0 Texas ratio, no fitting",0.00713,0.83858
+"B0 Texas ratio, no fitting",0.00725,0.83465
+"B0 Texas ratio, no fitting",0.00740,0.83465
+"B0 Texas ratio, no fitting",0.00757,0.83465
+"B0 Texas ratio, no fitting",0.00774,0.83465
+"B0 Texas ratio, no fitting",0.00792,0.83465
+"B0 Texas ratio, no fitting",0.00811,0.83465
+"B0 Texas ratio, no fitting",0.00830,0.83465
+"B0 Texas ratio, no fitting",0.00843,0.82677
+"B0 Texas ratio, no fitting",0.00865,0.82677
+"B0 Texas ratio, no fitting",0.00879,0.81890
+"B0 Texas ratio, no fitting",0.00898,0.81496
+"B0 Texas ratio, no fitting",0.00923,0.81496
+"B0 Texas ratio, no fitting",0.00949,0.81496
+"B0 Texas ratio, no fitting",0.00977,0.81496
+"B0 Texas ratio, no fitting",0.01006,0.81496
+"B0 Texas ratio, no fitting",0.01033,0.81102
+"B0 Texas ratio, no fitting",0.01066,0.81102
+"B0 Texas ratio, no fitting",0.01101,0.81102
+"B0 Texas ratio, no fitting",0.01139,0.81102
+"B0 Texas ratio, no fitting",0.01179,0.81102
+"B0 Texas ratio, no fitting",0.01223,0.81102
+"B0 Texas ratio, no fitting",0.01263,0.80709
+"B0 Texas ratio, no fitting",0.01313,0.80709
+"B0 Texas ratio, no fitting",0.01367,0.80709
+"B0 Texas ratio, no fitting",0.01426,0.80709
+"B0 Texas ratio, no fitting",0.01491,0.80709
+"B0 Texas ratio, no fitting",0.01561,0.80709
+"B0 Texas ratio, no fitting",0.01638,0.80709
+"B0 Texas ratio, no fitting",0.01723,0.80709
+"B0 Texas ratio, no fitting",0.01818,0.80709
+"B0 Texas ratio, no fitting",0.01904,0.79921
+"B0 Texas ratio, no fitting",0.02022,0.79921
+"B0 Texas ratio, no fitting",0.02154,0.79921
+"B0 Texas ratio, no fitting",0.02272,0.78740
+"B0 Texas ratio, no fitting",0.02443,0.78740
+"B0 Texas ratio, no fitting",0.02643,0.78740
+"B0 Texas ratio, no fitting",0.02879,0.78740
+"B0 Texas ratio, no fitting",0.03160,0.78740
+"B0 Texas ratio, no fitting",0.03485,0.78346
+"B0 Texas ratio, no fitting",0.03908,0.78346
+"B0 Texas ratio, no fitting",0.04403,0.77559
+"B0 Texas ratio, no fitting",0.05057,0.76772
+"B0 Texas ratio, no fitting",0.05806,0.74016
+"B0 Texas ratio, no fitting",0.06911,0.71260
+"B0 Texas ratio, no fitting",0.08746,0.68898
+"B0 Texas ratio, no fitting",0.11135,0.60630
+"B0 Texas ratio, no fitting",0.14510,0.43701
+"B0 Texas ratio, no fitting",1.00000,0.00000

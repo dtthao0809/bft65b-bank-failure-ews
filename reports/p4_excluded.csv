@@ -1,0 +1,15 @@
+left_out,why
+"ACTIVE, CHANGEC1, ENDEFYMD, BKCLASS (Institutions)","Current snapshot: known only today, so using it would be look-ahead. 52 banks are marked inactive yet report in 2026Q2."
+COST (Failures),Known only after the failure.
+y and all _ columns,Built from the future.
+"YEAR, REPDTE, q_idx, CERT","Would let a model memorise crisis years or individual banks. A test period starts after training, so neither would carry over."
+STNAME as a category,Would memorise Texas in the 1980s. Regional stress enters through point-in-time state statistics instead.
+Number of quarters in the panel,"The panel starts in 1984, so a bank's history is cut off by the data rather than by its age, and the count rises with calendar time."
+log(ASSET),"Nominal, so it rises with inflation and proxies calendar time. size_pct replaces it."
+National failure rate,One value per quarter: with few crises it identifies the period rather than any bank's risk. st_fail_4q varies across states.
+"VOLIAB, COREDEP","Median share jumps in one quarter, 2010Q1 (-12.6 and +10.5 points), which looks like a definition change. bro_dep and nondep_ta cover funding risk."
+"P3ASSET, OTHBFHLB",Null before 2001 for most banks: P3ASSET 100% and OTHBFHLB about 85%.
+RBCRWAJ,"Null before 1990Q1 and for 36-41% of banks from 2020 (CBLR), so training and test would mean different things. tier1_lev and eq_ta cover capital."
+f_cblr,"Can be true only from 2020, so it never varies in training and a model could not learn it."
+"P9ASSET, NAASSET, NUMEMP","Null for about 18-19% of banks before 1990, tied to thrift charters, which dominate the 1989 failures. Null would identify thrifts rather than risk. NCLNLS covers noncurrent loans."
+"FDIC ROA, ROE, NIMY, NCLNLSR, NTLNLSR, LNLSDEPR",Recomputed from levels to one definition across time. ROE is also meaningless with negative equity.

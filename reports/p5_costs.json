@@ -1,0 +1,23 @@
+{
+ "loss_rate_median": 0.213001270071952,
+ "loss_rate_failures": 2753,
+ "cost_null_share": 0.008285302593659942,
+ "median_loss_thousand": 11740.414,
+ "mean_loss_thousand": 71116.94699114018,
+ "share_saved_estimate": 0.23,
+ "share_saved_range": [
+  0.1,
+  0.23,
+  0.5
+ ],
+ "exam_person_weeks": 16,
+ "median_exam_cost_thousand": 22.044759334233017,
+ "exam_multipliers": [
+  0.5,
+  1,
+  2,
+  4
+ ],
+ "ratio_median_loss_to_exam": 532.5716566915959,
+ "action_lag_days": 45
+}

@@ -1,0 +1,95 @@
+{
+ "threshold": 0.008922758744692224,
+ "model": "gbm no state features",
+ "rows": 274032,
+ "y1": 254,
+ "failed_banks": 78,
+ "at_threshold": {
+  "alarms": 2934,
+  "alarm_share": 0.010706778770362585,
+  "banks_alarmed_ever": 545,
+  "alarms_per_quarter": 58.68,
+  "row_precision": 0.07225630538513975,
+  "row_recall": 0.8346456692913385,
+  "bank_recall_any": 0.8717948717948718,
+  "bank_recall_actionable": 0.7564102564102564,
+  "false_alarms": 2722,
+  "false_alarms_near_miss": 0,
+  "false_alarms_other_exit_within_4q": 261,
+  "median_lead_quarters": 4.0
+ },
+ "cost_thousand_usd": {
+  "with_system": 37872714.41093836,
+  "exam_part": 122190.36936834708,
+  "failure_part": 37750524.041570015,
+  "no_system": 38676334.14999999,
+  "saving": 803619.7390616313,
+  "hindsight_best_threshold": 0.08892776264495685,
+  "hindsight_best_cost": 37782857.95123624,
+  "hindsight_alarm_share": 0.0029011210369591874
+ },
+ "periods": {
+  "2013-2019": {
+   "rows": 169564,
+   "y1": 211,
+   "failed_banks": 67,
+   "prevalence": 0.0012443679082824184,
+   "ap": 0.42383725437833697,
+   "lift": 340.6044559308452,
+   "roc_auc": 0.9767067067041855,
+   "top_precision": 0.108708357685564,
+   "top_row_recall": 0.8815165876777251,
+   "top_bank_recall": 0.9552238805970149,
+   "top_bank_recall_actionable": 0.8208955223880597,
+   "alarm_share": 0.012142907692670613,
+   "precision_at_threshold": 0.0947061680427392
+  },
+  "2020-2025": {
+   "rows": 104468,
+   "y1": 43,
+   "failed_banks": 14,
+   "prevalence": 0.0004116092966267182,
+   "ap": 0.09141692083326607,
+   "lift": 222.09634617696838,
+   "roc_auc": 0.7304493600057903,
+   "top_precision": 0.016098484848484848,
+   "top_row_recall": 0.3953488372093023,
+   "top_bank_recall": 0.5,
+   "top_bank_recall_actionable": 0.42857142857142855,
+   "alarm_share": 0.008375770570892522,
+   "precision_at_threshold": 0.019428571428571427
+  }
+ },
+ "bootstrap": {
+  "ap_ci95": {
+   "chosen": [
+    0.2509837737271677,
+    0.4285084116559973
+   ],
+   "B1": [
+    0.22774298594064254,
+    0.4134015556155293
+   ],
+   "B0": [
+    0.062367677598193345,
+    0.13669941459080653
+   ]
+  },
+  "ap_diff_ci95": {
+   "B1": [
+    -0.04169570347277734,
+    0.08617757595455545
+   ],
+   "B0": [
+    0.18140708605886455,
+    0.31389251875752766
+   ]
+  },
+  "top_row_recall_ci95": [
+   0.7083124811934814,
+   0.8815267882587631
+  ],
+  "resamples": 500,
+  "unit": "bank"
+ }
+}

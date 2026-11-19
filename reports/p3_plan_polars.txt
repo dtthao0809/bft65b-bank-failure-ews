@@ -1,0 +1,236 @@
+=== CORE PIPELINE: logical plan as written ===
+SORT BY [col("CERT"), col("REPDTE")]
+  SELECT [col("CERT"), col("REPDTE"), col("YEAR"), col("STNAME"), col("q_idx"), col("ASSET"), col("EQ"), col("RBC1AAJ"), col("LIAB"), col("DEP"), col("CHBAL"), col("LNLSGR"), col("NCLNLS"), col("NETINC_Q"), col("INTINC_Q"), col("EINTEXP_Q"), col("NTLNLS_Q"), col("eq_ta"), col("npl"), col("cash_ta"), col("loan_dep"), col("roa_q"), col("nim_q"), col("nco_q"), col("eq_ta_d4"), col("asset_g4"), col("npl_d1"), col("roa_4q"), col("roa_std8"), col("eq_ta_pct"), col("npl_pct"), col("eq_ta_st_med"), col("eq_ta_gap"), col("y"), col("_fail_date")]
+     WITH_COLUMNS:
+     [(col("eq_ta") - col("eq_ta_st_med")).alias("eq_ta_gap"), when(col("q_idx") <= 8101).then((((((col("_fail_date").dt.year() * 4) + col("_fail_date").dt.quarter().cast(Int32)) - 1) - col("q_idx"))).is_between([1, 4]).fill_null([false]).strict_cast(Int8)).otherwise(null.cast(Int8)).alias("y")] 
+      LEFT JOIN:
+      LEFT PLAN ON: [col("REPDTE"), col("STNAME")]
+         WITH_COLUMNS:
+         [(col("eq_ta").rank().over([col("REPDTE")]) / col("eq_ta").count().over([col("REPDTE")]).cast(Float64)).alias("eq_ta_pct"), (col("npl").rank().over([col("REPDTE")]) / col("npl").count().over([col("REPDTE")]).cast(Float64)).alias("npl_pct")] 
+           WITH_COLUMNS:
+           [when((col("q_idx") - col("q_idx").shift([dyn int: 4]).over([col("CERT")])) == 4).then(col("eq_ta") - col("eq_ta").shift([dyn int: 4]).over([col("CERT")])).otherwise(null.cast(Float64)).alias("eq_ta_d4"), when(((col("q_idx") - col("q_idx").shift([dyn int: 4]).over([col("CERT")])) == 4) & (col("ASSET").shift([dyn int: 4]).over([col("CERT")]) > 0)).then((col("ASSET") / col("ASSET").shift([dyn int: 4]).over([col("CERT")])) - 1.0).otherwise(null.cast(Float64)).alias("asset_g4"), when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("npl") - col("npl").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Float64)).alias("npl_d1"), when((col("q_idx") - col("q_idx").shift([dyn int: 3]).over([col("CERT")])) == 3).then(col("roa_q").rolling_mean().over([col("CERT")])).otherwise(null.cast(Float64)).alias("roa_4q"), when((col("q_idx") - col("q_idx").shift([dyn int: 7]).over([col("CERT")])) == 7).then(col("roa_q").rolling_std().over([col("CERT")])).otherwise(null.cast(Float64)).alias("roa_std8")] 
+             WITH_COLUMNS:
+             [when(col("ASSET") > 0).then(col("EQ") / col("ASSET")).otherwise(null.cast(Float64)).alias("eq_ta"), when(col("LNLSGR") > 0).then(col("NCLNLS") / col("LNLSGR")).otherwise(null.cast(Float64)).alias("npl"), when(col("ASSET") > 0).then(col("CHBAL") / col("ASSET")).otherwise(null.cast(Float64)).alias("cash_ta"), when(col("DEP") > 0).then(col("LNLSGR") / col("DEP")).otherwise(null.cast(Float64)).alias("loan_dep"), when(col("ASSET") > 0).then((4 * col("NETINC_Q")) / col("ASSET")).otherwise(null.cast(Float64)).alias("roa_q"), when(col("ASSET") > 0).then((4 * (col("INTINC_Q") - col("EINTEXP_Q"))) / col("ASSET")).otherwise(null.cast(Float64)).alias("nim_q"), when(col("LNLSGR") > 0).then((4 * col("NTLNLS_Q")) / col("LNLSGR")).otherwise(null.cast(Float64)).alias("nco_q")] 
+               WITH_COLUMNS:
+               [when(col("REPDTE").dt.quarter() == 1).then(col("NETINC")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("NETINC") - col("NETINC").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("NETINC_Q"), when(col("REPDTE").dt.quarter() == 1).then(col("INTINC")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("INTINC") - col("INTINC").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("INTINC_Q"), when(col("REPDTE").dt.quarter() == 1).then(col("EINTEXP")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("EINTEXP") - col("EINTEXP").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("EINTEXP_Q"), when(col("REPDTE").dt.quarter() == 1).then(col("NTLNLS")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("NTLNLS") - col("NTLNLS").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("NTLNLS_Q")] 
+                 WITH_COLUMNS:
+                 [(((col("REPDTE").dt.year() * 4) + col("REPDTE").dt.quarter().cast(Int32)) - 1).alias("q_idx"), when(col("RBC1AAJ") != 0.0).then(col("RBC1AAJ")).otherwise(null.cast(Float64)), when(col("LIAB") >= 0).then(col("LIAB")).otherwise(null.cast(Int64)), when(col("DEP") >= 0).then(col("DEP")).otherwise(null.cast(Int64)), when(col("CHBAL") >= 0).then(col("CHBAL")).otherwise(null.cast(Int64)), when(col("LNLSGR") >= 0).then(col("LNLSGR")).otherwise(null.cast(Int64)), when(col("NCLNLS") >= 0).then(col("NCLNLS")).otherwise(null.cast(Int64))] 
+                  SORT BY [col("CERT"), col("REPDTE")]
+                    FILTER (col("_fail_date").is_null() | (col("REPDTE") < col("_fail_date")))
+                    FROM
+                      LEFT JOIN:
+                      LEFT PLAN ON: [col("CERT")]
+                        FILTER col("EQ").is_not_null()
+                        FROM
+                          SEMI JOIN:
+                          LEFT PLAN ON: [col("CERT")]
+                            SELECT [col("CERT"), col("REPDTE"), col("YEAR"), col("STNAME"), col("ASSET"), col("EQ"), col("RBC1AAJ"), col("LIAB"), col("DEP"), col("CHBAL"), col("LNLSGR"), col("NCLNLS"), col("NETINC"), col("INTINC"), col("EINTEXP"), col("NTLNLS")]
+                              Parquet SCAN [D:/Final BigData/data/bronze/financials/YEAR=1984/part-0.parquet, ... 42 other sources]
+                              PROJECT */44 COLUMNS
+                              ESTIMATED ROWS: 1702253
+                          RIGHT PLAN ON: [col("CERT")]
+                            SELECT [col("CERT")]
+                              Parquet SCAN [D:/Final BigData/data/bronze/institutions.parquet]
+                              PROJECT */11 COLUMNS
+                              ESTIMATED ROWS: 27835
+                          END SEMI JOIN
+                      RIGHT PLAN ON: [col("CERT")]
+                        AGGREGATE[maintain_order: false]
+                          [col("FAILDATE").min().alias("_fail_date")] BY [col("CERT")]
+                          FROM
+                          FILTER col("FAILDATE").is_between([1984-01-01, 2026-06-30])
+                          FROM
+                            FILTER col("CERT").is_not_null()
+                            FROM
+                              FILTER col("RESTYPE") == "FAILURE"
+                              FROM
+                                Parquet SCAN [D:/Final BigData/data/bronze/failures.parquet]
+                                PROJECT */11 COLUMNS
+                                ESTIMATED ROWS: 4117
+                      END LEFT JOIN
+      RIGHT PLAN ON: [col("REPDTE"), col("STNAME")]
+        AGGREGATE[maintain_order: false]
+          [col("eq_ta").median().alias("eq_ta_st_med")] BY [col("REPDTE"), col("STNAME")]
+          FROM
+           WITH_COLUMNS:
+           [(col("eq_ta").rank().over([col("REPDTE")]) / col("eq_ta").count().over([col("REPDTE")]).cast(Float64)).alias("eq_ta_pct"), (col("npl").rank().over([col("REPDTE")]) / col("npl").count().over([col("REPDTE")]).cast(Float64)).alias("npl_pct")] 
+             WITH_COLUMNS:
+             [when((col("q_idx") - col("q_idx").shift([dyn int: 4]).over([col("CERT")])) == 4).then(col("eq_ta") - col("eq_ta").shift([dyn int: 4]).over([col("CERT")])).otherwise(null.cast(Float64)).alias("eq_ta_d4"), when(((col("q_idx") - col("q_idx").shift([dyn int: 4]).over([col("CERT")])) == 4) & (col("ASSET").shift([dyn int: 4]).over([col("CERT")]) > 0)).then((col("ASSET") / col("ASSET").shift([dyn int: 4]).over([col("CERT")])) - 1.0).otherwise(null.cast(Float64)).alias("asset_g4"), when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("npl") - col("npl").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Float64)).alias("npl_d1"), when((col("q_idx") - col("q_idx").shift([dyn int: 3]).over([col("CERT")])) == 3).then(col("roa_q").rolling_mean().over([col("CERT")])).otherwise(null.cast(Float64)).alias("roa_4q"), when((col("q_idx") - col("q_idx").shift([dyn int: 7]).over([col("CERT")])) == 7).then(col("roa_q").rolling_std().over([col("CERT")])).otherwise(null.cast(Float64)).alias("roa_std8")] 
+               WITH_COLUMNS:
+               [when(col("ASSET") > 0).then(col("EQ") / col("ASSET")).otherwise(null.cast(Float64)).alias("eq_ta"), when(col("LNLSGR") > 0).then(col("NCLNLS") / col("LNLSGR")).otherwise(null.cast(Float64)).alias("npl"), when(col("ASSET") > 0).then(col("CHBAL") / col("ASSET")).otherwise(null.cast(Float64)).alias("cash_ta"), when(col("DEP") > 0).then(col("LNLSGR") / col("DEP")).otherwise(null.cast(Float64)).alias("loan_dep"), when(col("ASSET") > 0).then((4 * col("NETINC_Q")) / col("ASSET")).otherwise(null.cast(Float64)).alias("roa_q"), when(col("ASSET") > 0).then((4 * (col("INTINC_Q") - col("EINTEXP_Q"))) / col("ASSET")).otherwise(null.cast(Float64)).alias("nim_q"), when(col("LNLSGR") > 0).then((4 * col("NTLNLS_Q")) / col("LNLSGR")).otherwise(null.cast(Float64)).alias("nco_q")] 
+                 WITH_COLUMNS:
+                 [when(col("REPDTE").dt.quarter() == 1).then(col("NETINC")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("NETINC") - col("NETINC").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("NETINC_Q"), when(col("REPDTE").dt.quarter() == 1).then(col("INTINC")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("INTINC") - col("INTINC").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("INTINC_Q"), when(col("REPDTE").dt.quarter() == 1).then(col("EINTEXP")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("EINTEXP") - col("EINTEXP").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("EINTEXP_Q"), when(col("REPDTE").dt.quarter() == 1).then(col("NTLNLS")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("NTLNLS") - col("NTLNLS").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("NTLNLS_Q")] 
+                   WITH_COLUMNS:
+                   [(((col("REPDTE").dt.year() * 4) + col("REPDTE").dt.quarter().cast(Int32)) - 1).alias("q_idx"), when(col("RBC1AAJ") != 0.0).then(col("RBC1AAJ")).otherwise(null.cast(Float64)), when(col("LIAB") >= 0).then(col("LIAB")).otherwise(null.cast(Int64)), when(col("DEP") >= 0).then(col("DEP")).otherwise(null.cast(Int64)), when(col("CHBAL") >= 0).then(col("CHBAL")).otherwise(null.cast(Int64)), when(col("LNLSGR") >= 0).then(col("LNLSGR")).otherwise(null.cast(Int64)), when(col("NCLNLS") >= 0).then(col("NCLNLS")).otherwise(null.cast(Int64))] 
+                    SORT BY [col("CERT"), col("REPDTE")]
+                      FILTER (col("_fail_date").is_null() | (col("REPDTE") < col("_fail_date")))
+                      FROM
+                        LEFT JOIN:
+                        LEFT PLAN ON: [col("CERT")]
+                          FILTER col("EQ").is_not_null()
+                          FROM
+                            SEMI JOIN:
+                            LEFT PLAN ON: [col("CERT")]
+                              SELECT [col("CERT"), col("REPDTE"), col("YEAR"), col("STNAME"), col("ASSET"), col("EQ"), col("RBC1AAJ"), col("LIAB"), col("DEP"), col("CHBAL"), col("LNLSGR"), col("NCLNLS"), col("NETINC"), col("INTINC"), col("EINTEXP"), col("NTLNLS")]
+                                Parquet SCAN [D:/Final BigData/data/bronze/financials/YEAR=1984/part-0.parquet, ... 42 other sources]
+                                PROJECT */44 COLUMNS
+                                ESTIMATED ROWS: 1702253
+                            RIGHT PLAN ON: [col("CERT")]
+                              SELECT [col("CERT")]
+                                Parquet SCAN [D:/Final BigData/data/bronze/institutions.parquet]
+                                PROJECT */11 COLUMNS
+                                ESTIMATED ROWS: 27835
+                            END SEMI JOIN
+                        RIGHT PLAN ON: [col("CERT")]
+                          AGGREGATE[maintain_order: false]
+                            [col("FAILDATE").min().alias("_fail_date")] BY [col("CERT")]
+                            FROM
+                            FILTER col("FAILDATE").is_between([1984-01-01, 2026-06-30])
+                            FROM
+                              FILTER col("CERT").is_not_null()
+                              FROM
+                                FILTER col("RESTYPE") == "FAILURE"
+                                FROM
+                                  Parquet SCAN [D:/Final BigData/data/bronze/failures.parquet]
+                                  PROJECT */11 COLUMNS
+                                  ESTIMATED ROWS: 4117
+                        END LEFT JOIN
+      END LEFT JOIN
+
+=== CORE PIPELINE: after optimisation ===
+SORT BY [col("CERT"), col("REPDTE")]
+  simple π 35/35 ["CERT", "REPDTE", "YEAR", ... 32 other columns]
+     WITH_COLUMNS:
+     [(col("eq_ta") - col("eq_ta_st_med")).alias("eq_ta_gap"), when(col("q_idx") <= 8101).then((((((col("_fail_date").dt.year() * 4) + col("_fail_date").dt.quarter().cast(Int32)) - 1) - col("q_idx"))).is_between([1, 4]).fill_null([false]).strict_cast(Int8)).otherwise(null.cast(Int8)).alias("y")] 
+      LEFT JOIN:
+      LEFT PLAN ON: [col("REPDTE"), col("STNAME")]
+        CACHE[id: abbb0777-18ce-423e-ab96-9ef4cc3daae2]
+          simple π 32/32 ["CERT", "REPDTE", "YEAR", ... 29 other columns]
+             WITH_COLUMNS:
+             [when((col("q_idx") - col("q_idx").shift([dyn int: 4]).over([col("CERT")])) == 4).then(col("eq_ta") - col("eq_ta").shift([dyn int: 4]).over([col("CERT")])).otherwise(null.cast(Float64)).alias("eq_ta_d4"), when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("npl") - col("npl").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Float64)).alias("npl_d1"), when((col("q_idx") - col("q_idx").shift([dyn int: 3]).over([col("CERT")])) == 3).then(col("roa_q").rolling_mean().over([col("CERT")])).otherwise(null.cast(Float64)).alias("roa_4q"), when((col("q_idx") - col("q_idx").shift([dyn int: 7]).over([col("CERT")])) == 7).then(col("roa_q").rolling_std().over([col("CERT")])).otherwise(null.cast(Float64)).alias("roa_std8"), (col("eq_ta").rank().over([col("REPDTE")]) / col("eq_ta").count().over([col("REPDTE")]).cast(Float64)).alias("eq_ta_pct"), (col("npl").rank().over([col("REPDTE")]) / col("npl").count().over([col("REPDTE")]).cast(Float64)).alias("npl_pct")] 
+              simple π 26/26 ["CERT", "REPDTE", "YEAR", ... 23 other columns]
+                 WITH_COLUMNS:
+                 [when(col("__POLARS_CSER_0x10000001b")).then(col("EQ") / col("ASSET")).otherwise(null.cast(Float64)).alias("eq_ta"), when(col("__POLARS_CSER_0x10000001e")).then(col("NCLNLS") / col("LNLSGR")).otherwise(null.cast(Float64)).alias("npl"), when(col("__POLARS_CSER_0x10000001b")).then(col("CHBAL") / col("ASSET")).otherwise(null.cast(Float64)).alias("cash_ta"), when(col("DEP") > 0).then(col("LNLSGR") / col("DEP")).otherwise(null.cast(Float64)).alias("loan_dep"), when(col("__POLARS_CSER_0x10000001b")).then((4 * col("NETINC_Q")) / col("ASSET")).otherwise(null.cast(Float64)).alias("roa_q"), when(col("__POLARS_CSER_0x10000001b")).then((4 * (col("INTINC_Q") - col("EINTEXP_Q"))) / col("ASSET")).otherwise(null.cast(Float64)).alias("nim_q"), when(col("__POLARS_CSER_0x10000001e")).then((4 * col("NTLNLS_Q")) / col("LNLSGR")).otherwise(null.cast(Float64)).alias("nco_q"), when(((col("q_idx") - col("q_idx").shift([dyn int: 4]).over([col("CERT")])) == 4) & (col("ASSET").shift([dyn int: 4]).over([col("CERT")]) > 0)).then((col("ASSET") / col("ASSET").shift([dyn int: 4]).over([col("CERT")])) - 1.0).otherwise(null.cast(Float64)).alias("asset_g4")] 
+                   WITH_COLUMNS:
+                   [(col("ASSET") > 0).alias("__POLARS_CSER_0x10000001b"), (col("LNLSGR") > 0).alias("__POLARS_CSER_0x10000001e")] 
+                    simple π 18/18 ["CERT", "REPDTE", "YEAR", ... 15 other columns]
+                      simple π 22/22 ["CERT", "REPDTE", "YEAR", ... 19 other columns]
+                         WITH_COLUMNS:
+                         [when(col("__POLARS_CSER_0x100000019")).then(col("NETINC")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("NETINC") - col("NETINC").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("NETINC_Q"), when(col("__POLARS_CSER_0x100000019")).then(col("INTINC")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("INTINC") - col("INTINC").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("INTINC_Q"), when(col("__POLARS_CSER_0x100000019")).then(col("EINTEXP")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("EINTEXP") - col("EINTEXP").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("EINTEXP_Q"), when(col("__POLARS_CSER_0x100000019")).then(col("NTLNLS")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("NTLNLS") - col("NTLNLS").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("NTLNLS_Q")] 
+                           WITH_COLUMNS:
+                           [(col("REPDTE").dt.quarter() == 1).alias("__POLARS_CSER_0x100000019")] 
+                             WITH_COLUMNS:
+                             [(((col("REPDTE").dt.year() * 4) + col("REPDTE").dt.quarter().cast(Int32)) - 1).alias("q_idx"), when(col("RBC1AAJ") != 0.0).then(col("RBC1AAJ")).otherwise(null.cast(Float64)), when(col("LIAB") >= 0).then(col("LIAB")).otherwise(null.cast(Int64)), when(col("DEP") >= 0).then(col("DEP")).otherwise(null.cast(Int64)), when(col("CHBAL") >= 0).then(col("CHBAL")).otherwise(null.cast(Int64)), when(col("LNLSGR") >= 0).then(col("LNLSGR")).otherwise(null.cast(Int64)), when(col("NCLNLS") >= 0).then(col("NCLNLS")).otherwise(null.cast(Int64))] 
+                              SORT BY [col("CERT"), col("REPDTE")]
+                                FILTER (col("_fail_date").is_null() | (col("REPDTE") < col("_fail_date")))
+                                FROM
+                                  LEFT JOIN:
+                                  LEFT PLAN ON: [col("CERT")]
+                                    SEMI JOIN:
+                                    LEFT PLAN ON: [col("CERT")]
+                                      Parquet SCAN [D:/Final BigData/data/bronze/financials/YEAR=1984/part-0.parquet, ... 42 other sources]
+                                      PROJECT 16/44 COLUMNS
+                                      SELECTION: col("EQ").is_not_null()
+                                      ESTIMATED ROWS: 1702253
+                                    RIGHT PLAN ON: [col("CERT")]
+                                      Parquet SCAN [D:/Final BigData/data/bronze/institutions.parquet]
+                                      PROJECT 1/11 COLUMNS
+                                      ESTIMATED ROWS: 27835
+                                    END SEMI JOIN
+                                  RIGHT PLAN ON: [col("CERT")]
+                                    AGGREGATE[maintain_order: false]
+                                      [col("FAILDATE").min().alias("_fail_date")] BY [col("CERT")]
+                                      FROM
+                                      simple π 2/2 ["CERT", "FAILDATE"]
+                                        Parquet SCAN [D:/Final BigData/data/bronze/failures.parquet]
+                                        PROJECT 3/11 COLUMNS
+                                        SELECTION: ((col("CERT").is_not_null() & col("FAILDATE").is_between([1984-01-01, 2026-06-30])) & (col("RESTYPE") == "FAILURE"))
+                                        ESTIMATED ROWS: 4117
+                                  END LEFT JOIN
+      RIGHT PLAN ON: [col("REPDTE"), col("STNAME")]
+        AGGREGATE[maintain_order: false]
+          [col("eq_ta").median().alias("eq_ta_st_med")] BY [col("REPDTE"), col("STNAME")]
+          FROM
+          simple π 3/3 ["REPDTE", "STNAME", "eq_ta"]
+            CACHE[id: abbb0777-18ce-423e-ab96-9ef4cc3daae2]
+      END LEFT JOIN
+
+=== CORE + filter YEAR == 2008 AFTER the windows: after optimisation ===
+SORT BY [col("CERT"), col("REPDTE")]
+  simple π 35/35 ["CERT", "REPDTE", "YEAR", ... 32 other columns]
+     WITH_COLUMNS:
+     [(col("eq_ta") - col("eq_ta_st_med")).alias("eq_ta_gap"), when(col("q_idx") <= 8101).then((((((col("_fail_date").dt.year() * 4) + col("_fail_date").dt.quarter().cast(Int32)) - 1) - col("q_idx"))).is_between([1, 4]).fill_null([false]).strict_cast(Int8)).otherwise(null.cast(Int8)).alias("y")] 
+      LEFT JOIN:
+      LEFT PLAN ON: [col("REPDTE"), col("STNAME")]
+        FILTER col("YEAR") == 2008
+        FROM
+          CACHE[id: 0b9030a8-703d-4f9c-b92f-e7a1d5b5ef6e]
+            simple π 32/32 ["CERT", "REPDTE", "YEAR", ... 29 other columns]
+               WITH_COLUMNS:
+               [when((col("q_idx") - col("q_idx").shift([dyn int: 4]).over([col("CERT")])) == 4).then(col("eq_ta") - col("eq_ta").shift([dyn int: 4]).over([col("CERT")])).otherwise(null.cast(Float64)).alias("eq_ta_d4"), when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("npl") - col("npl").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Float64)).alias("npl_d1"), when((col("q_idx") - col("q_idx").shift([dyn int: 3]).over([col("CERT")])) == 3).then(col("roa_q").rolling_mean().over([col("CERT")])).otherwise(null.cast(Float64)).alias("roa_4q"), when((col("q_idx") - col("q_idx").shift([dyn int: 7]).over([col("CERT")])) == 7).then(col("roa_q").rolling_std().over([col("CERT")])).otherwise(null.cast(Float64)).alias("roa_std8"), (col("eq_ta").rank().over([col("REPDTE")]) / col("eq_ta").count().over([col("REPDTE")]).cast(Float64)).alias("eq_ta_pct"), (col("npl").rank().over([col("REPDTE")]) / col("npl").count().over([col("REPDTE")]).cast(Float64)).alias("npl_pct")] 
+                simple π 26/26 ["CERT", "REPDTE", "YEAR", ... 23 other columns]
+                   WITH_COLUMNS:
+                   [when(col("__POLARS_CSER_0x10000001b")).then(col("EQ") / col("ASSET")).otherwise(null.cast(Float64)).alias("eq_ta"), when(col("__POLARS_CSER_0x10000001e")).then(col("NCLNLS") / col("LNLSGR")).otherwise(null.cast(Float64)).alias("npl"), when(col("__POLARS_CSER_0x10000001b")).then(col("CHBAL") / col("ASSET")).otherwise(null.cast(Float64)).alias("cash_ta"), when(col("DEP") > 0).then(col("LNLSGR") / col("DEP")).otherwise(null.cast(Float64)).alias("loan_dep"), when(col("__POLARS_CSER_0x10000001b")).then((4 * col("NETINC_Q")) / col("ASSET")).otherwise(null.cast(Float64)).alias("roa_q"), when(col("__POLARS_CSER_0x10000001b")).then((4 * (col("INTINC_Q") - col("EINTEXP_Q"))) / col("ASSET")).otherwise(null.cast(Float64)).alias("nim_q"), when(col("__POLARS_CSER_0x10000001e")).then((4 * col("NTLNLS_Q")) / col("LNLSGR")).otherwise(null.cast(Float64)).alias("nco_q"), when(((col("q_idx") - col("q_idx").shift([dyn int: 4]).over([col("CERT")])) == 4) & (col("ASSET").shift([dyn int: 4]).over([col("CERT")]) > 0)).then((col("ASSET") / col("ASSET").shift([dyn int: 4]).over([col("CERT")])) - 1.0).otherwise(null.cast(Float64)).alias("asset_g4")] 
+                     WITH_COLUMNS:
+                     [(col("ASSET") > 0).alias("__POLARS_CSER_0x10000001b"), (col("LNLSGR") > 0).alias("__POLARS_CSER_0x10000001e")] 
+                      simple π 18/18 ["CERT", "REPDTE", "YEAR", ... 15 other columns]
+                        simple π 22/22 ["CERT", "REPDTE", "YEAR", ... 19 other columns]
+                           WITH_COLUMNS:
+                           [when(col("__POLARS_CSER_0x100000019")).then(col("NETINC")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("NETINC") - col("NETINC").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("NETINC_Q"), when(col("__POLARS_CSER_0x100000019")).then(col("INTINC")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("INTINC") - col("INTINC").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("INTINC_Q"), when(col("__POLARS_CSER_0x100000019")).then(col("EINTEXP")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("EINTEXP") - col("EINTEXP").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("EINTEXP_Q"), when(col("__POLARS_CSER_0x100000019")).then(col("NTLNLS")).otherwise(when((col("q_idx") - col("q_idx").shift([dyn int: 1]).over([col("CERT")])) == 1).then(col("NTLNLS") - col("NTLNLS").shift([dyn int: 1]).over([col("CERT")])).otherwise(null.cast(Int64))).alias("NTLNLS_Q")] 
+                             WITH_COLUMNS:
+                             [(col("REPDTE").dt.quarter() == 1).alias("__POLARS_CSER_0x100000019")] 
+                               WITH_COLUMNS:
+                               [(((col("REPDTE").dt.year() * 4) + col("REPDTE").dt.quarter().cast(Int32)) - 1).alias("q_idx"), when(col("RBC1AAJ") != 0.0).then(col("RBC1AAJ")).otherwise(null.cast(Float64)), when(col("LIAB") >= 0).then(col("LIAB")).otherwise(null.cast(Int64)), when(col("DEP") >= 0).then(col("DEP")).otherwise(null.cast(Int64)), when(col("CHBAL") >= 0).then(col("CHBAL")).otherwise(null.cast(Int64)), when(col("LNLSGR") >= 0).then(col("LNLSGR")).otherwise(null.cast(Int64)), when(col("NCLNLS") >= 0).then(col("NCLNLS")).otherwise(null.cast(Int64))] 
+                                SORT BY [col("CERT"), col("REPDTE")]
+                                  FILTER (col("_fail_date").is_null() | (col("REPDTE") < col("_fail_date")))
+                                  FROM
+                                    LEFT JOIN:
+                                    LEFT PLAN ON: [col("CERT")]
+                                      SEMI JOIN:
+                                      LEFT PLAN ON: [col("CERT")]
+                                        Parquet SCAN [D:/Final BigData/data/bronze/financials/YEAR=1984/part-0.parquet, ... 42 other sources]
+                                        PROJECT 16/44 COLUMNS
+                                        SELECTION: col("EQ").is_not_null()
+                                        ESTIMATED ROWS: 1702253
+                                      RIGHT PLAN ON: [col("CERT")]
+                                        Parquet SCAN [D:/Final BigData/data/bronze/institutions.parquet]
+                                        PROJECT 1/11 COLUMNS
+                                        ESTIMATED ROWS: 27835
+                                      END SEMI JOIN
+                                    RIGHT PLAN ON: [col("CERT")]
+                                      AGGREGATE[maintain_order: false]
+                                        [col("FAILDATE").min().alias("_fail_date")] BY [col("CERT")]
+                                        FROM
+                                        simple π 2/2 ["CERT", "FAILDATE"]
+                                          Parquet SCAN [D:/Final BigData/data/bronze/failures.parquet]
+                                          PROJECT 3/11 COLUMNS
+                                          SELECTION: ((col("CERT").is_not_null() & col("FAILDATE").is_between([1984-01-01, 2026-06-30])) & (col("RESTYPE") == "FAILURE"))
+                                          ESTIMATED ROWS: 4117
+                                    END LEFT JOIN
+      RIGHT PLAN ON: [col("REPDTE"), col("STNAME")]
+        AGGREGATE[maintain_order: false]
+          [col("eq_ta").median().alias("eq_ta_st_med")] BY [col("REPDTE"), col("STNAME")]
+          FROM
+          simple π 3/3 ["REPDTE", "STNAME", "eq_ta"]
+            CACHE[id: 0b9030a8-703d-4f9c-b92f-e7a1d5b5ef6e]
+      END LEFT JOIN
+
+=== SELECTIVE QUERY: as written ===
+AGGREGATE[maintain_order: false]
+  [col("ROA").mean()] BY [col("STNAME")]
+  FROM
+  FILTER col("YEAR") == 2008
+  FROM
+    Parquet SCAN [D:/Final BigData/data/bronze/financials/YEAR=1984/part-0.parquet, ... 42 other sources]
+    PROJECT */44 COLUMNS
+    ESTIMATED ROWS: 1702253
+
+=== SELECTIVE QUERY: after optimisation ===
+AGGREGATE[maintain_order: false]
+  [col("ROA").mean()] BY [col("STNAME")]
+  FROM
+  simple π 2/2 ["STNAME", "ROA"]
+    Parquet SCAN [D:/Final BigData/data/bronze/financials/YEAR=2008/part-0.parquet]
+    PROJECT 3/44 COLUMNS
+    SELECTION: col("YEAR") == 2008
+    ESTIMATED ROWS: 39588

@@ -1,0 +1,4 @@
+engine,fit_s,ap,roc_auc,rows_train,rows_val
+Spark logistic,35.80000,0.59116,0.97753,1041927,127181
+"Spark GBT, 30 trees, depth 4",40.70000,0.63296,0.97101,1041927,127181
+scikit-learn logistic,7.40000,0.58949,0.97731,1041927,127181

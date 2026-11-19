@@ -1,0 +1,11 @@
+query,optimizer,median_s,min_s,max_s
+core pipeline,all rules on,1.52,1.387,1.724
+core pipeline,no projection pushdown,1.815,1.74,2.103
+core pipeline,no predicate pushdown,1.448,1.381,1.469
+core pipeline,no common sub-plan or sub-expression,1.492,1.455,1.551
+core pipeline,all rules off,2.691,2.645,2.944
+selective query,all rules on,0.004,0.003,0.029
+selective query,no projection pushdown,0.026,0.02,0.199
+selective query,no predicate pushdown,0.018,0.015,0.063
+selective query,no common sub-plan or sub-expression,0.003,0.003,0.004
+selective query,all rules off,0.25,0.236,0.268

@@ -1,0 +1,15 @@
+engine,up_to_step,cumulative_s,added_s
+in-memory,"T1-T3 scan, filter, join",0.114,0.114
+in-memory,sort by bank,0.202,0.088
+in-memory,"T4-T6 clean, quarterly flows, ratios",0.685,0.482
+in-memory,T7 bank windows,0.975,0.291
+in-memory,T8 quarter ranks,1.178,0.203
+in-memory,"T8 state median, T9 label",1.605,0.427
+in-memory,T10 final sort,1.704,0.099
+streaming,"T1-T3 scan, filter, join",0.15,0.15
+streaming,sort by bank,0.392,0.242
+streaming,"T4-T6 clean, quarterly flows, ratios",0.594,0.202
+streaming,T7 bank windows,0.822,0.229
+streaming,T8 quarter ranks,0.957,0.135
+streaming,"T8 state median, T9 label",1.149,0.192
+streaming,T10 final sort,1.463,0.313

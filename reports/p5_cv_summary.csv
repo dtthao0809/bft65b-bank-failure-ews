@@ -1,0 +1,6 @@
+model,source,F1 crisis 1990-91,F2 quiet 1994-2006,F3 crisis 2008-11,mean_ap
+B0 Texas ratio,"B0 Texas ratio, no fitting",0.2697,0.0759,0.5425,0.2960
+"B1 logit, 3 ratios","B1 logit: capital, NPL, ROA",0.2942,0.1006,0.6018,0.3322
+"Logit, all features",logit C=0.1,0.4421,0.1480,0.5882,0.3928
+"GBM, with state features",gbm lr=0.03 leaves=15 trees=400,0.5466,0.1434,0.6508,0.4469
+"GBM, no state (chosen)",gbm no state features,0.5332,0.1651,0.6610,0.4531

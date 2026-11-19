@@ -1,0 +1,47 @@
+{
+ "numeric": [
+  "eq_ta",
+  "eq_ta_d4",
+  "npl",
+  "texas",
+  "res_cov",
+  "res_ln",
+  "nco_4q",
+  "prov_4q",
+  "npl_d4",
+  "npl_st_gap",
+  "con_ln",
+  "ln_ta",
+  "ln_g4",
+  "roa_4q",
+  "roa_q_d4",
+  "cost_inc",
+  "roa_std8",
+  "loss_q4",
+  "liq_ta",
+  "bro_dep",
+  "asset_g4",
+  "st_npl_med",
+  "st_loss_share",
+  "st_fail_4q"
+ ],
+ "flags": [
+  "f_neg_equity"
+ ],
+ "missing_indicators": [],
+ "label": "y",
+ "keys": [
+  "CERT",
+  "REPDTE"
+ ],
+ "split_column": "_split",
+ "failed_banks_per_era": {
+  "1986-89": 1473,
+  "1990-94": 769,
+  "1995-2006": 55
+ },
+ "screened_on": [
+  "1986-03-31",
+  "2006-12-31"
+ ]
+}

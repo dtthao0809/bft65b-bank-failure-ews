@@ -1,0 +1,4 @@
+model,rows,y1,failed_banks,prevalence,ap,lift,roc_auc,top_precision,top_row_recall,top_bank_recall,top_bank_recall_actionable,brier,log_loss,mean_pred,observed
+gbm no state features,274032,254,78,0.00093,0.34547,372.71469,0.93798,0.07336,0.79921,0.87179,0.75641,0.00074,0.00361,0.00126,0.00093
+"B1 logit: capital, NPL, ROA",274032,254,78,0.00093,0.31774,342.80060,0.95963,0.07228,0.78740,0.85897,0.74359,0.00077,0.00442,0.00175,0.00093
+"B0 Texas ratio, no fitting",274032,254,78,0.00093,0.09587,103.43065,0.90268,0.06072,0.66142,0.79487,0.67949,,,,

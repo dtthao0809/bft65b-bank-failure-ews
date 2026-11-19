@@ -1,0 +1,59 @@
+{
+ "raw_folder": "D:\\Final BigData\\data_raw\\fdic_full",
+ "financials": {
+  "quarters_expected": 170,
+  "quarters_on_disk": 170,
+  "quarters_missing": [],
+  "quarters_rows_differ_from_api": [],
+  "quarters_wrong_repdte_inside": [],
+  "panel_rows": 1682616,
+  "distinct_banks": 24064,
+  "null_keys": 0,
+  "duplicate_cert_repdte": 0,
+  "api_index": "risview_20260819185831",
+  "api_index_created": "2026-08-19T18:58:33Z"
+ },
+ "failures": {
+  "rows": 4117,
+  "exact_duplicate_rows": 0,
+  "null_cert": 488,
+  "api_total": 4117,
+  "api_index": "failures_1787667198788",
+  "api_index_created": "2026-08-25T14:13:18Z"
+ },
+ "institutions": {
+  "rows": 27835,
+  "exact_duplicate_rows": 0,
+  "null_cert": 0,
+  "api_total": 27835,
+  "api_index": "institutions_20261106100008",
+  "api_index_created": "2026-11-06T13:05:30Z"
+ },
+ "field_list_matches_config": true,
+ "download_log": {
+  "source": "https://api.fdic.gov/banks",
+  "started_utc": "2026-11-07T11:13:52+00:00",
+  "finished_utc": "2026-11-07T11:30:24+00:00",
+  "minutes": 16.5,
+  "ok": true,
+  "python": "3.15.2",
+  "pandas": "3.1.1",
+  "requests": "2.34.2"
+ },
+ "panel_banks_missing_from_institutions": 235,
+ "control_totals": {
+  "year_ends_compared": 42,
+  "year_ends_bank_count_exact": 1,
+  "max_abs_bank_diff": 303,
+  "max_abs_asset_diff_pct": 2.0506
+ },
+ "independent_download": {
+  "other_download": "data_raw\\fdic",
+  "quarters_compared": 170,
+  "shared_columns": 32,
+  "cells_compared": 53843712,
+  "cells_different": 0,
+  "columns_with_differences": {}
+ },
+ "ok": true
+}

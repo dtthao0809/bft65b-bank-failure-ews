@@ -1,0 +1,5 @@
+capital,banks,median_loss_rate,median_cost_thousand
+1 insolvent (EQ/TA <= 0),1380,0.2359,14332.9386
+2 under 2%,697,0.1841,12326.6110
+3 2-4%,317,0.1806,11724.5060
+4 4% or more,339,0.2107,5621.3960

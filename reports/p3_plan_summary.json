@@ -1,0 +1,59 @@
+{
+ "polars_streaming_nodes": {
+  "select": 14,
+  "with-columns": 9,
+  "window": 4,
+  "multi-scan": 3,
+  "sort": 2,
+  "equi-join": 2,
+  "multiplexer": 1,
+  "filter": 1,
+  "semi-join": 1,
+  "group-by": 1,
+  "in-memory-map": 1
+ },
+ "polars_rows": 1666719,
+ "filter_before_windows_changes": {
+  "rows": 33614,
+  "cells_changed": {
+   "eq_ta_d4": 33053,
+   "asset_g4": 33053,
+   "roa_4q": 28314,
+   "roa_std8": 32374,
+   "NETINC_Q": 0,
+   "npl_d1": 8380,
+   "eq_ta_pct": 0,
+   "y": 0
+  }
+ },
+ "spark": {
+  "toArrow_s": 95.4,
+  "rows": 1666719,
+  "final_flag": true,
+  "final_plan_nodes": {
+   "Exchange": 7,
+   "ReusedExchange": 2,
+   "Sort": 6,
+   "Window": 6,
+   "SortMergeJoin": 1,
+   "BroadcastHashJoin": 4,
+   "HashAggregate": 4,
+   "ObjectHashAggregate": 2,
+   "AQEShuffleRead": 7
+  },
+  "parquet_scans_of_financials": 4,
+  "stages": 11,
+  "shuffle_write_gb": 1.055,
+  "shuffle_read_gb": 1.374,
+  "spill_mb": 0.0,
+  "executor_run_s": 1248.3999999999999,
+  "gc_s": 16.200000000000003,
+  "selective_partition_filter": [
+   "PartitionFilters: [isnotnull(YEAR#976), (YEAR#976 = 2008)]"
+  ],
+  "bank_pushed_filter": [
+   "PushedFilters: [IsNotNull(CERT), EqualTo(CERT,14)]"
+  ],
+  "core_year_partition_filter": []
+ }
+}

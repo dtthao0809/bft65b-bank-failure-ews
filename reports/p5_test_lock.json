@@ -1,0 +1,7 @@
+{
+ "threshold": 0.008922758744692224,
+ "model": "gbm no state features",
+ "models_sha256": "bdc88c929ff46a2ad99fa11634de30ee9977e1c8ce2d509e6b7799ea40bc55d2",
+ "results_sha256": "866900f923675b4217e92558da3f3b310ba845d56e67a959628b8e10991a0c1e",
+ "evaluated_at_utc": "2026-11-07T18:09:25.770741+00:00"
+}

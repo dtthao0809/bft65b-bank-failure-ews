@@ -1,0 +1,32 @@
+test,result,detail
+"key (CERT, REPDTE) is unique",PASS,"1,666,719 rows"
+"gold has exactly the silver rows, and the same y",PASS,"y=1 rows 10,860"
+no forbidden field and no _ column among the features,PASS,"42 candidates, 25 selected"
+selected features are all in the registry,PASS,""
+selected features exclude Institutions-snapshot fields,PASS,""
+features are identical when every label-side column is removed first,PASS,"1,666,719 rows, 42 columns"
+rebuild from bronze gives the stored feature table,PASS,""
+truncated at 1990-12-31: 42 features unchanged,PASS,"479,162 rows "
+truncated at 2008-12-31: 42 features unchanged,PASS,"1,253,067 rows "
+truncated at 2019-12-31: 42 features unchanged,PASS,"1,545,003 rows "
+control: all four leaky features are caught by truncation,PASS,"{'leak_lead': 28469, 'leak_centred': 56802, 'leak_all_time': 3277232, 'leak_bank_max': 1570325}"
+gap: 4 unused quarters between development and test,PASS,4 quarters
+the last development label ends before the first test quarter,PASS,""
+test contains at least 50 failures,PASS,"{'dev': 2755, 'gap': 59, 'test': 78}"
+no bank's failure is labelled in both development and test,PASS,"2,755 and 78 banks"
+each row has one split; unlabelled rows only after 2025Q2,PASS,""
+Part 4 train and validation also have a 4-quarter gap,PASS,4 quarters
+screening reads nothing after its training window,PASS,""
+load_xy refuses the test period by default,PASS,""
+fitted parameters equal an independent computation on training rows,PASS,"1,041,927 training rows"
+control: fitting with validation rows gives different parameters,PASS,19 of 24 upper caps change
+transforming extreme rows does not change what was fitted,PASS,""
+a row's output does not depend on other rows,PASS,""
+no nulls remain after preprocessing,PASS,"shape (127181, 25)"
+capping holds on validation rows,PASS,""
+7 features match an independent pandas computation,PASS,"1,666,719 rows "
+st_fail_4q for Texas 1989Q4 equals failures in 1989 / banks,PASS,223 / 1468 = 0.1519
+"a reporting gap gives null, not a wrong total",PASS,28 gap rows
+a bank's first 3 quarters have no 4-quarter total,PASS,"70,704 rows"
+known case: SVB 2022Q4 is y=1 and not in distress on these ratios,PASS,"{'eq_ta': 0.0739, 'npl': 0.0019, 'y': 1}"
+known case: Washington Mutual 2008Q2 is y=1,PASS,"{'eq_ta': 0.0794, 'npl': 0.0415, 'y': 1}"

@@ -1,0 +1,8 @@
+exchange,size,rows,partitioning
+74,474.6 MiB,1.67E+6,"rangepartitioning(CERT ASC NULLS FIRST, REPDTE ASC NULLS FIRST, 200), ENSURE_REQUIREMENTS, [plan_id=2004]"
+50,436.5 MiB,1.67E+6,"hashpartitioning(REPDTE, STNAME, 200), ENSURE_REQUIREMENTS, [plan_id=1924]"
+39,411.1 MiB,1.67E+6,"hashpartitioning(REPDTE, 200), ENSURE_REQUIREMENTS, [plan_id=1787]"
+30,258.5 MiB,1.67E+6,"hashpartitioning(CERT, 200), ENSURE_REQUIREMENTS, [plan_id=1489]"
+8,434.9 KiB,2.78E+4,"hashpartitioning(CERT, 200), ENSURE_REQUIREMENTS, [plan_id=401]"
+21,67.0 KiB,2.86E+3,"hashpartitioning(CERT, 200), ENSURE_REQUIREMENTS, [plan_id=427]"
+67,45.0 MiB,9.44E+3,"hashpartitioning(REPDTE, STNAME, 200), ENSURE_REQUIREMENTS, [plan_id=1548]"

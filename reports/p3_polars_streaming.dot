@@ -1,0 +1,86 @@
+digraph polars {
+rankdir="BT"
+node [fontname="Monospace"]
+fontname="Helvetica"
+fontsize="10"
+labelloc="b"
+label=<<BR/><BR/><B>Legend</B><BR/><BR/>◯ streaming engine node <FONT COLOR="0.16 0.3 1.0">⬤</FONT> potentially memory-intensive node <FONT COLOR="0.0 0.3 1.0">⬤</FONT> in-memory engine fallback>
+4294967334 [label="select\nCERT, REPDTE, YEAR, STNAME, q_idx, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q, eq_ta, npl, cash_ta, loan_dep, roa_q, nim_q, nco_q, eq_ta_d4, asset_g4, npl_d1, roa_4q, roa_std8, eq_ta_pct, npl_pct, eq_ta_st_med, eq_ta_gap, y, _fail_date"];
+4294967333 [label="sort\n_POLARS_TMP_PHYS_8 = col(\"_POLARS_TMP_PHYS_8\")",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967332 [label="with-columns\n_POLARS_TMP_PHYS_8 = col(\"CERT\").row_encode([col(\"REPDTE\")])\n"];
+4294967331 [label="select\nCERT, REPDTE, YEAR, STNAME, q_idx, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q, eq_ta, npl, cash_ta, loan_dep, roa_q, nim_q, nco_q, eq_ta_d4, asset_g4, npl_d1, roa_4q, roa_std8, eq_ta_pct, npl_pct, eq_ta_st_med, eq_ta_gap, y, _fail_date"];
+4294967330 [label="with-columns\neq_ta_gap = col(\"eq_ta\") - col(\"eq_ta_st_med\")                                                                                                                                                                                           \n        y = when(col(\"q_idx\") <= 8101).then((((((col(\"_fail_date\").dt.year() * 4) + col(\"_fail_date\").dt.quarter().cast(Int32)) - 1) - col(\"q_idx\"))).is_between([1, 4]).fill_null([false]).strict_cast(Int8)).otherwise(null.cast(Int8))\n"];
+4294967329 [label="equi-join\nleft_on:\nREPDTE = col(\"REPDTE\")\nSTNAME = col(\"STNAME\")\nright_on:\nREPDTE = col(\"REPDTE\")\nSTNAME = col(\"STNAME\")\nhow: LEFT",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967335 [label="multiplexer",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967326 [label="select\nCERT, REPDTE, YEAR, STNAME, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, _fail_date, q_idx, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q, eq_ta, npl, cash_ta, loan_dep, roa_q, nim_q, nco_q, eq_ta_d4, asset_g4, npl_d1, roa_4q, roa_std8, eq_ta_pct, npl_pct"];
+4294967325 [label="select\nCERT, REPDTE, YEAR, STNAME, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, _fail_date, q_idx, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q, eq_ta, npl, cash_ta, loan_dep, roa_q, nim_q, nco_q, asset_g4, eq_ta_d4, npl_d1, roa_4q, roa_std8, eq_ta_pct, npl_pct"];
+4294967324 [label="with-columns\n eq_ta_d4 = when((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_1\")) == 4).then(col(\"eq_ta\") - col(\"_POLARS_TMP_PLAN_0\")).otherwise(null.cast(Float64))\n   npl_d1 = when((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_3\")) == 1).then(col(\"npl\") - col(\"_POLARS_TMP_PLAN_2\")).otherwise(null.cast(Float64))  \n   roa_4q = when((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_5\")) == 3).then(col(\"_POLARS_TMP_PLAN_4\")).otherwise(null.cast(Float64))               \n roa_std8 = when((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_7\")) == 7).then(col(\"_POLARS_TMP_PLAN_6\")).otherwise(null.cast(Float64))               \neq_ta_pct = col(\"_POLARS_TMP_PLAN_8\") / col(\"_POLARS_TMP_PLAN_9\").cast(Float64)                                                               \n  npl_pct = col(\"_POLARS_TMP_PLAN_10\") / col(\"_POLARS_TMP_PLAN_11\").cast(Float64)                                                             \n"];
+4294967323 [label="window[maintain_order: false, ordered_eval: false]\npartition by: REPDTE\n _POLARS_TMP_PLAN_8 = col(\"eq_ta\").rank().over([col(\"REPDTE\")]) \n _POLARS_TMP_PLAN_9 = col(\"eq_ta\").count().over([col(\"REPDTE\")])\n_POLARS_TMP_PLAN_10 = col(\"npl\").rank().over([col(\"REPDTE\")])   \n_POLARS_TMP_PLAN_11 = col(\"npl\").count().over([col(\"REPDTE\")])  \n",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967322 [label="window[maintain_order: false, ordered_eval: true]\npartition by: CERT\n_POLARS_TMP_PLAN_0 = col(\"eq_ta\").shift([dyn int: 4]).over([col(\"CERT\")])\n_POLARS_TMP_PLAN_1 = col(\"q_idx\").shift([dyn int: 4]).over([col(\"CERT\")])\n_POLARS_TMP_PLAN_2 = col(\"npl\").shift([dyn int: 1]).over([col(\"CERT\")])  \n_POLARS_TMP_PLAN_3 = col(\"q_idx\").shift([dyn int: 1]).over([col(\"CERT\")])\n_POLARS_TMP_PLAN_4 = col(\"roa_q\").rolling_mean().over([col(\"CERT\")])     \n_POLARS_TMP_PLAN_5 = col(\"q_idx\").shift([dyn int: 3]).over([col(\"CERT\")])\n_POLARS_TMP_PLAN_6 = col(\"roa_q\").rolling_std().over([col(\"CERT\")])      \n_POLARS_TMP_PLAN_7 = col(\"q_idx\").shift([dyn int: 7]).over([col(\"CERT\")])\n",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967321 [label="select\nCERT, REPDTE, YEAR, STNAME, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, _fail_date, q_idx, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q, eq_ta, npl, cash_ta, loan_dep, roa_q, nim_q, nco_q, asset_g4"];
+4294967320 [label="select\nCERT, REPDTE, YEAR, STNAME, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, _fail_date, q_idx, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q, __POLARS_CSER_0x10000001b, __POLARS_CSER_0x10000001e, eq_ta, npl, cash_ta, loan_dep, roa_q, nim_q, nco_q, asset_g4"];
+4294967319 [label="with-columns\n   eq_ta = when(col(\"__POLARS_CSER_0x10000001b\")).then(col(\"EQ\") / col(\"ASSET\")).otherwise(null.cast(Float64))                                                                              \n     npl = when(col(\"__POLARS_CSER_0x10000001e\")).then(col(\"NCLNLS\") / col(\"LNLSGR\")).otherwise(null.cast(Float64))                                                                         \n cash_ta = when(col(\"__POLARS_CSER_0x10000001b\")).then(col(\"CHBAL\") / col(\"ASSET\")).otherwise(null.cast(Float64))                                                                           \nloan_dep = when(col(\"DEP\") > 0).then(col(\"LNLSGR\") / col(\"DEP\")).otherwise(null.cast(Float64))                                                                                              \n   roa_q = when(col(\"__POLARS_CSER_0x10000001b\")).then((4 * col(\"NETINC_Q\")) / col(\"ASSET\")).otherwise(null.cast(Float64))                                                                  \n   nim_q = when(col(\"__POLARS_CSER_0x10000001b\")).then((4 * (col(\"INTINC_Q\") - col(\"EINTEXP_Q\"))) / col(\"ASSET\")).otherwise(null.cast(Float64))                                             \n   nco_q = when(col(\"__POLARS_CSER_0x10000001e\")).then((4 * col(\"NTLNLS_Q\")) / col(\"LNLSGR\")).otherwise(null.cast(Float64))                                                                 \nasset_g4 = when(((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_13\")) == 4) & (col(\"_POLARS_TMP_PLAN_12\") > 0)).then((col(\"ASSET\") / col(\"_POLARS_TMP_PLAN_12\")) - 1.0).otherwise(null.cast(Float64))\n"];
+4294967318 [label="window[maintain_order: true, ordered_eval: true]\npartition by: CERT\n_POLARS_TMP_PLAN_12 = col(\"ASSET\").shift([dyn int: 4]).over([col(\"CERT\")])\n_POLARS_TMP_PLAN_13 = col(\"q_idx\").shift([dyn int: 4]).over([col(\"CERT\")])\n",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967317 [label="with-columns\n__POLARS_CSER_0x10000001b = col(\"ASSET\") > 0 \n__POLARS_CSER_0x10000001e = col(\"LNLSGR\") > 0\n"];
+4294967316 [label="select\nCERT, REPDTE, YEAR, STNAME, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, _fail_date, q_idx, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q"];
+4294967315 [label="select\nCERT, REPDTE, YEAR, STNAME, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, NETINC, INTINC, EINTEXP, NTLNLS, _fail_date, q_idx, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q"];
+4294967314 [label="select\nCERT, REPDTE, YEAR, STNAME, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, NETINC, INTINC, EINTEXP, NTLNLS, _fail_date, q_idx, __POLARS_CSER_0x100000019, NETINC_Q, INTINC_Q, EINTEXP_Q, NTLNLS_Q"];
+4294967313 [label="with-columns\n NETINC_Q = when(col(\"__POLARS_CSER_0x100000019\")).then(col(\"NETINC\")).otherwise(when((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_15\")) == 1).then(col(\"NETINC\") - col(\"_POLARS_TMP_PLAN_14\")).otherwise(null.cast(Int64)))  \n INTINC_Q = when(col(\"__POLARS_CSER_0x100000019\")).then(col(\"INTINC\")).otherwise(when((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_15\")) == 1).then(col(\"INTINC\") - col(\"_POLARS_TMP_PLAN_16\")).otherwise(null.cast(Int64)))  \nEINTEXP_Q = when(col(\"__POLARS_CSER_0x100000019\")).then(col(\"EINTEXP\")).otherwise(when((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_15\")) == 1).then(col(\"EINTEXP\") - col(\"_POLARS_TMP_PLAN_17\")).otherwise(null.cast(Int64)))\n NTLNLS_Q = when(col(\"__POLARS_CSER_0x100000019\")).then(col(\"NTLNLS\")).otherwise(when((col(\"q_idx\") - col(\"_POLARS_TMP_PLAN_15\")) == 1).then(col(\"NTLNLS\") - col(\"_POLARS_TMP_PLAN_18\")).otherwise(null.cast(Int64)))  \n"];
+4294967312 [label="window[maintain_order: true, ordered_eval: true]\npartition by: CERT\n_POLARS_TMP_PLAN_14 = col(\"NETINC\").shift([dyn int: 1]).over([col(\"CERT\")]) \n_POLARS_TMP_PLAN_15 = col(\"q_idx\").shift([dyn int: 1]).over([col(\"CERT\")])  \n_POLARS_TMP_PLAN_16 = col(\"INTINC\").shift([dyn int: 1]).over([col(\"CERT\")]) \n_POLARS_TMP_PLAN_17 = col(\"EINTEXP\").shift([dyn int: 1]).over([col(\"CERT\")])\n_POLARS_TMP_PLAN_18 = col(\"NTLNLS\").shift([dyn int: 1]).over([col(\"CERT\")]) \n",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967311 [label="with-columns\n__POLARS_CSER_0x100000019 = (col(\"REPDTE\").dt.quarter() == 1)\n"];
+4294967310 [label="with-columns\n  q_idx = (((col(\"REPDTE\").dt.year() * 4) + col(\"REPDTE\").dt.quarter().cast(Int32)) - 1)\nRBC1AAJ = when(col(\"RBC1AAJ\") != 0.0).then(col(\"RBC1AAJ\")).otherwise(null.cast(Float64))\n   LIAB = when(col(\"LIAB\") >= 0).then(col(\"LIAB\")).otherwise(null.cast(Int64))          \n    DEP = when(col(\"DEP\") >= 0).then(col(\"DEP\")).otherwise(null.cast(Int64))            \n  CHBAL = when(col(\"CHBAL\") >= 0).then(col(\"CHBAL\")).otherwise(null.cast(Int64))        \n LNLSGR = when(col(\"LNLSGR\") >= 0).then(col(\"LNLSGR\")).otherwise(null.cast(Int64))      \n NCLNLS = when(col(\"NCLNLS\") >= 0).then(col(\"NCLNLS\")).otherwise(null.cast(Int64))      \n"];
+4294967309 [label="select\nCERT, REPDTE, YEAR, STNAME, ASSET, EQ, RBC1AAJ, LIAB, DEP, CHBAL, LNLSGR, NCLNLS, NETINC, INTINC, EINTEXP, NTLNLS, _fail_date"];
+4294967308 [label="sort\n_POLARS_TMP_PHYS_4 = col(\"_POLARS_TMP_PHYS_4\")",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967307 [label="with-columns\n_POLARS_TMP_PHYS_4 = col(\"CERT\").row_encode([col(\"REPDTE\")])\n"];
+4294967306 [label="filter\n_fail_date = (col(\"_fail_date\").is_null() | (col(\"REPDTE\") < col(\"_fail_date\")))\n"];
+4294967305 [label="equi-join\nleft_on:\nCERT = col(\"CERT\")\nright_on:\nCERT = col(\"CERT\")\nhow: LEFT",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967299 [label="semi-join\nleft_on:\nCERT = col(\"CERT\")\nright_on:\nCERT = col(\"CERT\")",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967297 [label="multi-scan[parquet]\n43 sources\nproject: 16 total, 15 from file\nfilter: col(\"EQ\").is_not_null()\nhive: 1 column"];
+4294967297 -> 4294967299;
+4294967298 [label="multi-scan[parquet]\n1 source\nproject: 1 total, 1 from file"];
+4294967298 -> 4294967299;
+4294967299 -> 4294967305;
+4294967304 [label="select\nCERT = _POLARS_TMP_PHYS_1\n_fail_date = _POLARS_TMP_PHYS_3"];
+4294967303 [label="group-by\nkey:\n_POLARS_TMP_PHYS_1 = col(\"_POLARS_TMP_PHYS_1\")\n\naggs:\n_POLARS_TMP_PHYS_3 = col(\"FAILDATE\").min()\n",style=filled,fillcolor="0.16 0.3 1.0"];
+4294967302 [label="select\n_POLARS_TMP_PHYS_1 = CERT\nFAILDATE"];
+4294967301 [label="select\nCERT, FAILDATE"];
+4294967300 [label="multi-scan[parquet]\n1 source\nproject: 3 total, 3 from file\nfilter: ((col(\"CERT\").is_not_null() & col(\"FAILDATE\").is_between([1984-01-01, 2026-06-30])) & (col(\"RESTYPE\") == \"FAILURE\"))"];
+4294967300 -> 4294967301;
+4294967301 -> 4294967302;
+4294967302 -> 4294967303;
+4294967303 -> 4294967304;
+4294967304 -> 4294967305;
+4294967305 -> 4294967306;
+4294967306 -> 4294967307;
+4294967307 -> 4294967308;
+4294967308 -> 4294967309;
+4294967309 -> 4294967310;
+4294967310 -> 4294967311;
+4294967311 -> 4294967312;
+4294967312 -> 4294967313;
+4294967313 -> 4294967314;
+4294967314 -> 4294967315;
+4294967315 -> 4294967316;
+4294967316 -> 4294967317;
+4294967317 -> 4294967318;
+4294967318 -> 4294967319;
+4294967319 -> 4294967320;
+4294967320 -> 4294967321;
+4294967321 -> 4294967322;
+4294967322 -> 4294967323;
+4294967323 -> 4294967324;
+4294967324 -> 4294967325;
+4294967325 -> 4294967326;
+4294967326 -> 4294967335;
+4294967335 -> 4294967329;
+4294967328 [label="in-memory-map\nAGGREGATE[maintain_order: false]\n  [col(\"eq_ta\").median().alias(\"eq_ta_st_med\")] BY [col(\"REPDTE\"), col(\"STNAME\")]",style=filled,fillcolor="0.0 0.3 1.0"];
+4294967327 [label="select\nREPDTE, STNAME, eq_ta"];
+4294967335 -> 4294967327;
+4294967327 -> 4294967328;
+4294967328 -> 4294967329;
+4294967329 -> 4294967330;
+4294967330 -> 4294967331;
+4294967331 -> 4294967332;
+4294967332 -> 4294967333;
+4294967333 -> 4294967334;
+}

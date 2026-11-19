@@ -1,0 +1,13 @@
+rule,what,rows_changed,banks_affected,rows_left
+start,bronze financials,0,0,1682616
+R1,no Institutions record,10996,235,1671620
+R2,"EQ null, no capital reported",3806,42,1667814
+R3,report dated on or after failure,1095,268,1666719
+R4,RBCRWAJ == 0 means not reported,462176,20785,1666719
+R4,RBC1AAJ == 0 means not reported,74378,3815,1666719
+R5,"LNLSDEPR undefined, DEP == 0",2798,312,1666719
+R5,"NCLNLSR undefined, LNLSGR == 0",9545,714,1666719
+R5,"NTLNLSR undefined, LNLSGR == 0",9545,714,1666719
+R6,"ROE meaningless, EQ <= 0",14604,2825,1666719
+R7,negative balance,793,284,1666719
+R8,blank STNAME,0,0,1666719

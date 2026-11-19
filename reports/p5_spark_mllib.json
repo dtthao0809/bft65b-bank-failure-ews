@@ -1,0 +1,9 @@
+{
+ "fold": "F3 crisis 2008-11",
+ "rows_matched": 127181,
+ "rank_corr_spark_vs_sklearn": 0.9938734277276113,
+ "max_abs_prob_diff": 0.14420828256118823,
+ "total_s": 142.2,
+ "logit_C": 1.0,
+ "lambda": 9.597601367466243e-07
+}

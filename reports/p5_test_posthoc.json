@@ -1,0 +1,24 @@
+{
+ "label": "Post hoc and descriptive. No decision depends on it.",
+ "share_of_test_losses_in_two_banks": 0.8852963122928236,
+ "without_those_two": {
+  "no_system_thousand": 4436318.154000002,
+  "with_system_thousand": 3632698.4149383465,
+  "saving_thousand": 803619.7390616555,
+  "saving_pct": 18.114565077733943,
+  "bank_recall_actionable": 0.7763157894736842
+ },
+ "with_them_saving_pct": 2.077807415627656,
+ "calibration": {
+  "gbm no state features": {
+   "mean_pred": 0.00126,
+   "observed": 0.00093
+  },
+  "B1 logit: capital, NPL, ROA": {
+   "mean_pred": 0.00175,
+   "observed": 0.00093
+  }
+ },
+ "dev_alarm_share": 0.031079596295380443,
+ "test_alarm_share": 0.010706778770362585
+}

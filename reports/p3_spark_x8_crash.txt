@@ -1,0 +1,1 @@
+Caused by: org.apache.spark.memory.SparkOutOfMemoryError: [UNABLE_TO_ACQUIRE_MEMORY] Unable to acquire 16384 bytes of memory, got 0. SQLSTATE: 53200

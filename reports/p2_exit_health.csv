@@ -1,0 +1,10 @@
+_exit_class,banks,first_year,last_year,median_asset,median_eq_ta_pct,eq_nonpositive_pct,median_roa,median_nc_ta_pct
+merger,15339,1984,2026,104086.0,8.96,0.8,0.82,0.51
+active_at_end,4242,2026,2026,386818.0,10.56,0.0,1.23,0.31
+failure,2837,1984,2026,65781.0,0.02,49.7,-4.41,7.34
+distress_no_failure_record,623,1984,2009,102478.0,-14.52,94.1,-5.45,7.06
+voluntary_closing,487,1984,2026,55893.0,14.09,2.5,0.17,0.11
+assisted_merger,242,1984,1989,125098.0,-13.14,93.0,-5.58,8.7
+other_or_unknown,14,1989,2014,11933.0,50.78,0.0,0.6,0.03
+active_late_report,2,2026,2026,191800.0,11.51,0.0,1.32,0.05
+failure_after_scope,2,2026,2026,38337.0,3.33,0.0,-4.53,4.99

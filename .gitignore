@@ -1,0 +1,41 @@
+# Never commit data (exam rule)
+data_raw/
+data/
+*.parquet
+*.csv.gz
+
+# Material that is not part of this repository
+bft65b-ews_ban_giao/
+*.zip
+
+.Rhistory
+
+# Keep the small measurement outputs in reports/ (csv, json, md, png): they are evidence
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+spark-warehouse/
+metastore_db/
+
+# Local JDK for PySpark (see README)
+tools/
+
+# Personal notes, not part of the submission
+HUONG_DAN_VSCODE.md
+Bộ câu hỏi*.docx
+
+# Exam brief from the course, not part of the submission
+final_report_bft65b.pdf
+# Word temporary files
+~$*
+*.tmp
+
+# Report drafts: the final report is submitted separately, not via GitHub
+/Report_*.docx
+report/*.docx
+report/*.pdf
+.vscode/
+
+# Helper scripts for pushing (local only)
+_git_*.bat
+_git_*.txt

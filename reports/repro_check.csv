@@ -1,0 +1,91 @@
+file,kind,same,detail
+p1_bench_env.json,variable,true,bytes
+p1_bronze_build.json,variable,false,/financials/seconds
+p1_completeness.json,variable,false,/raw_folder
+p1_control_totals.csv,variable,true,bytes
+p1_failures_coverage.csv,deterministic,true,bytes
+p1_parquet_columns.csv,deterministic,true,bytes
+p1_parquet_row_groups.json,deterministic,true,bytes
+p1_polars_plans.txt,variable,false,text differs
+p1_raw_sha256.csv,deterministic,true,bytes
+p1_schema_drift.csv,deterministic,true,bytes
+p1_schema_fidelity.json,deterministic,true,bytes
+p1_storage_benchmark.csv,variable,false,"write_s,W1_s,W1_spread_s,W1_peak_extra_mb,W2_s,W2_spread_s,W2_peak_extra_mb,W3_s,W3_spread_s,W3_peak_extra_mb,W4_s,W4_spread_s,W4_peak_extra_mb,W5_s,W5_spread_s,W5_peak_extra_mb,W6_s,W6_spread_s,W6_peak_extra_mb"
+p1_storage_benchmark.md,variable,false,text differs
+p1_storage_runs.csv,variable,false,"seconds,peak_mb,base_mb"
+p2_checks.csv,deterministic,true,bytes
+p2_dq_report.md,deterministic,true,bytes
+p2_exit_codes.csv,deterministic,true,bytes
+p2_exit_health.csv,deterministic,true,bytes
+p2_failure_days_after_report.csv,deterministic,true,bytes
+p2_failure_report_gap.csv,deterministic,true,bytes
+p2_issue_register.csv,deterministic,true,bytes
+p2_null_pct_by_year.csv,deterministic,true,bytes
+p2_profile.csv,deterministic,true,bytes
+p2_structural_breaks.csv,deterministic,true,bytes
+p2_waterfall.csv,deterministic,true,bytes
+p2_zero_pct_by_year.csv,deterministic,true,bytes
+p3_bench_env.json,variable,true,bytes
+p3_benchmark_runs.csv,variable,false,"shape (119, 20) vs (57, 20)"
+p3_cluster_case.json,variable,false,"/cores_spark_needs_to_match_polars_at_perfect_scaling,/cpu_ratio_spark_to_polars,/cpu_ratio_spark_to_polars_1_thread,/memory_extrapolation_not_measured/pandas_cols/extrapolated_m_rows_at_12gb,/memory_extrapolation_not_measured/pandas_cols/extrapolated_m_rows_at_64gb,/memory_extrapolation_not_measured/pandas_cols/extrapolated_scale_at_12gb"
+p3_engine_reconcile.csv,deterministic,true,bytes
+p3_engine_reconcile.json,deterministic,true,bytes
+p3_engines.csv,variable,false,"runs,wall_s,min_s,max_s,cpu_s,peak_rss_gb,avail_start_gb,spill_gb,x_slower_than_polars_stream,x_cpu,x_memory"
+p3_optimizer_effect.csv,variable,false,"median_s,min_s,max_s"
+p3_plan_polars.txt,variable,false,text differs
+p3_plan_spark.txt,variable,false,text differs
+p3_plan_summary.json,variable,false,"/spark/executor_run_s,/spark/gc_s,/spark/toArrow_s"
+p3_polars_profile.csv,variable,false,"cumulative_s,added_s"
+p3_scale.csv,variable,false,"shape (24, 14) vs (27, 14)"
+p3_spark_exchanges.csv,variable,false,partitioning
+p3_spark_settings.csv,variable,false,"runs,wall_s,min_s,max_s,cpu_s,peak_rss_gb,avail_start_gb,spill_gb"
+p3_spark_stages.csv,variable,false,"shuffle_write_mb,executor_run_s,jvm_gc_s,name"
+p3_spark_x8_crash.txt,variable,false,text differs
+p3_threads.csv,variable,false,"runs,wall_s,min_s,max_s,cpu_s,peak_rss_gb,avail_start_gb,speedup,efficiency"
+p4_checks.csv,deterministic,true,bytes
+p4_event_study.csv,deterministic,true,bytes
+p4_excluded.csv,deterministic,true,bytes
+p4_feature_dictionary.csv,deterministic,true,bytes
+p4_feature_screen.csv,deterministic,true,bytes
+p4_missing_indicators.csv,deterministic,true,bytes
+p4_pipeline_facts.json,deterministic,true,bytes
+p4_pipeline_params.csv,deterministic,true,bytes
+p4_selected_features.json,deterministic,true,bytes
+p4_split.csv,deterministic,true,bytes
+p5_action_lag_dev.csv,deterministic,true,bytes
+p5_calibration_dev.csv,deterministic,true,bytes
+p5_checks.csv,deterministic,true,bytes
+p5_cost_curve_dev.csv,deterministic,true,same rows after sorting
+p5_costs.json,deterministic,true,bytes
+p5_cv_results.csv,deterministic,true,same rows after sorting
+p5_cv_summary.csv,deterministic,true,bytes
+p5_dryrun_failed_banks.csv,deterministic,true,same rows after sorting
+p5_dryrun_metrics.csv,deterministic,true,bytes
+p5_dryrun_pr_curve.csv,deterministic,true,bytes
+p5_dryrun_results.json,deterministic,true,""
+p5_exam_cost_by_year.csv,deterministic,true,bytes
+p5_frozen.json,deterministic,true,""
+p5_importance_f3.csv,deterministic,true,bytes
+p5_loss_by_capital.csv,deterministic,true,bytes
+p5_plan_mllib.txt,variable,false,text differs
+p5_reproduce_check.json,deterministic,true,bytes
+p5_reproduce_failed_banks.csv,deterministic,true,bytes
+p5_reproduce_metrics.csv,deterministic,true,bytes
+p5_reproduce_pr_curve.csv,deterministic,true,bytes
+p5_reproduce_results.json,deterministic,true,""
+p5_spark_mllib.csv,variable,true,same rows after sorting
+p5_spark_mllib.json,variable,false,/total_s
+p5_test_failed_banks.csv,deterministic,true,""
+p5_test_lock.json,deterministic,true,bytes
+p5_test_metrics.csv,deterministic,true,""
+p5_test_posthoc.json,deterministic,true,""
+p5_test_pr_curve.csv,deterministic,true,bytes
+p5_test_results.json,deterministic,true,bytes
+p5_threshold_by_fold.csv,deterministic,true,bytes
+p5_threshold_sensitivity.csv,deterministic,true,bytes
+p6_conclusions_draft.md,variable,false,text differs
+p6_first_page.md,variable,true,bytes
+p6_key_numbers.json,variable,false,"/engines_s/pandas,/engines_s/polars,/engines_s/spark_18,/engines_s/spark_200,/scale/polars_x2_s,/scale/polars_x4"
+data/bronze (45 files),deterministic,true,""
+data/silver (44 files),deterministic,true,""
+data/gold/features (43 files),deterministic,true,""

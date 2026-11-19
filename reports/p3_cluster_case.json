@@ -1,0 +1,77 @@
+{
+ "data": {
+  "rows_panel": 1666719,
+  "rows_added_in_2025": 17612,
+  "years_of_growth_to_double": 94.6
+ },
+ "polars_streaming": {
+  "wall_s": 1.785,
+  "cpu_s": 11.6,
+  "peak_gb": 1.878
+ },
+ "spark_default": {
+  "wall_s": 105.963,
+  "cpu_s": 424.4,
+  "peak_gb": 3.315
+ },
+ "spark_best_setting": {
+  "threads": 0,
+  "shuffle_partitions": 18,
+  "heap": "3g",
+  "wall_s": 56.775,
+  "cpu_s": 317.5,
+  "peak_rss_gb": 3.258
+ },
+ "cpu_ratio_spark_to_polars": 27.4,
+ "cpu_ratio_spark_to_polars_1_thread": 29.0,
+ "cores_spark_needs_to_match_polars_at_perfect_scaling": 84,
+ "speedup": {
+  "polars_stream_best": {
+   "threads": 18,
+   "speedup": 4.38
+  },
+  "spark_best": {
+   "threads": 12,
+   "speedup": 2.0
+  },
+  "spark_at_18": 1.88
+ },
+ "network_lower_bound": {
+  "assumption": "10 Gb/s link, 1.25 GB/s, every shuffled byte crosses it once, no contention. Assumed, not measured.",
+  "shuffle_gb_per_run_x1": 1.055,
+  "seconds_x1": 0.84
+ },
+ "memory_extrapolation_not_measured": {
+  "polars_stream": {
+   "from_scale": 1,
+   "to_scale": 2,
+   "gb_per_copy": 0.791,
+   "largest_ok_scale_measured": 2,
+   "extrapolated_scale_at_12gb": 13.8,
+   "extrapolated_m_rows_at_12gb": 23.0,
+   "extrapolated_scale_at_64gb": 79.5,
+   "extrapolated_m_rows_at_64gb": 132.6
+  },
+  "polars_mem": {
+   "from_scale": 1,
+   "to_scale": 2,
+   "gb_per_copy": 1.197,
+   "largest_ok_scale_measured": 2,
+   "extrapolated_scale_at_12gb": 9.6,
+   "extrapolated_m_rows_at_12gb": 16.0,
+   "extrapolated_scale_at_64gb": 53.0,
+   "extrapolated_m_rows_at_64gb": 88.4
+  },
+  "pandas_cols": {
+   "from_scale": 1,
+   "to_scale": 2,
+   "gb_per_copy": 1.067,
+   "largest_ok_scale_measured": 2,
+   "extrapolated_scale_at_12gb": 11.1,
+   "extrapolated_m_rows_at_12gb": 18.4,
+   "extrapolated_scale_at_64gb": 59.8,
+   "extrapolated_m_rows_at_64gb": 99.7
+  }
+ },
+ "extrapolation_warning": "Two points only (x1, x2). x4 could not finish on this machine, so treat these as rough. The 4-thread settings are left out: their x4 runs had already passed the line through x1 and x2."
+}

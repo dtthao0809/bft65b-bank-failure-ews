@@ -1,0 +1,32 @@
+=== W4: 1 year, ROA by state (pq_year) ===
+--- logical plan, not optimised ---
+AGGREGATE[maintain_order: false]
+  [col("ROA").mean()] BY [col("STNAME")]
+  FROM
+  FILTER col("YEAR") == 2008
+  FROM
+    Parquet SCAN [D:/Final BigData/data/_bench/pq_year/YEAR=1984/part-0.parquet, ... 42 other sources]
+    PROJECT */44 COLUMNS
+    ESTIMATED ROWS: 1702253
+--- optimised plan ---
+AGGREGATE[maintain_order: false]
+  [col("ROA").mean()] BY [col("STNAME")]
+  FROM
+  simple π 2/2 ["STNAME", "ROA"]
+    Parquet SCAN [D:/Final BigData/data/_bench/pq_year/YEAR=2008/part-0.parquet]
+    PROJECT 3/44 COLUMNS
+    SELECTION: col("YEAR") == 2008
+    ESTIMATED ROWS: 39588
+
+=== W5: 1 bank's history (pq_year) ===
+--- logical plan, not optimised ---
+FILTER col("CERT") == 14
+FROM
+  Parquet SCAN [D:/Final BigData/data/_bench/pq_year/YEAR=1984/part-0.parquet, ... 42 other sources]
+  PROJECT */44 COLUMNS
+  ESTIMATED ROWS: 1702253
+--- optimised plan ---
+Parquet SCAN [D:/Final BigData/data/_bench/pq_year/YEAR=1984/part-0.parquet, ... 42 other sources]
+PROJECT */44 COLUMNS
+SELECTION: col("CERT") == 14
+ESTIMATED ROWS: 1702253

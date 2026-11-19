@@ -1,0 +1,21 @@
+test,passed,detail
+key unique,true,"1,666,719 rows"
+no report on or after failure,true,""
+y matches independent recomputation,true,"0 differences; 10,860 positives"
+y null exactly after last model quarter,true,2025-06-30
+only failed banks have y = 1,true,""
+at most 4 positive rows per bank,true,""
+failures without a positive row are only those with no earlier report,true,"2,858 events, 2,837 labelled, 21 with no report before failure"
+rows removed by R1 and R2 belong to banks that never failed,true,0 failure records hit
+mergers are never failures,true,"15,339 merged banks"
+assisted banks that never failed are y = 0,true,""
+last report before failure agrees with FDIC's QBFASSET,true,98.9% within 5%
+four quarterly flows sum to the December year-to-date value,true,"404,636 bank-years"
+no label-side or snapshot field in the point-in-time list,true,[]
+known case: Silicon Valley,true,"last report 2022-12-31, failed 2023-03-10, y = 1 on 4 rows"
+known case: First Republic,true,"last report 2023-03-31, failed 2023-05-01, y = 1 on 4 rows"
+known case: Washington Mutual,true,"last report 2008-06-30, failed 2008-09-25, y = 1 on 4 rows"
+truncation at 1990-12-31: point-in-time columns unchanged,true,"479,162 rows, 53 columns compared; differing: []"
+truncation at 2008-12-31: point-in-time columns unchanged,true,"1,253,067 rows, 53 columns compared; differing: []"
+truncation at 2019-12-31: point-in-time columns unchanged,true,"1,545,003 rows, 53 columns compared; differing: []"
+control: truncation does change a future-based column,true,"_exit_class differs, so the test has power"

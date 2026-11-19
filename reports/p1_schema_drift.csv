@@ -1,0 +1,44 @@
+column,n_physical_types,quarters_absent,physical_types
+CHBAL,2,0,"int64: 169, double: 1"
+COREDEP,2,0,"int64: 96, double: 74"
+DEP,2,0,"int64: 169, double: 1"
+DEPDOM,2,0,"int64: 169, double: 1"
+LIAB,2,0,"int64: 169, double: 1"
+LNCI,2,0,"int64: 169, double: 1"
+LNCON,2,0,"double: 163, int64: 7"
+LNLSGR,2,0,"int64: 169, double: 1"
+LNLSNET,2,0,"int64: 169, double: 1"
+LNRE,2,0,"int64: 169, double: 1"
+LNRECONS,2,0,"double: 98, int64: 72"
+NAASSET,2,0,"int64: 146, double: 24"
+NCLNLS,2,0,"int64: 161, double: 9"
+P3ASSET,2,0,"int64: 102, null: 68"
+P9ASSET,2,0,"int64: 145, double: 25"
+RBCRWAJ,2,0,"double: 146, int64: 24"
+SC,2,0,"int64: 169, double: 1"
+ASSET,1,0,int64: 170
+BRO,1,0,double: 170
+CERT,1,0,int64: 170
+EINTEXP,1,0,double: 170
+ELNATR,1,0,double: 170
+EQ,1,0,double: 170
+FREPP,1,0,int64: 170
+INTINC,1,0,double: 170
+LNATRES,1,0,double: 170
+LNLSDEPR,1,0,double: 170
+NCLNLSR,1,0,double: 170
+NETINC,1,0,double: 170
+NIMY,1,0,double: 170
+NONII,1,0,double: 170
+NONIX,1,0,double: 170
+NTLNLS,1,0,double: 170
+NTLNLSR,1,0,double: 170
+NUMEMP,1,0,double: 170
+ORE,1,0,double: 170
+OTHBFHLB,1,0,double: 170
+RBC1AAJ,1,0,double: 170
+REPDTE,1,0,large_string: 170
+ROA,1,0,double: 170
+ROE,1,0,double: 170
+STNAME,1,0,large_string: 170
+VOLIAB,1,0,double: 170

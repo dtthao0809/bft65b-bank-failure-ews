@@ -1,0 +1,50 @@
+{
+ "polars_csv_default_inference": {
+  "read_ok": true,
+  "columns_with_wrong_type": [
+   "CERT",
+   "OTHBFHLB",
+   "P3ASSET",
+   "REPDTE",
+   "YEAR"
+  ]
+ },
+ "pandas_csv_default": {
+  "repdte_type": "str",
+  "int_columns_read_as_float": [
+   "BRO",
+   "CHBAL",
+   "COREDEP",
+   "DEP",
+   "DEPDOM",
+   "EINTEXP",
+   "ELNATR",
+   "EQ",
+   "INTINC",
+   "LIAB",
+   "LNATRES",
+   "LNCI",
+   "LNCON",
+   "LNLSGR",
+   "LNLSNET",
+   "LNRE",
+   "LNRECONS",
+   "NAASSET",
+   "NCLNLS",
+   "NETINC",
+   "NONII",
+   "NONIX",
+   "NTLNLS",
+   "NUMEMP",
+   "ORE",
+   "OTHBFHLB",
+   "P3ASSET",
+   "P9ASSET",
+   "SC",
+   "VOLIAB"
+  ]
+ },
+ "csv_values_equal_with_handwritten_schema": true,
+ "parquet_types_equal": true,
+ "parquet_values_equal": true
+}

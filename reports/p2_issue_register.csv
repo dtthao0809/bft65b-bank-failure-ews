@@ -1,0 +1,33 @@
+dimension,issue,rows,banks,period,handling
+uniqueness,"Duplicate (CERT, REPDTE)",0,0,-,Build stops if any appear
+uniqueness,Same CERT with two in-scope FAILURE records,0,3,1986-1989,First date is the event; panel stops there
+uniqueness,Failures rows with no CERT,488,,before 1984,Out of scope; panel starts 1984
+completeness,P3ASSET null: field starts in 2001,971925,22718,1984-2000,Keep null; Part 4 cannot use it across eras without care
+completeness,"OTHBFHLB null, mostly commercial banks before 2001",826539,18872,1984-2026,Keep null; never impute before fitting
+completeness,"P9ASSET null, mostly thrifts before 1990",77731,4180,1984-1996,Keep null; missingness tracks charter type
+completeness,RBCRWAJ == 0: not reported before 1990Q1,419414,20479,1984-1989,R4 zero to null
+completeness,RBCRWAJ == 0 from 2020 with leverage ratio present (CBLR election),45423,2604,2020-2026,R4 zero to null; f_cblr flag
+completeness,"RBC1AAJ == 0: not reported, mostly thrifts before 1990",79496,3880,1984-2026,R4 zero to null
+completeness,EQ null: no capital (branches of foreign banks and similar),4148,45,1984-2026,R2 remove row; none of these banks failed
+completeness,Panel banks with no Institutions record,10996,235,1984-2026,"R1 remove; none failed, 84% of rows have no deposits"
+completeness,In-scope failures with no report before failure,0,21,1984,Cannot be labelled; stated as a limitation
+completeness,Reporting gaps inside a bank's history,33,32,1984-2026,R9 leaves flow null; f_gap_before; no forward fill
+validity,Negative balance that cannot be negative,816,292,1984-2024,R7 to null
+validity,LNLSDEPR == 0 only because DEP == 0,12141,534,1984-2026,R5 to null; f_no_deposits
+validity,NCLNLSR == 0 only because LNLSGR == 0,19034,937,1984-2026,R5 to null
+validity,ROE with EQ <= 0: sign is meaningless,15683,2845,1984-2026,R6 to null
+validity,"Extreme ratio: |ROA| > 100, |ROE| > 1000, RBC1AAJ > 100 or LNLSDEPR > 1000",6462,2150,1984-2026,Keep; capped in Part 4 with limits fitted on training data
+validity,ASSET below USD 1 million,550,91,1984-2018,"Keep; ratios are unstable, handled by Part 4 capping"
+validity,Blank STNAME,191,2,1984-2026,R8 to null
+validity,ENDEFYMD == 9999-12-31 sentinel in Institutions,4234,4234,-,Institutions dates are never features
+consistency,|ASSET - LIAB - EQ| > 1% of assets,1039,147,1984-2026,Keep; f_identity_break
+consistency,DEP > ASSET: consistent with negative equity,6204,1561,1984-2025,"Keep: real distress signal, not an error"
+consistency,LNRE > LNLSGR,38393,2605,1984-2026,Keep; excess is small (median under 4%) and mostly before 2000
+consistency,"Flows are year-to-date: NETINC, INTINC and others rise through each year",1254743,23916,1984-2026,R9 quarterly <FLOW>_Q
+consistency,INTINC falls inside a year (YTD restated or reset),2229,2055,1984-2026,Keep; negative quarterly value flagged f_ytd_reversal
+consistency,Bank changes STNAME over time,,249,1984-2026,Keep the value reported at q; do not use Institutions' current state
+timeliness,Reports dated on or after failure (thrifts in 1989 above all),1095,268,1985-1992,R3 remove: else labelled y = 0 after the bank has failed
+timeliness,ASSISTANCE: charter survives and bank keeps reporting,412,411,1984-2009,Not a failure; rows marked _near_miss for sensitivity
+timeliness,Failures after 2026Q2,2,2,2026,Out of scope; no row in the model period is affected
+timeliness,"Institutions says inactive, but bank still reports in 2026Q2",52,52,2026,Proves it is a current snapshot: never a feature
+timeliness,Distress exit code but no Failures record,,623,1984-2026,Exam definition kept: y = 0; rows marked _near_miss for sensitivity

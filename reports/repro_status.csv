@@ -1,0 +1,29 @@
+step,exit,seconds
+"src/p1_verify.py",0,9
+"src/p1_build_bronze.py",0,4
+"src/p1_storage_benchmark.py --repeat 1",0,250
+"src/p2_build_panel.py",0,2
+"src/p2_quality.py",0,14
+"src/p2_checks.py",0,14
+"src/p3_benchmark.py --suite engines --repeat 2 --spark-repeat 1",0,458
+"src/p3_compare.py",0,13
+"src/p3_benchmark.py --suite threads --repeat 1 --spark-repeat 1",0,700
+"src/p3_benchmark.py --suite spark_tune --spark-repeat 1",0,646
+"src/p3_benchmark.py --suite scale",0,833
+"src/p3_benchmark.py --suite scale --keep-prior --scales 1,2,4,8,16 --engines spark@6",0,899
+"src/p3_plans.py",0,168
+"src/p3_report.py",0,5
+"src/p4_features.py",0,4
+"src/p4_screen.py",0,13
+"src/p4_pipeline.py",0,30
+"src/p4_checks.py",0,54
+"src/p4_report.py",0,3
+"src/p5_costs.py",0,1
+"src/p5_develop.py",0,21352
+"src/p5_spark.py",0,128
+"src/p5_test.py --dry-run",0,9472
+"src/p5_test.py --reproduce",0,199
+"src/p5_report.py",0,8
+"src/p5_checks.py",0,31
+"src/p6_conclusions.py",0,1
+done

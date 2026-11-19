@@ -1,0 +1,52 @@
+{
+ "financials": {
+  "rows": 1682616,
+  "contract_columns": 43,
+  "year_partitions": 43,
+  "size_mb": 206.31,
+  "seconds": 2.6,
+  "quarters_where_field_absent": {},
+  "reconciliation": "rows, null counts and column totals equal raw"
+ },
+ "failures": {
+  "rows": 4117,
+  "columns": 11,
+  "schema": {
+   "QBFDEP": "Float64",
+   "COST": "Float64",
+   "QBFASSET": "Float64",
+   "FAILDATE": "Date",
+   "CERT": "Int32",
+   "CITYST": "String",
+   "RESTYPE": "String",
+   "SAVR": "String",
+   "FAILYR": "Int16",
+   "RESTYPE1": "String",
+   "NAME": "String"
+  }
+ },
+ "institutions": {
+  "rows": 27835,
+  "columns": 11,
+  "schema": {
+   "REGAGNT": "String",
+   "ACTIVE": "Int8",
+   "BKCLASS": "String",
+   "CHANGEC1": "Int32",
+   "STNAME": "String",
+   "ENDEFYMD": "Date",
+   "CERT": "Int32",
+   "ESTYMD": "Date",
+   "INSDATE": "Date",
+   "NAME": "String",
+   "SPECGRP": "Float64"
+  }
+ },
+ "polars": "2.1.0",
+ "compression": "zstd-3",
+ "row_group_size": 16384,
+ "sort": [
+  "CERT",
+  "REPDTE"
+ ]
+}

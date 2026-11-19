@@ -1,0 +1,52 @@
+{
+ "chosen": {
+  "name": "gbm no state features",
+  "kind": "hgb",
+  "lr": 0.03,
+  "leaves": 15,
+  "iters": 400,
+  "features": [
+   "eq_ta",
+   "eq_ta_d4",
+   "npl",
+   "texas",
+   "res_cov",
+   "res_ln",
+   "nco_4q",
+   "prov_4q",
+   "npl_d4",
+   "npl_st_gap",
+   "con_ln",
+   "ln_ta",
+   "ln_g4",
+   "roa_4q",
+   "roa_q_d4",
+   "cost_inc",
+   "roa_std8",
+   "loss_q4",
+   "liq_ta",
+   "bro_dep",
+   "asset_g4",
+   "f_neg_equity"
+  ]
+ },
+ "threshold": 0.008922758744692224,
+ "capacity_share": 0.01,
+ "action_lag_days": 45,
+ "share_saved": 0.23,
+ "train_window": [
+  "1986-03-31",
+  "2011-12-31"
+ ],
+ "train_rows": 1203457,
+ "train_y1": 9488,
+ "models_sha256": "bdc88c929ff46a2ad99fa11634de30ee9977e1c8ce2d509e6b7799ea40bc55d2",
+ "selection_mean_ap": 0.45306619684025157,
+ "best_candidate_mean_ap": 0.45306619684025157,
+ "dev_oof": {
+  "alarm_share": 0.031079596295380443,
+  "bank_recall": 0.9227642276422764,
+  "total_cost_thousand": 81566933.97270323,
+  "no_model_cost_thousand": 103848485.67342848
+ }
+}

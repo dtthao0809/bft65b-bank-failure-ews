@@ -1,0 +1,43 @@
+feature,pillar,kind,expected_sign,formula
+eq_ta,C capital,num,-1,EQ / ASSET
+tier1_lev,C capital,num,-1,"RBC1AAJ / 100, reported tier 1 leverage"
+eq_ta_d4,C capital,num,-1,eq_ta minus eq_ta 4 quarters earlier
+eq_ta_pct,C capital,num,-1,"rank of eq_ta among banks in the quarter, 0-1"
+eq_st_gap,C capital,num,-1,eq_ta minus state median in the quarter
+f_neg_equity,C capital,flag,1,EQ <= 0
+npl,A assets,num,1,"NCLNLS / LNLSGR, noncurrent loans"
+npa_ta,A assets,num,1,(NCLNLS + ORE) / ASSET
+texas,A assets,num,1,"NPA / (NPA + max(EQ + LNATRES, 0)), bounded Texas ratio"
+res_cov,A assets,num,-1,"LNATRES / (LNATRES + NCLNLS), bounded reserve coverage"
+res_ln,A assets,num,1,LNATRES / LNLSGR
+nco_4q,A assets,num,1,"4-quarter NTLNLS_Q / LNLSGR, net charge-offs"
+prov_4q,A assets,num,1,"4-quarter ELNATR_Q / LNLSGR, provisions"
+npl_d4,A assets,num,1,npl minus npl 4 quarters earlier
+npl_pct,A assets,num,1,"rank of npl among banks in the quarter, 0-1"
+npl_st_gap,A assets,num,1,npl minus state median in the quarter
+re_ln,M loan mix,num,1,"LNRE / LNLSGR, real estate share"
+cons_ta,M loan mix,num,1,"LNRECONS / ASSET, construction"
+ci_ln,M loan mix,num,0,"LNCI / LNLSGR, commercial and industrial share"
+con_ln,M loan mix,num,0,"LNCON / LNLSGR, consumer share"
+ln_ta,M loan mix,num,1,LNLSNET / ASSET
+ln_g4,M loan mix,num,0,LNLSGR growth over 4 quarters
+roa_4q,E earnings,num,-1,4-quarter NETINC_Q / ASSET
+roa_q_d4,E earnings,num,-1,"annualised quarterly ROA minus the same, 4 quarters earlier"
+nim_4q,E earnings,num,-1,4-quarter (INTINC_Q - EINTEXP_Q) / ASSET
+cost_inc,E earnings,num,1,"NONIX / (NONIX + max(revenue, 0)), bounded, 4 quarters"
+roa_std8,E earnings,num,1,"standard deviation of quarterly ROA, 8 quarters"
+loss_q4,E earnings,num,1,quarters with a loss among the last 4
+roa_pct,E earnings,num,-1,"rank of roa_4q among banks in the quarter, 0-1"
+liq_ta,L liquidity,num,-1,(CHBAL + SC) / ASSET
+ln_dep,L liquidity,num,1,LNLSGR / DEP
+bro_dep,L liquidity,num,1,"BRO / DEP, brokered deposits"
+nondep_ta,L liquidity,num,1,"(LIAB - DEP) / ASSET, non-deposit funding"
+dep_g4,L liquidity,num,0,DEP growth over 4 quarters
+size_pct,S size,num,0,"rank of ASSET among banks in the quarter, 0-1"
+asset_g4,S size,num,0,ASSET growth over 4 quarters
+st_npl_med,X region,num,1,state median of npl in the quarter
+st_loss_share,X region,num,1,share of the state's banks with a loss in the quarter
+st_fail_4q,X region,num,1,state failures in the last 4 quarters / state banks
+f_short_hist,Q quality,flag,1,fewer than 8 consecutive quarters of history
+f_gap_before,Q quality,flag,0,the previous quarter is missing
+f_identity_break,Q quality,flag,0,|ASSET - LIAB - EQ| > 1% of ASSET
