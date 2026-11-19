@@ -76,13 +76,22 @@ result files, and stops if any test suite has a failure.
 Parquet files of a rerun with the committed ones (`reports/repro_check.csv`). Deterministic results must match
 to 1e-9; timings, execution plans and machine state are listed but expected to differ.
 
-This was done in VS Code, in a clean clone of the project with a new environment from
+This was done on 2026-11-08 in VS Code, in a clean clone of the project with a new environment from
 `requirements.txt` and the same raw download (hashes as in `reports/p1_raw_sha256.csv`). Every step completed, and
 `--reproduce` gave the recorded test results exactly. All 61 deterministic results matched, including every bronze,
 silver and gold Parquet file byte for byte. The benchmarks ran with fewer repeats. One measurement did not repeat:
 Spark with a 2 GB heap ran out of execution memory at sixteen copies of the data (it finished sixteen in the recorded
 run and eight in both reruns), so `p6_conclusions.py` reports the largest scale Spark completed. On an idle laptop the
 rerun took about 3 hours; the first run, on a busy one, took about 10 hours, mostly `p5_develop.py`.
+
+The published repository was checked again on 2026-11-19, on a fresh clone under Linux: the pinned requirements
+installed into a new environment, every script compiled, and `reports/p5_test_results.json` matched the hash in its
+lock. This check found that the lock failed on checkouts with LF line endings, because the hash had been taken on
+Windows (CRLF); `.gitattributes` now checks that file out with CRLF on every system, and the results were not touched.
+The code edited after the 2026-11-08 rerun was compared statement by statement (Python syntax trees, ignoring comments
+and docstrings) with the version that was rerun. No step that builds data, features, models, the threshold or the test
+results changed; the only code changes are the Part 6 wording about the largest scale Spark finished, an optional
+comparison in the Part 1 notebook, and command-line help text. The pipeline itself was not rerun on 2026-11-19.
 
 ### The test period
 
@@ -149,5 +158,5 @@ The report's reference list, numbered as in the report:
     https://english.luatvietnam.vn/decision-no-32-2021-qd-ttg-on-insurance-money-limit-211331-doc1.html
 
 AI assistance: Claude (Anthropic), through Claude Code and the Claude app, was used for design discussion, writing
-and debugging code, and drafting text. The author reviewed the code, reran the pipeline from this README in VS Code,
-and is responsible for all text in the report.
+and debugging code, and drafting text. The author reviewed the code, reran the pipeline from this README in VS Code
+on 2026-11-08, checked the published repository again on 2026-11-19, and is responsible for all text in the report.
