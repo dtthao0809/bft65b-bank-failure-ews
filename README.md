@@ -192,9 +192,10 @@ The report's reference list (APA 7th edition):
 AI tools were used only as assistants under the author's direction; they were not a source of data or results.
 Claude (Anthropic, 2026), through Claude Code and the Claude app, supported design discussion, writing and debugging
 code, and drafting and editing text. On 2026-11-19 and 2026-11-20 it also helped check the published repository, run
-the fast checks on the author's laptop, prepare the last README and Part 6 commits (marked Co-Authored-By) and revise
+the fast checks on the author's laptop, prepare the last README and Part 6 commits and revise
 the report's wording and references, and on 2026-11-26 it helped convert the references in the report and this README
-to APA 7 (this commit). ChatGPT (OpenAI, 2026) and Antigravity (Google, 2026) were used to review the final draft and
+to APA 7. The "Co-Authored-By: Claude" line that Claude Code adds to the commits it prepared
+marks AI assistance in Git; it does not make Claude an author of the work. ChatGPT (OpenAI, 2026) and Antigravity (Google, 2026) were used to review the final draft and
 the repository before submission; files that Antigravity's rerun of the fast checks rewrote were restored from Git.
 Every number in the report comes from the pipeline's own result files. The author reviewed the code and every
 AI-assisted change, reran the pipeline from this README in VS Code on 2026-11-08, and is responsible for all text in
