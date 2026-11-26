@@ -146,37 +146,56 @@ FDIC BankFind Suite API, https://api.fdic.gov/banks (no key needed). Endpoints: 
 
 ## References and acknowledgements
 
-The report's reference list, numbered as in the report:
+The report's reference list (APA 7th edition):
 
-1. FDIC (2026). BankFind Suite API and field dictionary. https://api.fdic.gov/banks/docs/ (accessed 2026-11-07).
-2. BFT65B course team (2026). Starter script `fdic_download_starter.py`, reused by `fdic_download_full.py`.
-3. Cole, R. A., and White, L. J. (2012). Déjà vu all over again: The causes of U.S. commercial bank failures this
-   time around. *Journal of Financial Services Research*, 42, 5-29.
-4. Software documentation: Polars (https://docs.pola.rs), Apache Arrow and Parquet, pandas, Apache Spark
-   (https://spark.apache.org/docs/latest/) and delta-rs (accessed 2026-11-20).
-5. Pedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12, 2825-2830.
-6. Saito, T., and Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when
-   evaluating binary classifiers on imbalanced datasets. *PLoS ONE*, 10(3), e0118432.
-7. The Investor (2023, May 4). Compulsory transfer of 4 banks under special control approved.
-   https://theinvestor.vn/compulsory-transfer-of-4-banks-under-special-control-approved-d4787.html (accessed 2026-11-20).
-8. Vietnamnet. Four underperforming banks in Vietnam restructured through mandatory transfer.
-   https://vietnamnet.vn/en/four-underperforming-banks-in-vietnam-restructured-through-mandatory-transfer-2364609.html (accessed 2026-11-20).
-9. Law on Credit Institutions No. 32/2024/QH15, as summarised by Mayer Brown (2024, March 6), Vietnam's new banking
-   law for foreign investors: five key takeaways,
-   https://www.mayerbrown.com/en/insights/publications/2024/03/vietnams-new-banking-law-for-foreign-investors-five-key-takeaways,
-   and by Deposit Insurance of Vietnam, Restructure weak credit institutions,
-   https://div.gov.vn/restructuring-weak-credit-institutions-and-the-role-of-div-according-to-the-law-on-credit-institutions-2024a (accessed 2026-11-20).
-10. CNBC (2024, April 17). Vietnam mounts unprecedented $24 billion rescue for bank engulfed in giant fraud, documents show.
-    https://www.cnbc.com/2024/04/17/vietnam-mounts-unprecedented-24-billion-rescue-for-bank-engulfed-in-giant-fraud-documents-show.html (accessed 2026-11-20).
-11. Tuoi Tre News (2022, October 16). Vietnam's central bank places lender under special scrutiny.
-    https://tuoitrenews.vn/news/business/20221016/vietnam-s-central-bank-places-lender-under-special-scrutiny/69589.html (accessed 2026-11-20).
-12. Decision No. 32/2021/QD-TTg (2021, October 20) on the deposit insurance coverage limit.
-    https://english.luatvietnam.vn/decision-no-32-2021-qd-ttg-on-insurance-money-limit-211331-doc1.html (accessed 2026-11-20).
+- Anthropic. (2026). *Claude* [Large language model, AI assistant]. https://claude.ai
+- Apache Software Foundation. (n.d.-a). *Apache Arrow documentation*. Retrieved November 20, 2026, from https://arrow.apache.org/docs/
+- Apache Software Foundation. (n.d.-b). *Apache Parquet documentation*. Retrieved November 20, 2026, from https://parquet.apache.org/docs/
+- Apache Software Foundation. (n.d.-c). *Apache Spark documentation*. Retrieved November 20, 2026, from https://spark.apache.org/docs/latest/
+- BFT65B Course Team. (2026). *fdic_download_starter.py* [Computer software]. Unpublished course material, National
+  Economics University. Reused by `fdic_download_full.py`.
+- Cole, R. A., & White, L. J. (2012). Déjà vu all over again: The causes of U.S. commercial bank failures this time
+  around. *Journal of Financial Services Research, 42*(1), 5–29. https://doi.org/10.1007/s10693-011-0116-9
+- Delta Lake Project. (n.d.). *delta-rs documentation*. Retrieved November 20, 2026, from https://delta-io.github.io/delta-rs/
+- Deposit Insurance of Vietnam. (2024, April 29). *Restructuring weak credit institutions and the role of DIV according
+  to the Law on Credit Institutions 2024*.
+  https://div.gov.vn/restructuring-weak-credit-institutions-and-the-role-of-div-according-to-the-law-on-credit-institutions-2024a
+- Dinh, V., & Huong, D. (2023, May 4). Compulsory transfer of 4 banks under special control approved. *The Investor*.
+  https://theinvestor.vn/compulsory-transfer-of-4-banks-under-special-control-approved-d4787.html
+- Federal Deposit Insurance Corporation. (n.d.). *BankFind Suite API documentation*. Retrieved November 7, 2026, from
+  https://api.fdic.gov/banks/docs/
+- Google. (2026). *Antigravity* [AI-powered development platform, AI assistant]. https://antigravity.google
+- Law on Credit Institutions, No. 32/2024/QH15 (2024).
+  https://vanban.chinhphu.vn/?classid=1&docid=211190&pageid=27160&typegroupid=3
+- Mayer Brown. (2024, March 6). *Vietnam's new banking law for foreign investors: Five key takeaways*.
+  https://www.mayerbrown.com/en/insights/publications/2024/03/vietnams-new-banking-law-for-foreign-investors-five-key-takeaways
+- Nguyen, T. (2025, January 18). Four underperforming banks in Vietnam restructured through mandatory transfer.
+  *VietNamNet*. https://vietnamnet.vn/en/four-underperforming-banks-in-vietnam-restructured-through-mandatory-transfer-2364609.html
+- OpenAI. (2026). *ChatGPT* [Large language model, AI assistant]. https://chatgpt.com
+- pandas Development Team. (n.d.). *pandas documentation*. Retrieved November 20, 2026, from https://pandas.pydata.org/docs/
+- Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P.,
+  Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, É. (2011).
+  Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research, 12*, 2825–2830.
+  https://www.jmlr.org/papers/v12/pedregosa11a.html
+- Polars. (n.d.). *Polars documentation*. Retrieved November 20, 2026, from https://docs.pola.rs/
+- Prime Minister of Vietnam. (2021, October 20). *Decision No. 32/2021/QD-TTg on the deposit insurance coverage limit*.
+  LuatVietnam. https://english.luatvietnam.vn/decision-no-32-2021-qd-ttg-on-insurance-money-limit-211331-doc1.html
+- Reuters. (2022, October 16). Vietnam's central bank places lender under "special scrutiny." *Tuoi Tre News*.
+  https://news.tuoitre.vn/vietnams-central-bank-places-lender-under-special-scrutiny-10369589.htm
+- Reuters. (2024, April 17). Vietnam mounts unprecedented $24 billion rescue for bank engulfed in giant fraud, documents
+  show. *CNBC*. https://www.cnbc.com/2024/04/17/vietnam-mounts-unprecedented-24-billion-rescue-for-bank-engulfed-in-giant-fraud-documents-show.html
+- Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating
+  binary classifiers on imbalanced datasets. *PLOS ONE, 10*(3), Article e0118432. https://doi.org/10.1371/journal.pone.0118432
 
-AI assistance: Claude (Anthropic), through Claude Code and the Claude app, was used for design discussion, writing
-and debugging code, and drafting text. On 2026-11-19 and 2026-11-20 it was also used to check the published repository,
-run the fast checks on the author's laptop, prepare the last README and Part 6 commits (marked Co-Authored-By) and
-revise the report's wording and references. ChatGPT (OpenAI) and Antigravity (Google) were used to review the final
-draft and the repository before submission; files that Antigravity's rerun of the fast checks rewrote were restored
-from Git. The author reviewed the code and every change, reran the pipeline from this README in VS Code on 2026-11-08,
-and is responsible for all text in the report.
+### Use of AI tools
+
+AI tools were used only as assistants under the author's direction; they were not a source of data or results.
+Claude (Anthropic, 2026), through Claude Code and the Claude app, supported design discussion, writing and debugging
+code, and drafting and editing text. On 2026-11-19 and 2026-11-20 it also helped check the published repository, run
+the fast checks on the author's laptop, prepare the last README and Part 6 commits (marked Co-Authored-By) and revise
+the report's wording and references, and on 2026-11-26 it helped convert the references in the report and this README
+to APA 7 (this commit). ChatGPT (OpenAI, 2026) and Antigravity (Google, 2026) were used to review the final draft and
+the repository before submission; files that Antigravity's rerun of the fast checks rewrote were restored from Git.
+Every number in the report comes from the pipeline's own result files. The author reviewed the code and every
+AI-assisted change, reran the pipeline from this README in VS Code on 2026-11-08, and is responsible for all text in
+the report.
